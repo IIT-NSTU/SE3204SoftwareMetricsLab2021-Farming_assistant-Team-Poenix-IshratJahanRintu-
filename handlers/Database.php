@@ -93,7 +93,7 @@ class database
         if ($this->tableExists($table)) {
             $table_columns = implode(', ', array_keys($params));
             $table_values = implode(", ", $params);
-            // echo    $sql = "INSERT INTO $table ($table_columns) VALUES($table_values)";
+            $sql = "INSERT INTO $table ($table_columns) VALUES($table_values)";
             $insert = $this->connection->query($sql);
 
             if ($insert) {

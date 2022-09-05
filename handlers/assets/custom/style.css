@@ -759,6 +759,12 @@ section {
   width: 203px;
 }
 
+h1.empty-heading {
+  text-align: center;
+  border: 2px solid #0e610e;
+  padding: 10px;
+}
+
 .show-products .box-container .box .name {
   padding: 1rem 0;
   font-size: 2rem;

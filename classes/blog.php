@@ -24,7 +24,9 @@ class blog
     function viewAllBlogs()
     {
 
-        $product = array();
+
+
+        $blog_list = array();
         $blog = array();
         $result = $this->db->fetch_all_data($this->table);
 

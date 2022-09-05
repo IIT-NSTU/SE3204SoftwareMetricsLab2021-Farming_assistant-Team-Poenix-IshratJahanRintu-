@@ -44,6 +44,7 @@ section {
 }
 
 .heading {
+  margin-top: 27px;
   margin-bottom: 3rem;
   font-size: 3rem;
   color: #0e3111;
@@ -745,10 +746,22 @@ section {
   border: var(--border);
   box-shadow: var(--box-shadow);
   background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .show-products .box-container .box img {
-  height: 16rem;
+  height: 18rem;
+  padding: 7px 0px;
+  object-fit: cover;
+  width: 203px;
+}
+h1.empty-heading {
+  text-align: center;
+  border: 2px solid #0e610e;
+  padding: 10px;
 }
 
 .show-products .box-container .box .name {
@@ -756,11 +769,28 @@ section {
   font-size: 2rem;
   color: var(--black);
 }
-
+.dlt-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  background: darkred;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+.dlt-btn:hover {
+  background-color: red;
+  color: black;
+}
 /* admin farmer product details */
 .product-box-content {
   object-fit: contain;
+  font-size: 14px;
+  /* display: flex; */
   /* font-size: 81px; */
+  /* flex-direction: column; */
 }
 /*  */
 
