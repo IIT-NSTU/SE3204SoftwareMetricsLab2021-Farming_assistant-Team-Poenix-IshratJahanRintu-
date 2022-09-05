@@ -18,9 +18,9 @@ abstract class user
       $_SESSION['user_id'] = $found_row[0]['user_id'];
       $_SESSION['user_type']
         = $found_row[0]['user_type'];
-      header("location:http://localhost/spl_php/home.php");
+      header("location:http://localhost/spl_php/index.php");
     } else {
-      header("location:http://localhost/spl_php/loginpage.php");
+      // header("location:http://localhost/spl_php/loginpage.php");
     }
   }
 
@@ -31,6 +31,7 @@ abstract class user
       echo "member already exists with this phone number";
     } else {
       $this->db->insert($this->table, $signup_info);
+      header("Location:http://localhost/spl_php/index.php");
       echo "user added to the system";
     }
   }

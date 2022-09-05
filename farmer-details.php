@@ -5,12 +5,12 @@
     <h1 class="heading text-center">কৃষকগণ</h1>
     <div class="box-container">
         <?php
-          if (isset($farmer_list)) {
+              if (isset($farmer_list)) {
 
-               if (count($farmer_list) > 0) {
+                     if (count($farmer_list) > 0) {
 
-                    foreach ($farmer_list as $farmer) {
-          ?>
+                            foreach ($farmer_list as $farmer) {
+              ?>
 
 
         <div class="box "
@@ -25,19 +25,19 @@
                    class="
                    bttn">update</a>
                 <a href="admin_products.php?delete=1"
-                   class="delete-btn"
+                   class=" dlt-btn"
                    onclick="return confirm('delete this product?');">delete</a>
 
             </div>
         </div>
 
         <?php }
-               } else {
+                     } else {
 
-                    echo "কোন কৃষক নেই";
-               }
-          }
-          ?>
+                            echo "কোন কৃষক নেই";
+                     }
+              }
+              ?>
 
 
     </div>

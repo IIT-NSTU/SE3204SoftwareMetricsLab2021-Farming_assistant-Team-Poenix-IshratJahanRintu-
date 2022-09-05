@@ -33,5 +33,5 @@ if (isset($_POST['add_product'])) {
     if ($p->addProduct($product_info)) {
         move_uploaded_file($image_tmp_name, $image_folder);
     }
-    header("Location:http://localhost/spl_php/handlers/productHandler.php");
+    // header("Location:http://localhost/spl_php/handlers/productHandler.php");
 }

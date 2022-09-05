@@ -25,9 +25,10 @@ class Product
     {
 
         $product = array();
+        $result = array();
         if ($_SESSION['user_type'] == 'farmer') {
-            $farmer_info["farmer_id"] = $_SESSION['user_id'];
-            $result = $this->db->fetch_data_with_one_column_check($farmer_info, $this->table, "farmer_id");
+            print_r($farmer_info["farmer_id"] = $_SESSION['user_id']);
+            print_r($result = $this->db->fetch_data_with_one_column_check($farmer_info, $this->table, "farmer_id"));
         }
         if ($_SESSION['user_type'] == 'admin') {
             $result = $this->db->fetch_all_data($this->table);
@@ -41,7 +42,7 @@ class Product
                 while ($row = $stmnt->fetch()) {
                     $product["seller"] = $row['name'];
                 }
-
+                $product['product_img'] = $r['product_img'];
                 $product['name'] = $r['name'];
                 $product['category'] = $r['category'];
                 $product['quantity'] = converter::en2bn($r['quantity']);

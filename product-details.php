@@ -17,7 +17,7 @@
 
         <div class="box">
             <div class="product-box-content">
-                <img src="assets/uploaded_img/<?php echo $product['image']; ?>"
+                <img src="../assets/uploaded_img/<?php echo $product['product_img']; ?>"
                      alt="">
                 <div class="name"><?php echo $product['name']; ?>
                     <span class="text-muted">(<?php echo $product['category']; ?>)</span>
