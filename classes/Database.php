@@ -61,7 +61,6 @@ class database
     ";
         if ($statement->rowCount()) {
             $row = $statement->fetchAll();
-            print_r($row);
         } else {
             echo "no data found";
         }
@@ -73,13 +72,12 @@ class database
         echo "$data_array[$col]";
 
         $row = array();
-        echo $sql = "select * from ${table} Where ${col}=?";
+        $sql = "select * from ${table} Where ${col}=?";
 
         $statement = $this->connection->prepare($sql);
         $statement->execute([$data_array[$col]]);
         if ($statement->rowCount()) {
             $row = $statement->fetchAll();
-            print_r($row);
         } else {
             echo "no data found";
         }
@@ -93,7 +91,7 @@ class database
         if ($this->tableExists($table)) {
             $table_columns = implode(', ', array_keys($params));
             $table_values = implode(", ", $params);
-            echo    $sql = "INSERT INTO $table ($table_columns) VALUES($table_values)";
+            $sql = "INSERT INTO $table ($table_columns) VALUES($table_values)";
             $insert = $this->connection->query($sql);
 
             if ($insert) {

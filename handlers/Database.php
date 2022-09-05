@@ -52,7 +52,7 @@ class database
         echo "$data_array[$col1]";
         echo "$data_array[$col2]";
         $row = array();
-        echo $sql = "select * from ${table} Where ${col1}=? and ${col2}=?";
+        $sql = "select * from ${table} Where ${col1}=? and ${col2}=?";
 
         $statement = $this->connection->prepare($sql);
         $statement->execute([$data_array[$col1], $data_array[$col2]]);
@@ -70,16 +70,16 @@ class database
 
     function fetch_data_with_one_column_check($data_array = array(), $table, $col)
     {
-        echo "$data_array[$col]";
+        // echo "$data_array[$col]";
 
         $row = array();
-        echo $sql = "select * from ${table} Where ${col}=?";
+        $sql = "select * from ${table} Where ${col}=?";
 
         $statement = $this->connection->prepare($sql);
         $statement->execute([$data_array[$col]]);
         if ($statement->rowCount()) {
             $row = $statement->fetchAll();
-            print_r($row);
+            // print_r($row);
         } else {
             echo "no data found";
         }
@@ -93,7 +93,7 @@ class database
         if ($this->tableExists($table)) {
             $table_columns = implode(', ', array_keys($params));
             $table_values = implode(", ", $params);
-            echo    $sql = "INSERT INTO $table ($table_columns) VALUES($table_values)";
+            // echo    $sql = "INSERT INTO $table ($table_columns) VALUES($table_values)";
             $insert = $this->connection->query($sql);
 
             if ($insert) {

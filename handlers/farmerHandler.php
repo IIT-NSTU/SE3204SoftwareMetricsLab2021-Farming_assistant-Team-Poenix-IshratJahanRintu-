@@ -10,13 +10,13 @@ include_once '../classes/users/farmer.php';
 
 
 if (isset($_POST['add_farmer'])) {
-    echo "post ";
 
-    echo $farmer_info["name"] =  "'{$_POST['name']}'";
-    echo $farmer_info["phone_number"] =  "'{$_POST['phone']}'";
-    echo $farmer_info["address"] =  "'{$_POST['address']}'";
-    echo $farmer_info["user_type"] = "'farmer'";
-    echo $farmer_info['password'] = "'{$_POST['password']}'";
+
+    $farmer_info["name"] =  "'{$_POST['name']}'";
+    $farmer_info["phone_number"] =  "'{$_POST['phone']}'";
+    $farmer_info["address"] =  "'{$_POST['address']}'";
+    $farmer_info["user_type"] = "'farmer'";
+    $farmer_info['password'] = "'{$_POST['password']}'";
     print_r($farmer_info);
 
 
