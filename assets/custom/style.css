@@ -18,6 +18,15 @@
   border: none;
   text-decoration: none;
 }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  margin-top: auto;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -946,12 +955,14 @@ h1.empty-heading {
 .btn-groups {
   margin-top: 22px;
 }
+
 #order-quantity {
   border: 1px solid lightgrey;
   margin-top: 54px;
   text-align: center;
   padding: 10px 25px;
-  font-size: 18px;
+  font-size: 17px;
+  width: 207px;
 }
 .img-container img {
   width: 403px;

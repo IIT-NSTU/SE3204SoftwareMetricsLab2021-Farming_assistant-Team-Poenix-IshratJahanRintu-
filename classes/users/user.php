@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 abstract class user
 {
   public $table = "user";

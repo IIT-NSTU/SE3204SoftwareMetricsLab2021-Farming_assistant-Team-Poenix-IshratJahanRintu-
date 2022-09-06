@@ -14,32 +14,25 @@ $db = database::getInstance();
 
 
 <!-- home section ends -->
-<section class="home"
-         id="home">
+<section class="home" id="home">
     <div class="swiper home-slider">
         <div class="swiper-wrapper">
-            <section class="swiper-slide slide"
-                     style="background: url(assets/images/sp1.jpg) no-repeat">
+            <section class="swiper-slide slide" style="background: url(assets/images/sp1.jpg) no-repeat">
                 <div class="content">
                     <h3>কৃষিপণ্য কিনুন ঘরে বসেই</h3>
-                    <a href="#"
-                       class="bttn">শুরু করুন</a>
+                    <a href="#" class="bttn">শুরু করুন</a>
                 </div>
             </section>
-            <section class="swiper-slide slide"
-                     style="background: url(assets/images/sp2.jpg) no-repeat">
+            <section class="swiper-slide slide" style="background: url(assets/images/sp2.jpg) no-repeat">
                 <div class="content">
                     <h3>কৃষিপণ্য কিনুন ঘরে বসেই</h3>
-                    <a href="#"
-                       class="bttn">শুরু করুন</a>
+                    <a href="#" class="bttn">শুরু করুন</a>
                 </div>
             </section>
-            <section class="swiper-slide slide"
-                     style="background: url(assets/images/sp3.jpg) no-repeat">
+            <section class="swiper-slide slide" style="background: url(assets/images/sp3.jpg) no-repeat">
                 <div class="content">
                     <h3>কৃষিপণ্য কিনুন ঘরে বসেই</h3>
-                    <a href="#"
-                       class="bttn">শুরু করুন</a>
+                    <a href="#" class="bttn">শুরু করুন</a>
                 </div>
             </section>
 
@@ -58,18 +51,14 @@ $db = database::getInstance();
 
 
 
-<section class="speciality"
-         id="speciality">
+<section class="speciality" id="speciality">
     <h1 class="heading">ক্যাটাগরিসমূহ</h1>
     <!-- si -->
     <div class="box-container">
         <div class="box">
-            <img class="image"
-                 src="assets/images/sp3.jpg"
-                 alt="" />
+            <img class="image" src="assets/images/sp3.jpg" alt="" />
             <div class="content">
-                <img src="images/s-1.png"
-                     alt="" />
+                <img src="images/s-1.png" alt="" />
                 <h3>চাল</h3>
                 <p>
 
@@ -79,12 +68,9 @@ $db = database::getInstance();
         </div>
         <!-- single  -->
         <div class="box">
-            <img class="image"
-                 src="assets/images/sp3.jpg"
-                 alt="" />
+            <img class="image" src="assets/images/sp3.jpg" alt="" />
             <div class="content">
-                <img src="images/s-2.png"
-                     alt="" />
+                <img src="images/s-2.png" alt="" />
                 <h3>ডাল</h3>
                 <p>
 
@@ -94,12 +80,9 @@ $db = database::getInstance();
 
         <!-- single  -->
         <div class="box">
-            <img class="image"
-                 src="assets/images/sp3.jpg"
-                 alt="" />
+            <img class="image" src="assets/images/sp3.jpg" alt="" />
             <div class="content">
-                <img src="images/s-2.png"
-                     alt="" />
+                <img src="images/s-2.png" alt="" />
                 <h3>সবজি</h3>
                 <p>
 
@@ -108,12 +91,9 @@ $db = database::getInstance();
         </div>
         <!-- single  -->
         <div class="box">
-            <img class="image"
-                 src="assets/images/sp3.jpg"
-                 alt="" />
+            <img class="image" src="assets/images/sp3.jpg" alt="" />
             <div class="content">
-                <img src="images/s-2.png"
-                     alt="" />
+                <img src="images/s-2.png" alt="" />
                 <h3>শাক</h3>
                 <p>
 
@@ -131,8 +111,7 @@ $db = database::getInstance();
 
 <!-- popular section starts  -->
 
-<section class="popular"
-         id="popular">
+<section class="popular" id="popular">
     <h1 class="heading"> <span>পন্য</span> সমূহ</h1>
 
     <div class="box-container">
@@ -147,19 +126,16 @@ $db = database::getInstance();
 
 
         ?>
-        <div class="box">
-            <span class="price"><?php echo converter::en2bn($product['quantity'] * $product['unit_price']) ?> টাকা
-            </span>
-            <img src="assets/uploaded_img/<?php echo $product['product_img']; ?>"
-                 alt="">
-            <h3><?php echo $product['name']; ?></h3>
+                <div class="box">
+                    <span class="price"><?php echo converter::en2bn($product['quantity'] * $product['unit_price']) ?> টাকা
+                    </span>
+                    <img src="assets/uploaded_img/<?php echo $product['product_img']; ?>" alt="">
+                    <h3><?php echo $product['name']; ?></h3>
 
-            <p class="text-muted info"><span class="quantity"><?php echo $product['quantity_type']; ?></span><span
-                      class="quantity type"></span></p>
+                    <p class="text-muted info"><span class="quantity"><?php echo $product['quantity']; ?></span><span class="quantity type"><?php echo $product['quantity_type']; ?></span></p>
 
-            <a href="#"
-               class="bttn">order now</a>
-        </div>
+                    <a href="checkout-page.php?product_id=<?php echo $product['product_id'] ?>" class="bttn">বিস্তারিত দেখুন</a>
+                </div>
         <?php }
         } ?>
 
