@@ -794,6 +794,44 @@ h1.empty-heading {
 }
 /*  */
 
+/* blog section css*/
+.blog-container {
+  display: grid;
+  grid-template-columns: 87.5fr 1fr;
+  gap: 1.5rem;
+  background: #eee;
+  padding: 0px 52px;
+}
+
+.blog-container .posts-container .post {
+  width: 100%;
+  padding: 2rem;
+  background: #fff;
+  border: var(--border);
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-container .posts-container .post .image {
+  height: 47rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.blog-container .posts-container .post .title {
+  padding-top: 0.5rem;
+  font-size: 4rem;
+  color: var(--black);
+}
+
+.blog-container .posts-container .post .text {
+  color: var(--light-color);
+  font-size: 1.6rem;
+  line-height: 1.7;
+  padding: 1rem 0;
+}
+
 .edit-product-form {
   min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);

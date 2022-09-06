@@ -3,7 +3,7 @@ class database
 {
 
     private static $db;
-    private  $connection;
+    public  $connection;
 
     private function __construct()
     {
@@ -46,18 +46,7 @@ class database
         $row = $statement->fetchAll();
         return $row;
     }
-    function fetch_specific_data($data_array = array(), $table, $col)
-    {
 
-        $row = array();
-        echo $sql = "select * from ${table} Where ${col}=?";
-
-        $statement = $this->connection->prepare($sql);
-        $statement->execute([$data_array[$col]]);
-        while ($row = $statement->fetch()) {
-            $product[] = $row['name'];
-        }
-    }
     //pass an associative array 
     function fetch_data_with_two_column_check($data_array, $table, $col1, $col2)
     {
@@ -68,9 +57,7 @@ class database
 
         $statement = $this->connection->prepare($sql);
         $statement->execute([$data_array[$col1], $data_array[$col2]]);
-        echo "two column check function is called
-    
-    ";
+        echo "two column check function is called ";
         if ($statement->rowCount()) {
             $row = $statement->fetchAll();
             print_r($row);
@@ -82,16 +69,16 @@ class database
 
     function fetch_data_with_one_column_check($data_array = array(), $table, $col)
     {
-        echo "$data_array[$col]";
+        // echo "$data_array[$col]";
 
         $row = array();
-        echo $sql = "select * from ${table} Where ${col}=?";
+        $sql = "select * from ${table} Where ${col}=?";
 
         $statement = $this->connection->prepare($sql);
         $statement->execute([$data_array[$col]]);
         if ($statement->rowCount()) {
             $row = $statement->fetchAll();
-            print_r($row);
+            // print_r($row);
         } else {
             echo "no data found";
         }

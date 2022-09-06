@@ -44,7 +44,7 @@ class blog
                 $blog['title'] = $r['title'];
                 $blog['category'] = $r['category'];
 
-                $blog['date'] = $r['date'];
+
                 $blog_list[] = $blog;
             }
         }
