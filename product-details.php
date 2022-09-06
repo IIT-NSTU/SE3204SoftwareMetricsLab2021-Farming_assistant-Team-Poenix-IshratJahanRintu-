@@ -1,4 +1,4 @@
-<?php include_once 'admin_header.php'
+<?php include_once 'handlers/admin_header.php'
 ?>
 
 
@@ -31,7 +31,7 @@
                    class="
                    bttn">update</a>
                 <a href="admin_products.php?delete=1"
-                   class="delete-btn"
+                   class="dlt-btn"
                    onclick="return confirm('delete this product?');">delete</a>
             </div>
         </div>
@@ -118,4 +118,4 @@
 
 
 
-<?php include 'footer.php' ?>
+<?php include 'handlers/footer.php' ?>

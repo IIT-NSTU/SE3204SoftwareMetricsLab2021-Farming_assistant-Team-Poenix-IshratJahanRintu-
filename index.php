@@ -7,30 +7,37 @@ $db = database::getInstance();
 
 <!-- home section starts  -->
 
-<section class="home" id="home">
+<section class="home"
+         id="home">
     <div class="swiper home-slider">
         <div class="swiper-wrapper">
-            <section class="swiper-slide slide" style="background: url(assets/images/farmer2.jpg) no-repeat">
+            <section class="swiper-slide slide"
+                     style="background: url(assets/images/farmer2.jpg) no-repeat">
                 <div class="content">
                     <h3>কৃষক বাঁচাও,দেশ বাঁচাও</h3>
                     <p>আমার মাথা,আমার টিমমেটদের মাথা ,আমার চৌদ্দ গুষ্টীর মাথা</p>
-                    <a href="#about" class="bttn">শুরু করুন</a>
+                    <a href="#about"
+                       class="bttn">শুরু করুন</a>
                 </div>
             </section>
 
-            <section class="swiper-slide slide" style="background: url(assets/images/slider1.jpg) no-repeat">
+            <section class="swiper-slide slide"
+                     style="background: url(assets/images/slider1.jpg) no-repeat">
                 <div class="content">
                     <h3>কৃষক বাঁচাও,দেশ বাঁচাও</h3>
                     <p>আমার মাথা,আমার টিমমেটদের মাথা ,আমার চৌদ্দ গুষ্টীর মাথা</p>
-                    <a href="#about" class="bttn">get started</a>
+                    <a href="#about"
+                       class="bttn">get started</a>
                 </div>
             </section>
 
-            <section class="swiper-slide slide" style="background: url(assets/images/farmer3.jpg) no-repeat">
+            <section class="swiper-slide slide"
+                     style="background: url(assets/images/farmer3.jpg) no-repeat">
                 <div class="content">
                     <h3>কৃষক বাঁচাও,দেশ বাঁচাও</h3>
                     <p>আমার মাথা,আমার টিমমেটদের মাথা ,আমার চৌদ্দ গুষ্টীর মাথা</p>
-                    <a href="#about" class="bttn">get started</a>
+                    <a href="#about"
+                       class="bttn">get started</a>
                 </div>
             </section>
         </div>
@@ -47,7 +54,8 @@ $db = database::getInstance();
 
 <!-- about section starts  -->
 
-<section class="about" id="about">
+<section class="about"
+         id="about">
     <h1 class="heading">আমাদের লক্ষ্য</h1>
 
     <div class="roww">
@@ -65,7 +73,8 @@ $db = database::getInstance();
                 বাজারজাতকরণের জন্য প্লাটফর্ম এবং কৃষি সম্পর্কিত বিভিন্ন সমস্যাবলির
                 সমাধান দিয়ে সহায়তা দিয়ে থাকে।
             </p>
-            <a href="#services" class="bttn">আরও দেখুন</a>
+            <a href="#services"
+               class="bttn">আরও দেখুন</a>
         </div>
     </div>
 
@@ -95,26 +104,31 @@ $db = database::getInstance();
 
 <!-- services section starts  -->
 
-<section class="services" id="services">
+<section class="services"
+         id="services">
     <h1 class="heading">আমাদের সেবাসমূহ</h1>
     <div class="box-container">
         <div class="box">
-            <img src="assets/images/internet.gif" alt="" />
+            <img src="assets/images/internet.gif"
+                 alt="" />
             <h3>কৃষিবিষয়ক খবরাখবর</h3>
         </div>
 
         <div class="box">
-            <img src="assets/images/document.gif" alt="" />
+            <img src="assets/images/document.gif"
+                 alt="" />
             <h3>ব্লগ</h3>
         </div>
 
         <div class="box">
-            <img src="assets/images/shopping-cart.gif" alt="" />
+            <img src="assets/images/shopping-cart.gif"
+                 alt="" />
             <h3>কৃষিপণ্য বাজারজাতকরণ</h3>
         </div>
 
         <div class="box">
-            <img src="assets/images/tech-support.gif" alt="" />
+            <img src="assets/images/tech-support.gif"
+                 alt="" />
             <h3>কৃষিবিষয়ক সমস্যাবলির সমাধান</h3>
         </div>
     </div>
@@ -126,45 +140,54 @@ $db = database::getInstance();
 
 <!-- popular section starts  -->
 
-<section class="popular" id="popular">
+<section class="popular"
+         id="popular">
     <h1 class="heading"> <span>পন্য</span> সমূহ</h1>
 
     <div class="box-container">
         <div class="box">
             <span class="price">২০০ টাকা </span>
-            <img src="assets/images/sp2.jpg" alt="" />
+            <img src="assets/images/sp2.jpg"
+                 alt="" />
             <h3>মিনিকেট চাল</h3>
 
             <p class="text-muted info"><span class="quantity">10</span><span class="quantity type">kg</span></p>
 
-            <a href="#" class="bttn">সকল পণ্য দেখুন</a>
+            <a href="#"
+               class="bttn">সকল পণ্য দেখুন</a>
         </div>
         <div class="box">
             <span class="price">২০০ টাকা </span>
-            <img src="assets/images/sp2.jpg" alt="" />
+            <img src="assets/images/sp2.jpg"
+                 alt="" />
             <h3>মিনিকেট চাল</h3>
 
             <p class="text-muted info"><span class="quantity">10</span><span class="quantity type">kg</span></p>
 
-            <a href="#" class="bttn">সকল পণ্য দেখুন</a>
+            <a href="#"
+               class="bttn">সকল পণ্য দেখুন</a>
         </div>
         <div class="box">
             <span class="price">২০০ টাকা </span>
-            <img src="assets/images/sp2.jpg" alt="" />
+            <img src="assets/images/sp2.jpg"
+                 alt="" />
             <h3>মিনিকেট চাল</h3>
 
             <p class="text-muted info"><span class="quantity">10</span><span class="quantity type">kg</span></p>
 
-            <a href="#" class="bttn">সকল পণ্য দেখুন</a>
+            <a href="#"
+               class="bttn">সকল পণ্য দেখুন</a>
         </div>
         <div class="box">
             <span class="price">২০০ টাকা </span>
-            <img src="assets/images/sp2.jpg" alt="" />
+            <img src="assets/images/sp2.jpg"
+                 alt="" />
             <h3>মিনিকেট চাল</h3>
 
             <p class="text-muted info"><span class="quantity">10</span><span class="quantity type">kg</span></p>
 
-            <a href="#" class="bttn">সকল পণ্য দেখুন</a>
+            <a href="#"
+               class="bttn">সকল পণ্য দেখুন</a>
         </div>
 
 
@@ -175,7 +198,8 @@ $db = database::getInstance();
 <!-- popular section ends -->
 <!-- blogs section starts  -->
 
-<section class="blogs" id="blogs">
+<section class="blogs"
+         id="blogs">
     <h1 class="heading">ব্লগসমূহ</h1>
 
     <div class="swiper blogs-slider">
@@ -191,19 +215,21 @@ $db = database::getInstance();
 
 
 
-                    <div class="swiper-slide slide">
-                        <div class="image">
-                            <img src="assets/uploaded_img/<?php echo $b['blog_img']; ?>" alt="">
+            <div class="swiper-slide slide">
+                <div class="image">
+                    <img src="assets/uploaded_img/<?php echo $b['blog_img']; ?>"
+                         alt="">
 
-                        </div>
-                        <div class="content">
-                            <h3><?php echo $b["title"] ?></h3>
-                            <p>
-                                <?php echo $b["category"] ?>
-                            </p>
-                            <a href="single_blog.php?blog_id=<?php echo $b["blog_id"] ?>" class="bttn">read more</a>
-                        </div>
-                    </div>
+                </div>
+                <div class="content">
+                    <h3><?php echo $b["title"] ?></h3>
+                    <p>
+                        <?php echo $b["category"] ?>
+                    </p>
+                    <a href="single_blog.php?blog_id=<?php echo $b["blog_id"] ?>"
+                       class="bttn">read more</a>
+                </div>
+            </div>
             <?php }
             } ?>
 

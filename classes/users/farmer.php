@@ -1,7 +1,6 @@
 <?php
 
-// include 'user.php';
-// include 'testdb.php';
+
   
 
  class farmer extends user{
@@ -17,13 +16,3 @@ function __construct(){
  
 
 }
-
-
-
-
-
- 
-
-
-
-?>
