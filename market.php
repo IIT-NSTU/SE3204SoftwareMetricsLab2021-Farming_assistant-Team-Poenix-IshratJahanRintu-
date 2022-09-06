@@ -1,5 +1,8 @@
 <?php
 include 'basic_header.php';
+include_once 'Database.php';
+include_once 'handlers/converter.php';
+$db = database::getInstance();
 ?>
 
 <!-- slider section start -->
@@ -133,61 +136,32 @@ include 'basic_header.php';
     <h1 class="heading"> <span>পন্য</span> সমূহ</h1>
 
     <div class="box-container">
-        <div class="box">
-            <span class="price">২০০ টাকা </span>
-            <img src="assets/images/sp2.jpg"
-                 alt="" />
-            <h3>মিনিকেট চাল</h3>
 
-            <p class="text-muted info"><span class="quantity">10</span><span class="quantity type">kg</span></p>
+        <?php
+        $sql = "SELECT * from product ORDER BY product_id ";
+        $statement = $db->connection->prepare($sql);
+        $statement->execute();
+        if ($statement->rowCount()) {
+            while ($product = $statement->fetch()) {
+
+
+
+        ?>
+        <div class="box">
+            <span class="price"><?php echo converter::en2bn($product['quantity'] * $product['unit_price']) ?> টাকা
+            </span>
+            <img src="assets/uploaded_img/<?php echo $product['product_img']; ?>"
+                 alt="">
+            <h3><?php echo $product['name']; ?></h3>
+
+            <p class="text-muted info"><span class="quantity"><?php echo $product['quantity_type']; ?></span><span
+                      class="quantity type"></span></p>
 
             <a href="#"
                class="bttn">order now</a>
         </div>
-        <div class="box">
-            <span class="price">২০০ টাকা </span>
-            <img src="assets/images/sp2.jpg"
-                 alt="" />
-            <h3>মিনিকেট চাল</h3>
-
-            <p class="text-muted info"><span class="quantity">10</span><span class="quantity type">kg</span></p>
-
-            <a href="#"
-               class="bttn">order now</a>
-        </div>
-        <div class="box">
-            <span class="price">২০০ টাকা </span>
-            <img src="assets/images/sp2.jpg"
-                 alt="" />
-            <h3>মিনিকেট চাল</h3>
-
-            <p class="text-muted info"><span class="quantity">10</span><span class="quantity type">kg</span></p>
-
-            <a href="#"
-               class="bttn">order now</a>
-        </div>
-        <div class="box">
-            <span class="price">২০০ টাকা </span>
-            <img src="assets/images/sp2.jpg"
-                 alt="" />
-            <h3>মিনিকেট চাল</h3>
-
-            <p class="text-muted info"><span class="quantity">10</span><span class="quantity type">kg</span></p>
-
-            <a href="#"
-               class="bttn">order now</a>
-        </div>
-        <div class="box">
-            <span class="price">২০০ টাকা </span>
-            <img src="assets/images/sp2.jpg"
-                 alt="" />
-            <h3>মিনিকেট চাল</h3>
-
-            <p class="text-muted info"><span class="quantity">10</span><span class="quantity type">kg</span></p>
-
-            <a href="#"
-               class="bttn">order now</a>
-        </div>
+        <?php }
+        } ?>
 
 
     </div>

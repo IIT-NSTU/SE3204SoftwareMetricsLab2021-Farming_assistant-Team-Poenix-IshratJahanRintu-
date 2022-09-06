@@ -45,12 +45,11 @@
                class="logo">Farming<span>Assistant</span></a>
 
             <nav class="navbar">
-                <a href="#home">হোম</a>
-                <a href="#about">আমাদের লক্ষ্য</a>
-                <a href="#services">সেবাসমূহ</a>
+                <a href="http://localhost/spl_php/index.php">হোম</a>
+
                 <a href="#projects">খবরাখবর</a>
-                <a href="#projects">কৃষিপণ্য</a>
-                <a href="#pricing">ব্লগ</a>
+                <a href="http://localhost/spl_php/market.php">কৃষিপণ্য</a>
+
             </nav>
 
             <div class="icons">
