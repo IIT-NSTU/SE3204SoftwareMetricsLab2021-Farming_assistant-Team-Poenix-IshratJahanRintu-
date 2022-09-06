@@ -1,16 +1,16 @@
-<?php include_once 'customer_header.php'
+<?php include_once 'handlers/admin_header.php'
 ?>
 
 <section class="show-products">
     <h1 class="heading text-center">অ্যাডমিনগণ</h1>
     <div class="box-container">
         <?php
-          if (isset($customer_list)) {
+              if (isset($customer_list)) {
 
-               if (count($customer_list) > 0) {
+                     if (count($customer_list) > 0) {
 
-                    foreach ($customer_list as $customer) {
-          ?>
+                            foreach ($customer_list as $customer) {
+              ?>
 
 
         <div class="box "
@@ -25,19 +25,19 @@
                    class="
                    bttn">update</a>
                 <a href="admin_products.php?delete=1"
-                   class="delete-btn"
+                   class="dlt-btn"
                    onclick="return confirm('delete this product?');">delete</a>
 
             </div>
         </div>
 
         <?php }
-               } else {
+                     } else {
 
-                    echo "No customer  to show";
-               }
-          }
-          ?>
+                            echo "No customer  to show";
+                     }
+              }
+              ?>
 
 
     </div>
@@ -98,4 +98,4 @@
 
 
 
-<?php include 'footer.php' ?>
+<?php include 'handlers/footer.php' ?>

@@ -39,8 +39,7 @@ session_start();
 
         <link rel="stylesheet"
               href="../assets/custom/loginpage.css" />
-        <link rel="stylesheet"
-              href="assets/custom/style.css" />
+
 
 
     </head>
@@ -51,12 +50,11 @@ session_start();
                class="logo">Farming<span>Assistant</span></a>
 
             <nav class="navbar">
-                <a href="#home">হোম</a>
-                <a href="#about">আমাদের লক্ষ্য</a>
-                <a href="#services">সেবাসমূহ</a>
+                <a href="http://localhost/spl_php/index.php">হোম</a>
+
                 <a href="#projects">খবরাখবর</a>
-                <a href="#projects">কৃষিপণ্য</a>
-                <a href="#pricing">ব্লগ</a>
+                <a href="http://localhost/spl_php/market.php">কৃষিপণ্য</a>
+                <a href="#blog">ব্লগ</a>
             </nav>
 
             <div class="icons">
@@ -96,7 +94,7 @@ session_start();
                         করুন</a></div>
                 <div class="action"><a href="http://localhost/spl_php/admin/order-details.php"> অর্ডার ম্যানেজ করুন</a>
                 </div>
-                <div class="action"><a href="http://localhost/spl_php/admin/blog-details.php"> ব্লগ ম্যানেজ করুন</a>
+                <div class="action"><a href="http://localhost/spl_php/handlers/blogHandler.php"> ব্লগ ম্যানেজ করুন</a>
                 </div>
 
             </div>

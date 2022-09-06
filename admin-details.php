@@ -1,4 +1,4 @@
-<?php include_once 'admin_header.php'
+<?php include_once 'handlers/admin_header.php'
 ?>
 
 <section class="show-products">
@@ -95,4 +95,4 @@
 
 
 
-<?php include 'footer.php' ?>
+<?php include 'handlers/footer.php' ?>

@@ -1,8 +1,5 @@
 <?php
-// session_start();
-// include 'user.php';
-// include 'testdb.php';
-  
+
 
  class agriculturist extends user{
     
@@ -18,10 +15,3 @@ function __construct(){
  
 
 }
-
-
- 
-
-
-
-?>
