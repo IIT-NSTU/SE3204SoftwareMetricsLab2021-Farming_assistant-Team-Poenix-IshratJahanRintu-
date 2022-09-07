@@ -47,6 +47,8 @@
 
 
 </section>
+
+<?php if ($_SESSION['user_type'] == "farmer") { ?>
 <section class="add-products">
     <form action="../handlers/blogHandler.php"
           method="post"
@@ -91,7 +93,7 @@
     </form>
 
 </section>
-
+<?php } ?>
 <!-- product CRUD section ends -->
 
 <!-- show products  -->

@@ -24,7 +24,7 @@
                 <a href="farmer_products.php"
                    class="
                    bttn">update</a>
-                <a href="admin_products.php?delete=1"
+                <a href="farmerHandler.php?delete_id=<?php echo $farmer['user_id']; ?>"
                    class=" dlt-btn"
                    onclick="return confirm('delete this product?');">delete</a>
 
@@ -34,7 +34,7 @@
         <?php }
                      } else {
 
-                            echo "কোন কৃষক নেই";
+                            echo "<h1 class='empty-heading'>কোন কৃষক নেই</h1>";
                      }
               }
               ?>
