@@ -82,3 +82,9 @@ var swiper = new Swiper(".logo-slider", {
     },
   },
 });
+
+//update page////////
+document.querySelector("#close-update").onclick = () => {
+  document.querySelector(".edit-product-form").style.display = "none";
+  window.location.href = "productHandler.php";
+};
