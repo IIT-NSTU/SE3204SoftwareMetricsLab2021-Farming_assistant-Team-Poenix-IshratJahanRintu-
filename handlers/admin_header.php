@@ -51,7 +51,7 @@
 
                 <a href="#projects">খবরাখবর</a>
                 <a href="http://localhost/spl_php/market.php">কৃষিপণ্য</a>
-                <a href="#blog">ব্লগ</a>
+
             </nav>
 
             <div class="icons">

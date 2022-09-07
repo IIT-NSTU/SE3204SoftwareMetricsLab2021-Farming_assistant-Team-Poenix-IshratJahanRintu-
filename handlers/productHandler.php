@@ -4,6 +4,8 @@ include 'Database.php';
 include 'converter.php';
 include '../classes/product.php';
 
+$db = database::getInstance();
+
 $p = new Product();
 
 
@@ -11,6 +13,33 @@ if (isset($_GET['delete_id'])) {
     $p->deleteProduct($_GET['delete_id']);
 }
 
+
+if (isset($_POST['update_product'])) {
+
+    $update_p_id = $_POST['update_p_id'];
+    $update_name = $_POST['update_name'];
+    $update_description = $_POST['update_description'];
+    $update_category = $_POST['update_category'];
+    $update_quantity_type = $_POST['update_quantity_type'];
+    $update_quantity = $_POST['update_quantity'];
+    $update_unit_price = $_POST['update_unit_price'];
+    $update_image = $_FILES['update_image']['name'];
+    $update_image_tmp_name = $_FILES['update_image']['tmp_name'];
+    $update_image_folder = '../assets/uploaded_img/' . $update_image;
+    $update_old_image = $_POST['update_old_image'];
+
+    echo  $update_query =  "UPDATE product SET  name='$update_name',description='$update_description',
+    category='$update_category',quantity_type='$update_quantity_type', quantity=$update_quantity,unit_price=$update_unit_price,
+      product_img = '$update_image' WHERE product_id = $update_p_id";
+    $stmnt = $db->connection->prepare($update_query);
+    $stmnt->execute() or die("update query failed");
+    move_uploaded_file($update_image_tmp_name, $update_folder);
+    unlink('uploaded_img/' . $update_old_image);
+
+
+
+    header('location:productHandler.php');
+}
 
 if (isset($_POST['add_product'])) {
 
@@ -37,4 +66,5 @@ if (isset($_POST['add_product'])) {
 }
 
 
-$p->viewAllproducts();
+$product_list = $p->viewAllproducts();
+include '../product-details.php';

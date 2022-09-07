@@ -39,7 +39,7 @@ class Product
     }
     function viewAllproducts()
     {
-
+        $product_list = array();
         $product = array();
         $result = array();
         if ($_SESSION['user_type'] == 'farmer') {
@@ -57,7 +57,7 @@ class Product
                 $stmnt->execute();
                 $product['seller'] = '';
                 while ($row = $stmnt->fetch()) {
-                    $product["seller"] = $row['name'];
+                    $product['seller'] = $row['name'];
                 }
                 $product['product_img'] = $r['product_img'];
                 $product['name'] = $r['name'];
@@ -70,7 +70,6 @@ class Product
             }
         }
 
-
-        include '../product-details.php';
+        return $product_list;
     }
 }
