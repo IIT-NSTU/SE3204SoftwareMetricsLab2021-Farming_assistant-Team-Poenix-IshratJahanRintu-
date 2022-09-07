@@ -21,6 +21,22 @@ class Product
             return true;
         }
     }
+
+
+    public function deleteProduct($where)
+    {
+
+        $sql = "DELETE FROM $this->table WHERE product_id=$where";
+        $statement = $this->db->connection->prepare($sql);
+        $statement->execute();
+        if ($statement->execute()) {
+
+            return true;
+        } else {
+
+            return false;
+        }
+    }
     function viewAllproducts()
     {
 
@@ -39,6 +55,7 @@ class Product
                 $sql = "SELECT name from user where user_id={$r['farmer_id']}";
                 $stmnt = $this->db->connection->prepare($sql);
                 $stmnt->execute();
+                $product['seller'] = '';
                 while ($row = $stmnt->fetch()) {
                     $product["seller"] = $row['name'];
                 }
@@ -48,6 +65,7 @@ class Product
                 $product['quantity'] = converter::en2bn($r['quantity']);
                 $product['quantity_type'] = $r['quantity_type'];
                 $product['price'] = converter::en2bn($r['quantity'] * $r['unit_price']);
+                $product['product_id'] = $r['product_id'];
                 $product_list[] = $product;
             }
         }

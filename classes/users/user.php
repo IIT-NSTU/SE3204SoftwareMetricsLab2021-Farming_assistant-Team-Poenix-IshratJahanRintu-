@@ -1,11 +1,15 @@
 <?php
-
-abstract class user
+class user
 {
   public $table = "user";
   public $user_info;
   public $db;
+  function __construct()
+  {
 
+
+    $this->db = database::getInstance();
+  }
 
 
 
@@ -23,7 +27,26 @@ abstract class user
       // header("location:http://localhost/spl_php/loginpage.php");
     }
   }
+  public function deleteUser($where = null)
+  {
 
+    $sql = "DELETE FROM $this->table WHERE user_id=$where";
+    $statement = $this->db->connection->prepare($sql);
+    $statement->execute();
+    if ($statement->execute()) {
+
+      $sql = "DELETE FROM product WHERE farmer_id=$where";
+      $product_delete = $this->db->connection->prepare($sql);
+      $product_delete->execute();
+      if ($product_delete->execute()) {
+        echo "farm product also deleted";
+        return true;
+      }
+    } else {
+
+      return false;
+    }
+  }
 
   public function signup($signup_info)
   {

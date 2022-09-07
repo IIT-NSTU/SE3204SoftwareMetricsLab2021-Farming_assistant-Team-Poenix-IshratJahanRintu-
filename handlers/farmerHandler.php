@@ -5,8 +5,15 @@ include_once '../classes/users/user.php';
 include_once '../classes/users/farmer.php';
 
 
+
+
+
 $a = new farmer();
-$farmer_list = $a->viewAllMembers();
-if (($a->countMembers()) > 0) {
-    include '../farmer-details.php';
+
+if (isset($_GET['delete_id'])) {
+    $a->deleteUser($_GET['delete_id']);
 }
+
+
+$farmer_list = $a->viewAllMembers();
+include '../farmer-details.php';

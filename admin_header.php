@@ -75,7 +75,7 @@
             </div>
 
             <div id="side-actions">
-                <div class="action"><a href="http://localhost/spl_php/admin/admin-panel.php"> এডমিন প্যানেল</a></div>
+                <div class="action"><a href="http://localhost/spl_php/admin-panel.php"> এডমিন প্যানেল</a></div>
                 <div class="action"><a href="http://localhost/spl_php/handlers/adminHandler.php">এডমিনদের বিবরণ </a>
                 </div>
                 <div class="action"><a href="http://localhost/spl_php/handlers/farmerHandler.php"> কৃষকদের বিবরণ</a>

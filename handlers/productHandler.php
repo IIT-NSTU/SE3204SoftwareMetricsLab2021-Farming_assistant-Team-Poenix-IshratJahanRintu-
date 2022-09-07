@@ -4,10 +4,12 @@ include 'Database.php';
 include 'converter.php';
 include '../classes/product.php';
 
-
 $p = new Product();
-$p->viewAllproducts();
 
+
+if (isset($_GET['delete_id'])) {
+    $p->deleteProduct($_GET['delete_id']);
+}
 
 
 if (isset($_POST['add_product'])) {
@@ -28,10 +30,11 @@ if (isset($_POST['add_product'])) {
 
 
 
-
-    $p = new Product();
     if ($p->addProduct($product_info)) {
         move_uploaded_file($image_tmp_name, $image_folder);
     }
     // header("Location:http://localhost/spl_php/handlers/productHandler.php");
 }
+
+
+$p->viewAllproducts();
