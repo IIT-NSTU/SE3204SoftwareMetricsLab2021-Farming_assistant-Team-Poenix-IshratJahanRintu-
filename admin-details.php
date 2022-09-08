@@ -21,10 +21,6 @@
                 <div class="price text-muted"><?php echo $admin['phone_number']; ?></div>
                 <div class="price text-muted"><?php echo $admin['address']; ?></div>
 
-                <a href="admin_products.php"
-                   class="
-                   bttn">update</a>
-
             </div>
         </div>
 
@@ -82,7 +78,7 @@
 
 
         <input type="submit"
-               value="add_admin"
+               value="অ্যাডমিন যোগ করুন"
                name="add_admin"
                class="bttn">
     </form>
