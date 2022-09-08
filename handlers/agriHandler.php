@@ -5,8 +5,10 @@ include_once '../classes/users/user.php';
 include_once '../classes/users/agriculturist.php';
 
 
-
-
+$a = new agriculturist();
+if (isset($_GET['delete_id'])) {
+    $a->deleteUser($_GET['delete_id']);
+}
 
 
 if (isset($_POST['add_agri'])) {
@@ -22,7 +24,7 @@ if (isset($_POST['add_agri'])) {
 
 
 
-    $a = new agriculturist();
+
     if ($a->signup($agri_info)) {
         echo "new agriculturist added";
     }
@@ -31,6 +33,4 @@ if (isset($_POST['add_agri'])) {
 $a = new agriculturist();
 
 $agri_list = $a->viewAllMembers();
-if (($a->countMembers()) > 0) {
-    include '../agri-details.php';
-}
+include '../agri-details.php';

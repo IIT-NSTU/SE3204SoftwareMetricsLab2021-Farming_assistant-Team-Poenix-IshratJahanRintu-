@@ -21,12 +21,10 @@
                 <div class="price text-muted"><?php echo $customer['phone_number']; ?></div>
                 <div class="price text-muted"><?php echo $customer['address']; ?></div>
 
-                <a href="customer_products.php"
-                   class="
-                   bttn">update</a>
-                <a href="admin_products.php?delete=1"
-                   class="dlt-btn"
-                   onclick="return confirm('delete this product?');">delete</a>
+
+                <a href="customerHandler.php?delete_id=<?php echo $customer['user_id']; ?>"
+                   class=" dlt-btn"
+                   onclick="return confirm('কাস্টমার রিমুভ করতে চান?');">মুছুন</a>
 
             </div>
         </div>
@@ -34,7 +32,7 @@
         <?php }
                      } else {
 
-                            echo "<h1 class='empty-heading'></h1>";
+                            echo "<h1 class='empty-heading'>কোন ক্রেতা নেই</h1>";
                      }
               }
               ?>

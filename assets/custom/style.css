@@ -389,8 +389,8 @@ div#side-actions {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
   gap: 1rem;
-  align-items: flex-end;
-  height: 255px;
+  align-items: flex-start;
+  height: 196px;
 }
 
 .speciality .box-container .box {
@@ -598,27 +598,6 @@ p.text-muted.info {
   }
 }
 
-/*slider*/
-/*
-.slider {
-  background-color: rgb(201, 242, 174);
-  padding-top: 80px;
-  height: 655px;
-}
-.slider img {
-  height: 439px;
-  object-fit: contain;
-}
-.slider .slider-text h2 {
-  font-size: 68px;
-  font-weight: 700px;
-}
-.slider .slider-text p {
-  font-size: 16px;
-  margin-top: 36px;
-  margin-bottom: 65px;
-}*/
-
 /* admin panel */
 section {
   padding: 3rem 2rem;
@@ -660,15 +639,16 @@ section {
 }
 
 .dashboard .box-container .box p {
+  color: white;
   margin-top: 1.5rem;
   padding: 1.5rem;
   background-color: rgb(206, 235, 206);
   color: var(--purple);
-  font-size: 2rem;
+  font-size: 3rem;
   border-radius: 0.5rem;
 }
 .dashboard .box-container .box p:hover {
-  background-color: #7e9d3e;
+  background-color: yellowgreen;
   border: none;
 }
 
@@ -744,6 +724,7 @@ h1.empty-heading {
   text-align: center;
   border: 2px solid #0e610e;
   padding: 10px;
+  /* width: 200px; */
 }
 
 .show-products .box-container .box .name {
@@ -940,6 +921,8 @@ h1.empty-heading {
 
 .product-div-right span {
   display: block;
+  /* font-size: 18px; */
+  /* margin: 9px; */
 }
 .product-name {
   font-size: 26px;
@@ -975,12 +958,70 @@ h1.empty-heading {
   width: 207px;
 }
 .img-container img {
-  width: 403px;
+  width: 411px;
   margin: 0 auto;
-  height: 324px;
+  height: 392px;
   object-fit: cover;
   padding: 8px;
 }
+
+#bkash_no {
+  font-size: 18px;
+  color: darkred;
+  font-weight: bold;
+}
+
+#bkash-text {
+  font-size: 15px;
+  color: #042704;
+  margin: 10px auto;
+}
+
+#trans-id {
+  border: 1px solid lightgrey;
+  text-align: center;
+  padding: 10px 25px;
+  font-size: 17px;
+  width: 236px;
+}
+
+/* checkout page design ends*********/
+
+/* order details design start ***************/
+
+.order-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.order-table td,
+.order-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-bottom: 1.5px solid grey;
+  font-size: 16px;
+  text-align: center;
+}
+
+.order-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.order-table tr:hover {
+  background-color: #ddd;
+}
+
+.order-table th {
+  text-align: center;
+  background-color: #093d09;
+  color: white;
+  padding: 10px auto;
+  padding: 10px auto;
+  font-size: 15px;
+  padding: 20px 0px;
+}
+
+/*********order details design ends**************/
 
 @media screen and (max-width: 992px) {
   .product-div {

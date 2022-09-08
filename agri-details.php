@@ -24,9 +24,9 @@
                 <a href="admin_products.php"
                    class="
                    bttn">update</a>
-                <a href="admin_products.php?delete=1"
-                   class="dlt-btn"
-                   onclick="return confirm('delete this product?');">delete</a>
+                <a href="agriHandler.php?delete_id=<?php echo $agri['user_id']; ?>"
+                   class=" dlt-btn"
+                   onclick="return confirm('কৃষিবিদ রিমুভ করতে চান?');">delete</a>
             </div>
         </div>
 
