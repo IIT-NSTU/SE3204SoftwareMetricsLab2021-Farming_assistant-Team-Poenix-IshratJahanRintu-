@@ -82,7 +82,11 @@ var swiper = new Swiper(".logo-slider", {
     },
   },
 });
-
+document.getElementById("close-category").onclick = () => {
+  console.log("hello");
+  document.querySelector(".edit-product-form").style.display = "none";
+  window.location.href = "categoryHandler.php";
+};
 //update page////////
 document.querySelector("#close-update").onclick = () => {
   document.querySelector(".edit-product-form").style.display = "none";
