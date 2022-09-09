@@ -1,18 +1,66 @@
 <?php
-
-class category implements ExistingCheckable
+//implements ExistingCheckable
+class category
 {
-    public $table = "category";
+
+    public $table = "product_category";
     public $db;
-
-
-
-    public function checkExisting(ExistingChecker $ex, $category_info = array())
+    function __construct()
     {
-        if ($ex->checkExistingCategory($category_info)) {
-            echo "category existing";
-        } else {
-            echo "no existing found";
+        $this->db = EDatabase::getInstance();
+    }
+
+
+    // public function checkExisting(ExistingChecker $ex, $category_info = array())
+    // {
+    //     if ($ex->checkExistingCategory($category_info)) {
+    //         echo "category existing";
+    //     } else {
+    //         echo "no existing found";
+    //     }
+    // }
+
+
+    function addCategory($category_info)
+    {
+        print_r($category_info);
+
+        if ($this->db->insert($this->table, $category_info)) {
+
+            echo "category added to the system";
+            return true;
         }
+    }
+
+
+    public function deleteCategory($where)
+    {
+
+        $sql = "DELETE FROM $this->table WHERE category_id={$where['category_id']}";
+        $statement = $this->db->connection->prepare($sql);
+        $statement->execute();
+        if ($statement->execute()) {
+
+            return true;
+        } else {
+
+            return false;
+        }
+    }
+
+    public function editCategory($edit_info = array())
+    {
+        echo  $update_query =  "UPDATE $this->table SET  category_name='{$edit_info["update_name"]}',category_img='{$edit_info["update_image"]}' WHERE category_id={$edit_info["update_id"]}";
+        $stmnt = $this->db->connection->prepare($update_query);
+        $stmnt->execute() or die("update query failed");
+        move_uploaded_file($edit_info['update_image_tmp_name'], $edit_info['update_image_folder']);
+        unlink('../assets/uploaded_img/' . $edit_info['update_old_image']);
+        header("location:categoryHandler.php");
+    }
+
+    public function viewAllCategory()
+    {
+        $result = $this->db->fetch_all_data($this->table);
+        return $result;
     }
 }
