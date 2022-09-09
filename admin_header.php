@@ -89,7 +89,7 @@
                         করুন</a></div>
                 <div class="action"><a href="http://localhost/spl_php/admin/order-details.php"> অর্ডার ম্যানেজ করুন</a>
                 </div>
-                <div class="action"><a href="http://localhost/spl_php/admin/blog-details.php"> ব্লগ ম্যানেজ করুন</a>
+                <div class="action"><a href="http://localhost/spl_php/handlers/blogHandler.php"> ব্লগ ম্যানেজ করুন</a>
                 </div>
 
             </div>
