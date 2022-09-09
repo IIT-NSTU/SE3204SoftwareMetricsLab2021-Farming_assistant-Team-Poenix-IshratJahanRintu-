@@ -1,35 +1,63 @@
 <?php
 session_start();
-include 'Database.php';
+include_once 'DatabaseEdited.php';
+
 include 'converter.php';
 include '../classes/blog.php';
+include_once '../classes/blogManagerFactory.php';
+include_once '../classes/manageBlog.php';
 
 
-$p = new blog();
-$p->viewAllBlogs();
+
+$manager_type;
+$blog_info = array();
+$blog = new Blog();
+$image_info = array();
 
 
+
+if (isset($_GET['delete_id'])) {
+    $manager_type = "delete";
+    $blog_info['blog_id'] = $_GET['delete_id'];
+}
+
+if (isset($_POST['update_blog'])) {
+    print_r($_FILES);
+    $manager_type = "update";
+    $blog_info['update_id'] = $_POST['update_b_id'];
+
+    $blog_info['update_name'] = $_POST['update_name'];
+    $blog_info['update_description'] = $_POST['update_description'];
+    $blog_info['update_category'] = $_POST['update_category'];
+    $blog_info['update_image'] = $_FILES['update_image']['name'];
+    $blog_info['update_image_tmp_name'] = $_FILES['update_image']['tmp_name'];
+    $update_image = $_FILES['update_image']['name'];
+    $blog_info['update_image_folder'] = '../assets/uploaded_img/' . $update_image;
+    $blog_info['update_old_image'] = $_POST['update_old_image'];
+}
 
 if (isset($_POST['add_blog'])) {
+    $manager_type = "add";
+    echo $blog_info["title"] = $_POST['name'];
+    echo $blog_info["description"] = $_POST['description'];
+    echo $blog_info["category"] = $_POST['category'];
 
-    echo $blog_info["title"] =  "'{$_POST['name']}'";
-    echo $blog_info["description"] =  "'{$_POST['description']}'";
-    echo $blog_info["category"] =  "'{$_POST['category']}'";
+    $blog_info["blog_img"] = $_FILES['image']['name'];
 
-    $blog_info["blog_img"] = "'{$_FILES['image']['name']}'";
-
-    echo $blog_info["author"] =  $_SESSION['user_id'];
-    $image_tmp_name = $_FILES['image']['tmp_name'];
-    $image_folder = '../assets/uploaded_img/' . $_FILES['image']['name'];
-
-
-    print_r($blog_info);
-
-
-
-
-    $p = new blog();
-    if ($p->addBlog($blog_info)) {
-        move_uploaded_file($image_tmp_name, $image_folder);
-    }
+    echo $blog_info["author"] = $_SESSION['user_id'];
+    $image_info['image_tmp_name'] = $_FILES['image']['tmp_name'];
+    $image = $_FILES['image']['name'];
+    $image_info['image_folder'] = '../assets/uploaded_img/' . $image;
 }
+
+if (isset($manager_type)) {
+    $manager_factory = new BlogManagerFactory($manager_type);
+    $manage_blog = $manager_factory->getManager($blog, $blog_info, $image_info);
+
+    $manager = new BlogManager($manage_blog);
+    $manager->action();
+}
+
+
+$blog_list = $blog->viewAllBlogs();
+include '../blog-details.php';
