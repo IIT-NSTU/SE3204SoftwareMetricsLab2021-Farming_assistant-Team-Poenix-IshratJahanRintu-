@@ -26,11 +26,13 @@ include 'admin_header.php';
                         <th>দাম</th>
                         <th>পরিমাণ</th>
                         <th>কৃষক</th>
+                        <th>তারিখ</th>
                         <th>পেমেন্ট স্ট্যাটাস</th>
                         <th>কৃষক থেকে পণ্য গ্রহণ </th>
                         <th>ট্রান্সেকশন আইডি</th>
                         <th>পণ্য ডেলিভারি</th>
-                        <th>আপডেট করুন</th>
+                        <th>আপডেট </th>
+
                     </tr>
                     <tr>
                         <td>১</td>
@@ -39,10 +41,22 @@ include 'admin_header.php';
                         <td><span>৫০</span> টাকা</td>
                         <td>অনুপা</td>
                         <td>রিন্তু</td>
-                        <td> হয়েছে</td>
+                        <td>198404510</td>
                         <td><select style="margin: 0; width:max-content;padding: 11px;
-    background-color: #4b4b4c;
-    text-align: center; border-radius: 8px;box-shadow: inset 8px 8px 8px grey, inset -8px -8px 8px black;"
+    background-color: #093d09;
+    text-align: center; border-radius: 8px;box-shadow: inset 8px 8px 8px #198754, inset -8px -8px 8px black;"
+                                    name="recieved-farmer"
+                                    id=""
+                                    class="bttn">
+                                <option value="pending">পেন্ডিং</option>
+                                <option value="complete">কমপ্লিট</option>
+                                <option value="rejected">রিজেক্টেড</option>
+
+
+                            </select></td>
+                        <td><select style="margin: 0; width:max-content;padding: 11px;
+    background-color: #093d09;
+    text-align: center; border-radius: 8px;box-shadow: inset 8px 8px 8px #198754, inset -8px -8px 8px black;"
                                     name="recieved-farmer"
                                     id=""
                                     class="bttn">
@@ -52,8 +66,8 @@ include 'admin_header.php';
                             </select></td>
                         <td>ABBDKLK1255EHD</td>
                         <td><select style="margin: 0; width:max-content;padding: 11px;
-    background-color: #4b4b4c;
-    text-align: center; border-radius: 8px;box-shadow: inset 8px 8px 8px grey, inset -8px -8px 8px black;"
+    background-color: #093d09;
+    text-align: center; border-radius: 8px;box-shadow: inset 8px 8px 8px #198754, inset -8px -8px 8px black;"
                                     name="recieved-farmer"
                                     id=""
                                     class="bttn">
@@ -65,7 +79,7 @@ include 'admin_header.php';
                                class="bttn"
                                style="margin: 0;
     padding: 11px;
-    border-radius: 8px;">আপডেট করুন</a></td>
+    border-radius: 8px;">আপডেট</a></td>
 
                     </tr>
 
