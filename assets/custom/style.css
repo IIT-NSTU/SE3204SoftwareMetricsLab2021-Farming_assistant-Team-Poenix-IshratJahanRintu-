@@ -466,7 +466,7 @@ div#side-actions {
 .popular .box-container .box img {
   height: 25rem;
   object-fit: cover;
-  width: 100%;
+  width: 99%;
   border-radius: 0.5rem;
 }
 
