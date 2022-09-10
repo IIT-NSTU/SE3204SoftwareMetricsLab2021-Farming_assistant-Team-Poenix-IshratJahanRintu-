@@ -22,9 +22,9 @@ class user
       $_SESSION['user_id'] = $found_row[0]['user_id'];
       $_SESSION['user_type']
         = $found_row[0]['user_type'];
-      header("location:http://localhost/spl_php/index.php");
+      header("location:../index.php");
     } else {
-      header("location:http://localhost/spl_php/loginpage.php");
+      header("location:../loginpage.php");
     }
   }
   public function deleteUser($where = null)
@@ -54,7 +54,7 @@ class user
       echo "member already exists with this phone number";
     } else {
       $this->db->insert($this->table, $signup_info);
-      header("Location:http://localhost/spl_php/loginpage.php");
+      header("Location:loginpage.php");
       echo "user added to the system";
     }
   }

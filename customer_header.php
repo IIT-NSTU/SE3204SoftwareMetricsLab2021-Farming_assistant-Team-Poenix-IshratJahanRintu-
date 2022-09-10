@@ -63,10 +63,10 @@
                class="logo">Farming<span>Assistant</span></a>
 
             <nav class="navbar">
-                <a href="http://localhost/spl_php/index.php">হোম</a>
+                <a href="http://localhost/Farming-assistant/index.php">হোম</a>
 
                 <a href="#projects">খবরাখবর</a>
-                <a href="http://localhost/spl_php/market.php">কৃষিপণ্য</a>
+                <a href="http://localhost/Farming-assistant/market.php">কৃষিপণ্য</a>
 
             </nav>
 
@@ -74,7 +74,7 @@
                 <div id="menu-btn"
                      class="fas fa-bars"></div>
 
-                <a href="http://localhost/spl_php/logoutpage.php">
+                <a href="http://localhost/Farming-assistant/logoutpage.php">
                     <div title="লগআউট করুন"
                          class="bi bi-box-arrow-right">
                         </button>

@@ -62,7 +62,7 @@
                 <a href="http://localhost/spl_php/index.php">হোম</a>
 
                 <a href="#">খবরাখবর</a>
-                <a href="http://localhost/spl_php/market.php">কৃষিপণ্য</a>
+                <a href="http://localhost/Farming-assistant/market.php">কৃষিপণ্য</a>
 
             </nav>
 
@@ -70,7 +70,7 @@
                 <div id="menu-btn"
                      class="fas fa-bars"></div>
 
-                <a href="http://localhost/spl_php/logoutpage.php">
+                <a href="http://localhost/Farming-assistant/logoutpage.php">
                     <div title="লগআউট করুন"
                          class="bi bi-box-arrow-right">
                         </button>
@@ -94,10 +94,11 @@
             </div>
 
             <div id="side-actions">
-                <div class="action"><a href="http://localhost/spl_php/handlers/productHandler.php"> কৃষিপণ্য
+                <div class="action"><a href="http://localhost/Farming-assistant/handlers/productHandler.php"> কৃষিপণ্য
                         ম্যানেজ
                         করুন</a></div>
-                <div class="action"><a href="http://localhost/spl_php/order-details.php"> অর্ডার ম্যানেজ করুন</a>
+                <div class="action"><a href="http://localhost/Farming-assistant/order-details.php"> অর্ডার ম্যানেজ
+                        করুন</a>
                 </div>
                 <div class="action"><a href="#"> সমস্যা বলুন</a>
                 </div>
