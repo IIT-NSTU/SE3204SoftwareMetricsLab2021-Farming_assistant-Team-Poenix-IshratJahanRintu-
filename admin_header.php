@@ -1,5 +1,3 @@
-<?php
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,11 +28,28 @@
 
         <link rel="stylesheet"
               href="assets/icon/bootstrap-icons.css" />
-
+        <link rel="stylesheet"
+              href="assets/custom/loginpage.css" />
         <!-- Custom css files -->
 
         <link rel="stylesheet"
               href="assets/custom/style.css" />
+
+        <!-- bootstrap paths -->
+
+        <link rel="stylesheet"
+              href="../assets/css/bootstrap.min.css" />
+
+        <link rel="stylesheet"
+              href="../assets/icon/bootstrap-icons.css" />
+
+        <!-- Custom css files -->
+
+        <link rel="stylesheet"
+              href="../assets/custom/style.css" />
+
+        <link rel="stylesheet"
+              href="../assets/custom/loginpage.css" />
 
 
     </head>
@@ -56,8 +71,13 @@
                 <div id="menu-btn"
                      class="fas fa-bars"></div>
 
-                <div id="login-btn"
-                     class="fas fa-user"></div>
+                <a href="http://localhost/spl_php/logoutpage.php">
+                    <div title="লগআউট করুন"
+                         class="bi bi-box-arrow-right">
+                        </button>
+                    </div>
+                </a>
+
                 <div id="info-btn"
                      class="fas fa-info-circle"></div>
             </div>
@@ -87,9 +107,12 @@
                 <div class="action"><a href="http://localhost/spl_php/handlers/productHandler.php"> কৃষিপণ্য
                         ম্যানেজ
                         করুন</a></div>
-                <div class="action"><a href="http://localhost/spl_php/admin/order-details.php"> অর্ডার ম্যানেজ করুন</a>
+                <div class="action"><a href="http://localhost/spl_php/order-details.php"> অর্ডার ম্যানেজ করুন</a>
                 </div>
                 <div class="action"><a href="http://localhost/spl_php/handlers/blogHandler.php"> ব্লগ ম্যানেজ করুন</a>
+                </div>
+                <div class="action"><a href="http://localhost/spl_php/handlers/categoryHandler.php"> কৃষিপণ্যের
+                        ক্যাটাগরি ম্যানেজ করুন</a>
                 </div>
 
             </div>

@@ -1,4 +1,4 @@
-<?php include_once 'handlers/admin_header.php';
+<?php
 include_once 'handlers/DatabaseEdited.php';
 
 $db = EDatabase::getInstance();

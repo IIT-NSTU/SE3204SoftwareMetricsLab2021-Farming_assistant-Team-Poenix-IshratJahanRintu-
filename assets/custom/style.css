@@ -122,6 +122,10 @@ header .navbar a {
   text-decoration-line: underline;
   font-size: 2.1rem;
 }
+
+.icons {
+  display: flex;
+}
 .header .icons div {
   height: 5rem;
   width: 5rem;
@@ -132,6 +136,9 @@ header .navbar a {
   cursor: pointer;
   text-align: center;
   margin-left: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header .icons div:hover {
   background: green;

@@ -1,5 +1,16 @@
 <?php
 session_start();
+
+if (isset($_SESSION['user_type'])) {
+    if ($_SESSION['user_type'] == "farmer") {
+        include_once '../farmer_header.php';
+    } else if ($_SESSION['user_type'] == "admin") {
+        include_once '../admin_header.php';
+    } else {
+        header("location:localhost/spl_php/index.php");
+    }
+}
+
 include 'Database.php';
 include 'converter.php';
 include '../classes/product.php';

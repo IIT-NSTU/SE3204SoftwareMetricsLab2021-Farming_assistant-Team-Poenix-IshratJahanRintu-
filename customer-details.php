@@ -1,6 +1,3 @@
-<?php include_once 'handlers/admin_header.php'
-?>
-
 <section class="show-products">
     <h1 class="heading text-center">ক্রেতাগণ</h1>
     <div class="box-container">

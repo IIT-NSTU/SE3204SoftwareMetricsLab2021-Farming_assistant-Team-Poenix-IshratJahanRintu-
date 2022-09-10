@@ -1,5 +1,16 @@
 <?php
-include_once 'admin_header.php';
+session_start();
+if (isset($_SESSION['user_type'])) {
+    if ($_SESSION['user_type'] == "farmer") {
+        include_once 'farmer_header.php';
+    } else if ($_SESSION['user_type'] == "admin") {
+        include_once 'admin_header.php';
+    } else if ($_SESSION['user_type'] == "customer") {
+        include_once 'customer_header.php';
+    } else {
+        include_once 'agri_header.php';
+    }
+} else include_once 'basic_header.php';
 include_once 'Database.php';
 
 
@@ -26,33 +37,38 @@ if (isset($_GET['blog_id'])) {
 
 
 ?>
-    <section class="blog-container" id="posts">
+<section class="blog-container"
+         id="posts">
 
-        <div class="posts-container">
+    <div class="posts-container">
 
-            <div class="post">
-                <img src="assets/uploaded_img/<?php echo $blog['blog_img']; ?>" alt="" class="image">
+        <div class="post">
+            <img src="assets/uploaded_img/<?php echo $blog['blog_img']; ?>"
+                 alt=""
+                 class="image">
 
-                <h3 class="title heading"><?php echo $blog["title"] ?></h3>
-                <p class="text"><?php echo $blog["description"] ?></p>
+            <h3 class="title heading"><?php echo $blog["title"] ?></h3>
+            <p class="text"><?php echo $blog["description"] ?></p>
 
-                <div class="links">
+            <div class="links">
 
-                    <i class="far fa-user"></i>
-                    <span style=" font-size: 10px; ">পোস্টদাতা <?php echo $blog["author"] ?></span>
+                <i class="far fa-user"></i>
+                <span style=" font-size: 10px; ">পোস্টদাতা <?php echo $blog["author"] ?></span>
 
-                    <a href=" #" class="icon">
-                        <i class="far fa-comment"></i>
-                        <span>(45)</span>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="far fa-share-square"></i>
-                        <span>(29)</span>
-                    </a>
-                </div>
+                <a href=" #"
+                   class="icon">
+                    <i class="far fa-comment"></i>
+                    <span>(45)</span>
+                </a>
+                <a href="#"
+                   class="icon">
+                    <i class="far fa-share-square"></i>
+                    <span>(29)</span>
+                </a>
             </div>
+        </div>
 
-    </section>
+</section>
 
 
 

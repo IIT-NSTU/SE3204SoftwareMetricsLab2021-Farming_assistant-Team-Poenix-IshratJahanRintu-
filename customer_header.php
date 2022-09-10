@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,6 +37,22 @@ session_start();
         <link rel="stylesheet"
               href="assets/custom/loginpage.css" />
 
+        <!-- bootstrap paths -->
+
+        <link rel="stylesheet"
+              href="../assets/css/bootstrap.min.css" />
+
+        <link rel="stylesheet"
+              href="../assets/icon/bootstrap-icons.css" />
+
+        <!-- Custom css files -->
+
+        <link rel="stylesheet"
+              href="../assets/custom/style.css" />
+
+        <link rel="stylesheet"
+              href="../assets/custom/loginpage.css" />
+
 
 
     </head>
@@ -50,19 +63,24 @@ session_start();
                class="logo">Farming<span>Assistant</span></a>
 
             <nav class="navbar">
-                <a href="#home">হোম</a>
-                <a href="#about">আমাদের লক্ষ্য</a>
-                <a href="#services">সেবাসমূহ</a>
+                <a href="http://localhost/spl_php/index.php">হোম</a>
+
                 <a href="#projects">খবরাখবর</a>
-                <a href="#pricing">ব্লগ</a>
+                <a href="http://localhost/spl_php/market.php">কৃষিপণ্য</a>
+
             </nav>
 
             <div class="icons">
                 <div id="menu-btn"
                      class="fas fa-bars"></div>
 
-                <div id="login-btn"
-                     class="fas fa-user"></div>
+                <a href="http://localhost/spl_php/logoutpage.php">
+                    <div title="লগআউট করুন"
+                         class="bi bi-box-arrow-right">
+                        </button>
+                    </div>
+                </a>
+
                 <div id="info-btn"
                      class="fas fa-info-circle"></div>
             </div>
@@ -79,15 +97,12 @@ session_start();
                 <p>01756609963</p>
             </div>
 
-            <div id="side-actions">
-                <div class="action"><a href="#"> এডমিন প্যানেল</a></div>
-                <div class="action"><a href="#">এডমিনদের বিবরণ </a></div>
-                <div class="action"><a href="#"> কৃষকদের বিবরণ</a></div>
-                <div class="action"><a href="#"> কৃষিবিদদের বিবরণ</a></div>
-                <div class="action"><a href="#"> ক্রেতাদের বিবরণ</a></div>
-                <div class="action"><a href="#"> কৃষিপণ্য ম্যানেজ করুন</a></div>
-                <div class="action"><a href="#"> অর্ডার ম্যানেজ করুন</a></div>
-                <div class="action"><a href="#"> ব্লগ ম্যানেজ করুন</a></div>
+            <div id="side-actions"
+                 style="height: 10%;">
+
+
+                <div class="action"><a href="#"> অর্ডারগুলো দেখুন</a></div>
+
 
             </div>
         </div>
