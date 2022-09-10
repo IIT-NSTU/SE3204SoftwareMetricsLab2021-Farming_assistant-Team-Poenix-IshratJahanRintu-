@@ -1,5 +1,15 @@
 <?php
 session_start();
+
+if (isset($_SESSION['user_type'])) {
+    if ($_SESSION['user_type'] == "admin") {
+        include_once '../admin_header.php';
+    } else if ($_SESSION['user_type'] == "agriculturist") {
+        include_once '../agri_header.php';
+    } else {
+        header("location:localhost/spl_php/index.php");
+    }
+}
 include_once 'DatabaseEdited.php';
 
 include 'converter.php';

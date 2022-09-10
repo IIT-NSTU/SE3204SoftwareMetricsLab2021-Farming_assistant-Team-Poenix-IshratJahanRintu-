@@ -6,7 +6,7 @@ include '../classes/category.php';
 include_once '../classes/managerFactory.php';
 include_once '../classes/manageCategory.php';
 include_once 'DatabaseEdited.php';
-
+include_once '../admin_header.php';
 
 
 $manager_type;

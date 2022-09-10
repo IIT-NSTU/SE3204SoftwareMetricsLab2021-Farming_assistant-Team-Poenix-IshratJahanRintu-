@@ -24,6 +24,22 @@
         <!-- bootstrap paths -->
 
         <link rel="stylesheet"
+              href="assets/css/bootstrap.min.css" />
+
+        <link rel="stylesheet"
+              href="assets/icon/bootstrap-icons.css" />
+
+        <!-- Custom css files -->
+
+        <link rel="stylesheet"
+              href="assets/custom/style.css" />
+
+        <link rel="stylesheet"
+              href="assets/custom/loginpage.css" />
+
+        <!-- bootstrap paths -->
+
+        <link rel="stylesheet"
               href="../assets/css/bootstrap.min.css" />
 
         <link rel="stylesheet"
@@ -58,8 +74,13 @@
                 <div id="menu-btn"
                      class="fas fa-bars"></div>
 
-                <div id="login-btn"
-                     class="fas fa-user"></div>
+                <a href="http://localhost/spl_php/logoutpage.php">
+                    <div title="লগআউট করুন"
+                         class="bi bi-box-arrow-right">
+                        </button>
+                    </div>
+                </a>
+
                 <div id="info-btn"
                      class="fas fa-info-circle"></div>
             </div>
@@ -76,29 +97,17 @@
                 <p>01756609963</p>
             </div>
 
-            <div id="side-actions">
-                <div class="action"><a href="http://localhost/spl_php/admin-panel.php"> এডমিন প্যানেল</a></div>
-                <div class="action"><a href="http://localhost/spl_php/handlers/adminHandler.php">এডমিনদের বিবরণ </a>
-                </div>
-                <div class="action"><a href="http://localhost/spl_php/handlers/farmerHandler.php"> কৃষকদের বিবরণ</a>
-                </div>
-                <div class="action"><a href="http://localhost/spl_php/handlers/agriHandler.php"> কৃষিবিদদের বিবরণ</a>
-                </div>
-                <div class="action"><a href="http://localhost/spl_php/handlers/customerHandler.php"> ক্রেতাদের বিবরণ</a>
-                </div>
-                <div class="action"><a href="http://localhost/spl_php/handlers/productHandler.php"> কৃষিপণ্য
-                        ম্যানেজ
+            <div id="side-actions"
+                 style="height: 30%;">
+
+
+                <div class="action"><a href="http://localhost/spl_php/handlers/blogHandler.php"> ব্লগগুলো ম্যানেজ
                         করুন</a></div>
-                <div class="action"><a href="http://localhost/spl_php/order-details.php"> অর্ডার ম্যানেজ করুন</a>
-                </div>
-                <div class="action"><a href="http://localhost/spl_php/handlers/blogHandler.php"> ব্লগ ম্যানেজ করুন</a>
-                </div>
-                <div class="action"><a href="http://localhost/spl_php/handlers/categoryHandler.php">প্রোডাক্ট ক্যাটাগরি
-                        ম্যানেজ করুন </a>
-                </div>
+                <div class="action"><a href="#"> কৃষকদের সমস্যার সমাধান দিন</a></div>
+
+
 
             </div>
-        </div>
         </div>
 
         <!-- header section ends -->

@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,6 +37,22 @@ session_start();
         <link rel="stylesheet"
               href="assets/custom/loginpage.css" />
 
+        <!-- bootstrap paths -->
+
+        <link rel="stylesheet"
+              href="../assets/css/bootstrap.min.css" />
+
+        <link rel="stylesheet"
+              href="../assets/icon/bootstrap-icons.css" />
+
+        <!-- Custom css files -->
+
+        <link rel="stylesheet"
+              href="../assets/custom/style.css" />
+
+        <link rel="stylesheet"
+              href="../assets/custom/loginpage.css" />
+
 
 
     </head>
@@ -61,10 +74,21 @@ session_start();
                 <div id="menu-btn"
                      class="fas fa-bars"></div>
 
-                <div id="login-btn"
-                     class="fas fa-user"></div>
-                <div id="info-btn"
-                     class="fas fa-info-circle"></div>
+                <a href="loginpage.php">
+                    <div id="login-btn"
+                         class="fas fa-user"></div>
+
+                </a>
+
+                <!-- <a href="http://localhost/spl_php/logoutpage.php">
+                    <div title="লগআউট করুন"
+                         class="bi bi-box-arrow-right">
+
+                    </div>
+                </a> -->
+
+                <!-- <div id="info-btn"
+                     class="fas fa-info-circle"></div> -->
             </div>
 
 
@@ -79,12 +103,13 @@ session_start();
                 <p>01756609963</p>
             </div>
 
-            <div id="side-actions">
-                <div class="action"><a href="#"> admin panel</a></div>
-                <div class="action"><a href="#"> admin panel</a></div>
-                <div class="action"><a href="#"> admin panel</a></div>
-                <div class="action"><a href="#"> admin panel</a></div>
-                <div class="action"><a href="#"> admin panel</a></div>
+            <div id="side-actions"
+                 style="height: 10%;">
+
+
+                <div class="action"><a href="#"> অর্ডারগুলো দেখুন</a></div>
+
+
             </div>
         </div>
 

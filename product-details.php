@@ -1,8 +1,3 @@
-<?php include_once 'handlers/admin_header.php'
-?>
-
-
-
 <section class="show-products">
     <h1 class="heading text-center">কৃষিপণ্যসমূহ</h1>
     <div class="box-container">

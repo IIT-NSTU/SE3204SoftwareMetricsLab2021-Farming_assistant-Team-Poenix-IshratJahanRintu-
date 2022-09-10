@@ -1,4 +1,4 @@
-<?php include_once 'handlers/admin_header.php';
+<?php
 include_once 'handlers/DatabaseEdited.php';
 
 $db = EDatabase::getInstance();
@@ -50,7 +50,7 @@ $db = EDatabase::getInstance();
 
 </section>
 
-
+<?php if ($_SESSION['user_type'] == "agriculturist") { ?>
 <section class="add-products">
     <form action="../handlers/blogHandler.php"
           method="post"
@@ -98,7 +98,7 @@ $db = EDatabase::getInstance();
 
 <!-- product CRUD section ends -->
 
-<?php
+<?php }
 
 
 if (isset($_GET['update_id'])) {
@@ -109,7 +109,7 @@ if (isset($_GET['update_id'])) {
     if ($stmnt->rowCount()) {
         while ($blog_update = $stmnt->fetch()) {
             echo $blog_update['blog_img'];
-?>
+    ?>
 <section class="edit-product-form">
     <form action=""
           method="post"
