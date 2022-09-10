@@ -60,10 +60,10 @@
                class="logo">Farming<span>Assistant</span></a>
 
             <nav class="navbar">
-                <a href="http://localhost/spl_php/index.php">হোম</a>
+                <a href="http://localhost/Farming-assistant/index.php">হোম</a>
 
                 <a href="#projects">খবরাখবর</a>
-                <a href="http://localhost/spl_php/market.php">কৃষিপণ্য</a>
+                <a href="http://localhost/Farming-assistant/market.php">কৃষিপণ্য</a>
 
             </nav>
 
@@ -71,7 +71,7 @@
                 <div id="menu-btn"
                      class="fas fa-bars"></div>
 
-                <a href="http://localhost/spl_php/logoutpage.php">
+                <a href="http://localhost/Farming-assistant/logoutpage.php">
                     <div title="লগআউট করুন"
                          class="bi bi-box-arrow-right">
                         </button>
@@ -95,23 +95,31 @@
             </div>
 
             <div id="side-actions">
-                <div class="action"><a href="http://localhost/spl_php/admin-panel.php"> এডমিন প্যানেল</a></div>
-                <div class="action"><a href="http://localhost/spl_php/handlers/adminHandler.php">এডমিনদের বিবরণ </a>
+                <div class="action"><a href="http://localhost/Farming-assistant/admin-panel.php"> এডমিন প্যানেল</a>
                 </div>
-                <div class="action"><a href="http://localhost/spl_php/handlers/farmerHandler.php"> কৃষকদের বিবরণ</a>
+                <div class="action"><a href="http://localhost/Farming-assistant/handlers/adminHandler.php">এডমিনদের
+                        বিবরণ </a>
                 </div>
-                <div class="action"><a href="http://localhost/spl_php/handlers/agriHandler.php"> কৃষিবিদদের বিবরণ</a>
+                <div class="action"><a href="http://localhost/Farming-assistant/handlers/farmerHandler.php"> কৃষকদের
+                        বিবরণ</a>
                 </div>
-                <div class="action"><a href="http://localhost/spl_php/handlers/customerHandler.php"> ক্রেতাদের বিবরণ</a>
+                <div class="action"><a href="http://localhost/Farming-assistant/handlers/agriHandler.php"> কৃষিবিদদের
+                        বিবরণ</a>
                 </div>
-                <div class="action"><a href="http://localhost/spl_php/handlers/productHandler.php"> কৃষিপণ্য
+                <div class="action"><a href="http://localhost/Farming-assistant/handlers/customerHandler.php"> ক্রেতাদের
+                        বিবরণ</a>
+                </div>
+                <div class="action"><a href="http://localhost/Farming-assistant/handlers/productHandler.php"> কৃষিপণ্য
                         ম্যানেজ
                         করুন</a></div>
-                <div class="action"><a href="http://localhost/spl_php/order-details.php"> অর্ডার ম্যানেজ করুন</a>
+                <div class="action"><a href="http://localhost/Farming-assistant/order-details.php"> অর্ডার ম্যানেজ
+                        করুন</a>
                 </div>
-                <div class="action"><a href="http://localhost/spl_php/handlers/blogHandler.php"> ব্লগ ম্যানেজ করুন</a>
+                <div class="action"><a href="http://localhost/Farming-assistant/handlers/blogHandler.php"> ব্লগ ম্যানেজ
+                        করুন</a>
                 </div>
-                <div class="action"><a href="http://localhost/spl_php/handlers/categoryHandler.php"> কৃষিপণ্যের
+                <div class="action"><a href="http://localhost/Farming-assistant/handlers/categoryHandler.php">
+                        কৃষিপণ্যের
                         ক্যাটাগরি ম্যানেজ করুন</a>
                 </div>
 

@@ -7,7 +7,7 @@ if (isset($_SESSION['user_type'])) {
     } else if ($_SESSION['user_type'] == "admin") {
         include_once '../admin_header.php';
     } else {
-        header("location:localhost/spl_php/index.php");
+        header("location:../index.php");
     }
 }
 

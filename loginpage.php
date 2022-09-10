@@ -1,4 +1,4 @@
-<?php include 'basic_header.php'?>
+<?php include 'basic_header.php' ?>
 <div class="login-container">
     <div class="wrapper">
         <div class="text-center mt-4 name heading">
@@ -37,7 +37,7 @@
 
                         <option value="farmer">কৃষক</option>
                         <option value="admin">এডমিন</option>
-                        <option value="agri">কৃষিবিদ</option>
+                        <option value="agriculturist">কৃষিবিদ</option>
                         <option value="customer">ক্রেতা</option>
 
                     </select></div>
@@ -55,4 +55,4 @@
     </div>
 </div>
 
-<?php include 'footer.php'?>
+<?php include 'footer.php' ?>

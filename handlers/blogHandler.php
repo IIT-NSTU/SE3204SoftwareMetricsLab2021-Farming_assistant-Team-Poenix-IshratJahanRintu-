@@ -7,7 +7,7 @@ if (isset($_SESSION['user_type'])) {
     } else if ($_SESSION['user_type'] == "agriculturist") {
         include_once '../agri_header.php';
     } else {
-        header("location:localhost/spl_php/index.php");
+        header("location:../index.php");
     }
 }
 include_once 'DatabaseEdited.php';
