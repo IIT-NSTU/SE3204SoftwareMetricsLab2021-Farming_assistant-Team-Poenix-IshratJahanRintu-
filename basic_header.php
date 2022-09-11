@@ -1,3 +1,5 @@
+<?php
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,10 +35,6 @@
 
         <link rel="stylesheet"
               href="assets/custom/style.css" />
-
-        <link rel="stylesheet"
-              href="assets/custom/loginpage.css" />
-
         <!-- bootstrap paths -->
 
         <link rel="stylesheet"
@@ -52,8 +50,8 @@
 
         <link rel="stylesheet"
               href="../assets/custom/loginpage.css" />
-
-
+        <link rel="stylesheet"
+              href="assets/custom/loginpage.css">
 
     </head>
 
@@ -63,54 +61,48 @@
                class="logo">Farming<span>Assistant</span></a>
 
             <nav class="navbar">
-                <a href="#home">হোম</a>
-                <a href="#about">আমাদের লক্ষ্য</a>
-                <a href="#services">সেবাসমূহ</a>
-                <a href="#projects">খবরাখবর</a>
-                <a href="#pricing">ব্লগ</a>
+                <a href="http://localhost/Farming-assistant/index.php">হোম</a>
+
+                <a href="#">খবরাখবর</a>
+                <a href="http://localhost/Farming-assistant/market.php">কৃষিপণ্য</a>
+
             </nav>
 
             <div class="icons">
                 <div id="menu-btn"
                      class="fas fa-bars"></div>
-
                 <a href="loginpage.php">
                     <div id="login-btn"
                          class="fas fa-user"></div>
-
                 </a>
 
-                <!-- <a href="http://localhost/spl_php/logoutpage.php">
+                <!-- <a href="http://localhost/Farming-assistant/logoutpage.php">
                     <div title="লগআউট করুন"
                          class="bi bi-box-arrow-right">
-
+                        </button>
                     </div>
                 </a> -->
 
-                <!-- <div id="info-btn"
-                     class="fas fa-info-circle"></div> -->
+                <div id="info-btn"
+                     style="display: none;"></div>
             </div>
 
 
         </header>
 
         <div class="contact-info">
-            <div id="close-contact-info"
-                 class="fas fa-times"></div>
-            <div class="info">
+            <div id="close-contact-info"></div>
+            <!-- <div class="info">
                 <a href="#"><i class="fas fa-user"></i></a>
                 <h3>User name</h3>
-                <p>01756609963</p>
-            </div>
-
-            <div id="side-actions"
-                 style="height: 10%;">
-
-
-                <div class="action"><a href="#"> অর্ডারগুলো দেখুন</a></div>
+                <p>01756609963</p> -->
+        </div>
+        <!-- 
+        <div id="side-actions">
 
 
-            </div>
+        </div> -->
+        </div>
         </div>
 
         <!-- header section ends -->

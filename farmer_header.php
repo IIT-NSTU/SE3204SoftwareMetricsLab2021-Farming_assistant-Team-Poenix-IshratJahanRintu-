@@ -59,7 +59,7 @@
                class="logo">Farming<span>Assistant</span></a>
 
             <nav class="navbar">
-                <a href="http://localhost/spl_php/index.php">হোম</a>
+                <a href="http://localhost/Farming-assistant/index.php">হোম</a>
 
                 <a href="#">খবরাখবর</a>
                 <a href="http://localhost/Farming-assistant/market.php">কৃষিপণ্য</a>
