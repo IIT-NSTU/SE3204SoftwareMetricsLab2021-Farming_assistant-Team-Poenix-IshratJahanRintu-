@@ -1,13 +1,16 @@
 <?php
 session_start();
+include_once 'DatabaseEdited.php';
+$db = EDatabase::getInstance();
+
+
 if (isset($_POST['order'])) {
     echo   $quantity = $_POST['quantity'];
     echo $customer_id = $_SESSION['user_id'];
     echo $product_id =  $_POST['product_id'];
     echo $price = $_POST['unit_price'] * $quantity;
     echo $farmer_id = $_POST['farmer_id'];
-    echo  $is_recieved = "no";
-    echo $is_delivered = "no";
+
 
 
     /* PHP */
@@ -17,7 +20,7 @@ if (isset($_POST['order'])) {
     $post_data['total_amount'] = $price;
     $post_data['currency'] = "BDT";
     $post_data['tran_id'] = "SSLCZ_TEST_" . uniqid();
-    $post_data['success_url'] = "http://localhost/Farming-assistant/handlers/checkoutHandler.php";
+    $post_data['success_url'] = "http://localhost/Farming-assistant/handlers/success-payment.php";
     $post_data['fail_url'] = "http://localhost/new_sslcz_gw/fail.php";
     $post_data['cancel_url'] = "http://localhost/new_sslcz_gw/cancel.php";
     # $post_data['multi_card_name'] = "mastercard,visacard,amexcard";  # DISABLE TO DISPLAY ALL AVAILABLE
@@ -28,7 +31,7 @@ if (isset($_POST['order'])) {
     $post_data['emi_selected_inst'] = "9";
 
     # CUSTOMER INFORMATION
-    $post_data['cus_name'] = "Test Customer";
+    $post_data['cus_name'] = "";
     $post_data['cus_email'] = "test@test.com";
     $post_data['cus_add1'] = "Dhaka";
     $post_data['cus_add2'] = "Dhaka";
@@ -36,7 +39,7 @@ if (isset($_POST['order'])) {
     $post_data['cus_state'] = "Dhaka";
     $post_data['cus_postcode'] = "1000";
     $post_data['cus_country'] = "Bangladesh";
-    $post_data['cus_phone'] = "01711111111";
+    $post_data['cus_phone'] = "";
     $post_data['cus_fax'] = "01711111111";
 
     # SHIPMENT INFORMATION
@@ -48,11 +51,11 @@ if (isset($_POST['order'])) {
     $post_data['ship_postcode'] = "1000";
     $post_data['ship_country'] = "Bangladesh";
 
-    # OPTIONAL PARAMETERS
-    $post_data['value_a'] = "ref001";
-    $post_data['value_b '] = "ref002";
-    $post_data['value_c'] = "ref003";
-    $post_data['value_d'] = "ref004";
+    # OPTIONAL PaRAMETERS
+    $post_data['value_a'] = $quantity;
+    $post_data['value_b'] = $product_id;
+    $post_data['value_c'] = $farmer_id;
+    $post_data['value_d'] = $customer_id;
 
     # CART PARAMETERS
     $post_data['cart'] = json_encode(array(
