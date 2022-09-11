@@ -19,7 +19,7 @@ class user
 
     if (count($found_row) > 0) {
       echo "login successfull";
-      $_SESSION['user_id'] = $found_row[0]['user_id'];
+      echo  $_SESSION['user_id'] = $found_row[0]['user_id'];
       $_SESSION['user_type']
         = $found_row[0]['user_type'];
       header("location:../index.php");
