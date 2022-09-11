@@ -90,6 +90,7 @@
 <script src="../assets/js/phone.js"></script>
 <script src="../assets/custom/script.js"></script>
 <script src="../assets/custom/script.js"></script>
+<script src="assets/custom/script.js"></script>
 <script src="../script.js"></script>
 <script>
 lightGallery(document.querySelector(".projects .box-container"));

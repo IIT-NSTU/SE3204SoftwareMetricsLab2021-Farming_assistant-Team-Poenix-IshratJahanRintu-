@@ -89,8 +89,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
 <script src="assets/js/phone.js"></script>
 <script src="assets/custom/script.js"></script>
-<script src="assets/custom/script.js"></script>
-<script src="script.js"></script>
+<script src="../assets/custom/script.js"></script>
+
 <script>
 lightGallery(document.querySelector(".projects .box-container"));
 </script>
