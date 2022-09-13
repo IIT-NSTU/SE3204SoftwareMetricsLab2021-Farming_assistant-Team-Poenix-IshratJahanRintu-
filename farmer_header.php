@@ -97,7 +97,8 @@
                 <div class="action"><a href="http://localhost/Farming-assistant/handlers/productHandler.php"> কৃষিপণ্য
                         ম্যানেজ
                         করুন</a></div>
-                <div class="action"><a href="http://localhost/Farming-assistant/order-details.php"> অর্ডার ম্যানেজ
+                <div class="action"><a href="http://localhost/Farming-assistant/handlers/orderHandler.php"> অর্ডার
+                        ম্যানেজ
                         করুন</a>
                 </div>
                 <div class="action"><a href="#"> সমস্যা বলুন</a>

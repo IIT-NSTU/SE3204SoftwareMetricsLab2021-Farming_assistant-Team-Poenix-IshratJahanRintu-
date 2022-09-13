@@ -1,4 +1,5 @@
 <?php
+
 class user
 {
   public $table = "user";
@@ -20,9 +21,9 @@ class user
     if (count($found_row) > 0) {
       echo "login successfull";
       echo  $_SESSION['user_id'] = $found_row[0]['user_id'];
-      $_SESSION['user_type']
+      echo $_SESSION['user_type']
         = $found_row[0]['user_type'];
-      header("location:../index.php");
+      // header("location:../index.php");
     } else {
       header("location:../loginpage.php");
     }

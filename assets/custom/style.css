@@ -243,6 +243,7 @@ div#side-actions {
   position: relative;
   background-size: cover !important;
   background-position: center !important;
+  height: 100vh;
 }
 .home .slide::before {
   content: "";
@@ -259,7 +260,7 @@ div#side-actions {
   margin-left: 44px;
 }
 .home .slide .content h3 {
-  font-size: 6rem;
+  font-size: 5rem;
   color: var(--black);
   text-transform: capitalize;
   text-transform: uppercase;
@@ -972,7 +973,7 @@ h1.empty-heading {
   padding: 8px;
 }
 
-#bkash_no {
+/* #bkash_no {
   font-size: 18px;
   color: darkred;
   font-weight: bold;
@@ -990,7 +991,7 @@ h1.empty-heading {
   padding: 10px 25px;
   font-size: 17px;
   width: 236px;
-}
+} */
 
 /* checkout page design ends*********/
 
@@ -1003,15 +1004,15 @@ h1.empty-heading {
 
 .order-table td,
 .order-table th {
-  border: 1px solid #ddd;
+  border: 1px solid rgb(132, 130, 130);
   padding: 8px;
-  border-bottom: 1.5px solid grey;
+  border-bottom: 1.5px solid #093d09;
   font-size: 16px;
   text-align: center;
 }
 
 .order-table tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #c7d7cd;
 }
 
 .order-table tr:hover {
@@ -1022,8 +1023,7 @@ h1.empty-heading {
   text-align: center;
   background-color: #093d09;
   color: white;
-  padding: 10px auto;
-  padding: 10px auto;
+
   font-size: 15px;
   padding: 20px 0px;
 }
