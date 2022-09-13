@@ -27,62 +27,86 @@ include 'admin_header.php';
                         <th>পরিমাণ</th>
                         <th>কৃষক</th>
                         <th>তারিখ</th>
-                        <th>পেমেন্ট স্ট্যাটাস</th>
-                        <th>কৃষক থেকে পণ্য গ্রহণ </th>
                         <th>ট্রান্সেকশন আইডি</th>
+                        <th>কৃষক থেকে পণ্য গ্রহণ </th>
+
                         <th>পণ্য ডেলিভারি</th>
                         <th>আপডেট </th>
 
                     </tr>
+                    <?php
+                if (isset($order_list)) {
+
+                    if (count($order_list) > 0) {
+
+                        foreach ($order_list as $order) {
+                ?>
                     <tr>
-                        <td>১</td>
-                        <td>রিন্তু</td>
-                        <td>মরিচ</td>
-                        <td><span>৫০</span> টাকা</td>
-                        <td>অনুপা</td>
-                        <td>রিন্তু</td>
-                        <td>198404510</td>
-                        <td><select style="margin: 0; width:max-content;padding: 11px;
+                        <td><?php echo $order['order_id']; ?></td>
+                        <td><?php echo $order['customer_id']; ?></td>
+                        <td><?php echo $order['product_id']; ?></td>
+                        <td><span><?php echo $order['price']; ?></span> টাকা</td>
+                        <td><?php echo $order['quantity']; ?></td>
+                        <td><?php echo $order['farmer_id']; ?></td>
+                        <td><?php echo $order['order_date']; ?></td>
+                        <td><?php echo $order['transaction_id']; ?></td>
+                        <form action=""
+                              method="post">
+                            <input type="hidden"
+                                   name="order_id"
+                                   value="<?php echo $order['order_id']; ?>">
+                            <td><select name="is_recieved"
+                                        style="margin: 0; width:max-content;padding: 11px;
     background-color: #093d09;
     text-align: center; border-radius: 8px;box-shadow: inset 8px 8px 8px #198754, inset -8px -8px 8px black;"
-                                    name="recieved-farmer"
-                                    id=""
-                                    class="bttn">
-                                <option value="pending">পেন্ডিং</option>
-                                <option value="complete">কমপ্লিট</option>
-                                <option value="rejected">রিজেক্টেড</option>
+                                        name="recieved-farmer"
+                                        id=""
+                                        class="bttn">
+                                    <?php if ($order['is_recieved'] == 'no') { ?>
+                                    <option value="no"
+                                            selected>করা হয়নি</option>
+                                    <option value="yes">করা হয়েছে</option>
+                                    <?php } else { ?>
+                                    <option value="no">করা হয়নি</option>
+                                    <option value="yes"
+                                            selected>করা হয়েছে</option>
+                                    <?php  } ?>
+                                </select></td>
 
-
-                            </select></td>
-                        <td><select style="margin: 0; width:max-content;padding: 11px;
+                            <td><select name="is_delivered"
+                                        style="margin: 0; width:max-content;padding: 11px;
     background-color: #093d09;
     text-align: center; border-radius: 8px;box-shadow: inset 8px 8px 8px #198754, inset -8px -8px 8px black;"
-                                    name="recieved-farmer"
-                                    id=""
-                                    class="bttn">
-                                <option value="no">করা হয়নি</option>
-                                <option value="yes">করা হয়েছে</option>
+                                        id=""
+                                        class="bttn">
+                                    <?php if ($order['is_delivered'] == 'no') { ?>
+                                    <option value="no"
+                                            selected>করা হয়নি</option>
+                                    <option value="yes">করা হয়েছে</option>
+                                    <?php } else { ?>
+                                    <option value="no">করা হয়নি</option>
+                                    <option value="yes"
+                                            selected>করা হয়েছে</option>
+                                    <?php  } ?>
 
-                            </select></td>
-                        <td>ABBDKLK1255EHD</td>
-                        <td><select style="margin: 0; width:max-content;padding: 11px;
-    background-color: #093d09;
-    text-align: center; border-radius: 8px;box-shadow: inset 8px 8px 8px #198754, inset -8px -8px 8px black;"
-                                    name="recieved-farmer"
-                                    id=""
-                                    class="bttn">
-                                <option value="no">করা হয়নি</option>
-                                <option value="yes">করা হয়েছে</option>
-
-                            </select></td>
-                        <td><a href="#"
-                               class="bttn"
-                               style="margin: 0;
+                                </select></td>
+                            <td style="display:flex ; flex-direction:column;"><input type="submit"
+                                       class="bttn"
+                                       style="margin: 5px 0px;
     padding: 11px;
-    border-radius: 8px;">আপডেট</a></td>
+    border-radius: 8px;"
+                                       name="update_order"
+                                       value="আপডেট">
 
+                                <a href="orderHandler.php?delete_id=<?php echo $order['order_id']; ?>"
+                                   class="dlt-btn"
+                                   style="margin: 0; padding: 11px; border-radius: 8px;">ডিলেট</a>
+                            </td>
+                        </form>
                     </tr>
-
+                    <?php }
+                    }
+                } ?>
 
                 </table>
             </div>
