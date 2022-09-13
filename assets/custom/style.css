@@ -912,7 +912,11 @@ h1.empty-heading {
   padding: 25px;
 }
 .product-div-right {
+  position: relative;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .img-container img {
   width: 180px;
@@ -926,6 +930,10 @@ h1.empty-heading {
   transform: scale(1.1);
   padding: 8px;
 }
+.seller-c {
+  font-size: 16px;
+  flex: 1;
+}
 
 .product-div-right span {
   display: block;
@@ -934,10 +942,11 @@ h1.empty-heading {
 }
 .product-name {
   font-size: 26px;
-  margin-bottom: 22px;
+  margin-bottom: 22px auto;
   font-weight: 700;
   letter-spacing: 1px;
   opacity: 0.9;
+  flex: 1;
 }
 .product-price {
   font-weight: 700;
@@ -951,19 +960,35 @@ h1.empty-heading {
   line-height: 1.6;
   font-weight: 300;
   opacity: 0.9;
-  margin-top: 22px;
+  /* margin: 22px 0px; */
+  font-size: 16px;
+  flex: 2;
+}
+
+.quantity-div {
+  flex: 1;
 }
 .btn-groups {
-  margin-top: 22px;
+  /* margin-bottom: auto; */
+  /* align-self: flex-end; */
+  /* position: absolute; */
+  bottom: 0;
+  /* margin: 31px auto; */
+  flex: 1;
+  margin-bottom: auto;
 }
 
 #order-quantity {
   border: 1px solid lightgrey;
-  margin-top: 54px;
+  /* margin-top: 10px; */
   text-align: center;
   padding: 10px 25px;
   font-size: 17px;
   width: 207px;
+  /* flex: auto; */
+  /* position: absolute; */
+  /* bottom: 142px; */
+  flex: 1;
 }
 .img-container img {
   width: 411px;
@@ -1027,7 +1052,9 @@ h1.empty-heading {
   font-size: 15px;
   padding: 20px 0px;
 }
-
+.order-table td {
+  font-size: 16px;
+}
 /*********order details design ends**************/
 
 @media screen and (max-width: 992px) {
