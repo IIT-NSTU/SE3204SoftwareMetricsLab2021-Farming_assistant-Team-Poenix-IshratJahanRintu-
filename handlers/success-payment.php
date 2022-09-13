@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once 'DatabaseEdited.php';
+include_once '../classes/order.php';
 $db = EDatabase::getInstance();
 
 $val_id = urlencode($_POST['val_id']);
@@ -68,7 +69,9 @@ if ($code == 200 && !(curl_errno($handle))) {
     echo "Failed to connect with SSLCOMMERZ";
 }
 
-$order_info = array();
+$order = new order();
+
+
 $order_info['product_id'] = $product_id;
 $order_info['customer_id'] = $customer_id;
 $order_info['farmer_id'] = $farmer_id;
@@ -79,4 +82,4 @@ $order_info['is_recieved'] = "no";
 $order_info['transaction_id'] = $tran_id;
 $order_info['is_delivered'] = "no";
 $order_info['order_date'] = $tran_date;
-$db->insert("orders", $order_info);
+$order->addOrder($order_info);

@@ -26,32 +26,56 @@ if (isset($_GET['product_id'])) {
 
 
 ?>
-    <div class="main-wrapper">
-        <h1 class="heading">পণ্যের বিবরণ দেখে অর্ডার করুন</h1>
-        <div class="checkout-container">
-            <div class="product-div">
-                <div class="product-div-left">
-                    <div class="img-container zoom-hover">
-                        <img src="assets/uploaded_img/<?php echo $product['product_img']; ?>" alt="কৃষিপণ্য">
-                    </div>
-
+<div class="main-wrapper">
+    <h1 class="heading">পণ্যের বিবরণ দেখে অর্ডার করুন</h1>
+    <div class="checkout-container">
+        <div class="product-div">
+            <div class="product-div-left">
+                <div class="img-container zoom-hover">
+                    <img src="assets/uploaded_img/<?php echo $product['product_img']; ?>"
+                         alt="কৃষিপণ্য">
                 </div>
-                <div class="product-div-right">
-                    <form action="handlers/checkoutHandler.php" method="post">
-                        <span class="product-name"><?php echo $product['name']; ?></span>
+
+            </div>
+            <div class="product-div-right">
+                <form action="handlers/checkoutHandler.php"
+                      method="post"
+                      style="height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;">
+                    <span class="product-name"><?php echo $product['name']; ?></span>
 
 
-                        <p class="product-description"><?php echo $product['description']; ?></p>
+                    <p class="product-description"><?php echo $product['description']; ?></p>
+                    <span class="seller-c">কৃষকঃ
 
-                        <input type="number" min="1" max="<?php echo $product['quantity']; ?>" name="quantity" placeholder="পণ্যের পরিমাণ লিখুন" id="order-quantity" onchange="calculatePrice(
-                           )" required>
-                        <div class="btn-groups">
-                            <span class="product-price" id="price"><?php echo $product['unit_price']; ?>টাকা</span>
-                            <input type="hidden" value="<?php echo $product['unit_price']; ?>" name="unit_price">
-                            <input type="hidden" value="<?php echo $product['product_id']; ?>" name="product_id">
-                            <input type="hidden" value="<?php echo $product['farmer_id']; ?>" name="farmer_id">
+                        <?php echo $product["seller"]; ?> </span>
 
-                            <!-- <div><span id="bkash_no">০১৭৫৬০৯৯৬৩</span><span id="bkash-text">এই নাম্বারে উপরোল্লিখিত টাকা
+                    <div class=quantity-div> <input type="number"
+                               min="1"
+                               max="<?php echo $product['quantity']; ?>"
+                               name="quantity"
+                               placeholder="পণ্যের পরিমাণ লিখুন"
+                               id="order-quantity"
+                               onchange="calculatePrice(
+                           )"
+                               required></div>
+                    <div class="btn-groups">
+                        <span class="product-price"
+                              id="price"><?php echo $product['unit_price']; ?>টাকা</span>
+
+                        <input type="hidden"
+                               value="<?php echo $product['unit_price']; ?>"
+                               name="unit_price">
+                        <input type="hidden"
+                               value="<?php echo $product['product_id']; ?>"
+                               name="product_id">
+                        <input type="hidden"
+                               value="<?php echo $product['farmer_id']; ?>"
+                               name="farmer_id">
+
+                        <!-- <div><span id="bkash_no">০১৭৫৬০৯৯৬৩</span><span id="bkash-text">এই নাম্বারে উপরোল্লিখিত টাকা
                                 বিকাশ করুন এবং নিম্নের
                                 খালিঘরে ট্রান্সেকশন আইডি প্রদান করুন</span></div>
                         <input type="text"
@@ -59,22 +83,25 @@ if (isset($_GET['product_id'])) {
                                placeholder="ট্রান্সেকশন আইডি লিখুন"
                                id="trans-id"
                                required> -->
-                            <input type="submit" class="bttn " value="পেমেন্ট করুন করুন" name="order">
+                        <input type="submit"
+                               class="bttn "
+                               value="পেমেন্ট করুন করুন"
+                               name="order">
 
 
-                    </form>
-                </div>
+                </form>
             </div>
         </div>
     </div>
-    </div>
+</div>
+</div>
 
-    <script>
-        function calculatePrice() {
-            let input = document.getElementById('order-quantity').value;
-            document.getElementById('price').innerHTML = (input * <?php echo  $product['unit_price'];   ?>) + " টাকা";
-        }
-    </script>
+<script>
+function calculatePrice() {
+    let input = document.getElementById('order-quantity').value;
+    document.getElementById('price').innerHTML = (input * <?php echo  $product['unit_price'];   ?>) + " টাকা";
+}
+</script>
 <?php
 }
 
