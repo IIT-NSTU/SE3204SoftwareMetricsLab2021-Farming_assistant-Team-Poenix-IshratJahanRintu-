@@ -61,9 +61,7 @@ class DeleteCategory implements ManageCategory
     }
     public function manage()
     {
-        if ($this->category->deleteCategory($this->delete_info)) {
-            header("location:categoryHandler.php");
-        }
+        $this->category->deleteCategory($this->delete_info);
     }
 }
 

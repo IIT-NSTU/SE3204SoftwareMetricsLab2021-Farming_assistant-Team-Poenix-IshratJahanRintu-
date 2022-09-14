@@ -70,8 +70,13 @@ if ($code == 200 && !(curl_errno($handle))) {
 }
 
 $order = new order();
+$sql = "SELECT * from product where product_id=$product_id";
+$stmnt = $db->connection->prepare($sql);
+$stmnt->execute();
 
-
+while ($row = $stmnt->fetch()) {
+    $order_info['product_name'] = $row['name'];
+}
 $order_info['product_id'] = $product_id;
 $order_info['customer_id'] = $customer_id;
 $order_info['farmer_id'] = $farmer_id;

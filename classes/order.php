@@ -26,7 +26,7 @@ class order
 
         if ($this->db->insert($this->table, $order_info)) {
             $sql = "update product set quantity=quantity-
-{$order_info['quantity']}";
+{$order_info['quantity']} where product_id={$order_info['product_id']}";
 
             $statement = $this->db->connection->prepare($sql);
             $statement->execute() or die("quantity decrease error");
@@ -66,6 +66,7 @@ class order
     {
 
         $result = array();
+        $order_list = array();
         if ($_SESSION['user_type'] == 'farmer') {
             $farmer_info["farmer_id"] = $_SESSION['user_id'];
             $result = $this->db->fetch_data_with_one_column_check($farmer_info, $this->table, "farmer_id");
@@ -104,10 +105,11 @@ class order
                 $stmnt3->execute();
 
                 while ($row = $stmnt3->fetch()) {
-                    $order['product'] = $row['name'];
+
                     $order['quantity_type'] = $row['quantity_type'];
                 }
 
+                $order['product'] = $r['product_name'];
                 $order['price']
                     = Converter::en2bn($r['price']);
                 $order['quantity'] =

@@ -43,7 +43,7 @@ if (isset($_GET['blog_id'])) {
     <div class="posts-container">
 
         <div class="post">
-            <img src="assets/uploaded_img/<?php echo $blog['blog_img']; ?>"
+            <img src="assets/uploaded_img/blog/<?php echo $blog['blog_img']; ?>"
                  alt=""
                  class="image">
 

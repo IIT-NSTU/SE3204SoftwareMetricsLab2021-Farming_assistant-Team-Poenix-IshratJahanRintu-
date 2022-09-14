@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+include_once 'DatabaseEdited.php';
+$db = EDatabase::getInstance();
 if (isset($_SESSION['user_type'])) {
     if ($_SESSION['user_type'] == "farmer") {
         include_once '../farmer_header.php';
@@ -21,6 +23,9 @@ $p = new Product();
 
 
 if (isset($_GET['delete_id'])) {
+
+    $sql = "select * from orders where product_id={$_GET['delete_id']} AND is_recieved='no'";
+
     $p->deleteProduct($_GET['delete_id']);
 }
 
@@ -29,44 +34,59 @@ if (isset($_POST['update_product'])) {
 
     $update_p_id = $_POST['update_p_id'];
     $update_name = $_POST['update_name'];
-    $update_description = $_POST['update_description'];
+
     $update_category = $_POST['update_category'];
     $update_quantity_type = $_POST['update_quantity_type'];
     $update_quantity = $_POST['update_quantity'];
     $update_unit_price = $_POST['update_unit_price'];
     $update_image = $_FILES['update_image']['name'];
     $update_image_tmp_name = $_FILES['update_image']['tmp_name'];
-    $update_image_folder = '../assets/uploaded_img/' . $update_image;
+    $update_image_folder = '../assets/uploaded_img/product/' . $update_image;
     $update_old_image = $_POST['update_old_image'];
 
-    echo  $update_query =  "UPDATE product SET  name='$update_name',description='$update_description',
+
+    // $error_messages = array(
+    //     UPLOAD_ERR_OK         => 'There is no error, the file uploaded with success',
+    //     UPLOAD_ERR_INI_SIZE   => 'The uploaded file exceeds the upload_max_filesize directive in php.ini',
+    //     UPLOAD_ERR_FORM_SIZE  => 'The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form',
+    //     UPLOAD_ERR_PARTIAL    => 'The uploaded file was only partially uploaded',
+    //     UPLOAD_ERR_NO_FILE    => 'No file was uploaded',
+    //     UPLOAD_ERR_NO_TMP_DIR => 'Missing a temporary folder',
+    //     UPLOAD_ERR_CANT_WRITE => 'Failed to write file to disk',
+    //     UPLOAD_ERR_EXTENSION  => 'A PHP extension stopped the file upload',
+    // );
+    // echo $error_messages[$_FILES['update_image']["error"]];
+
+    echo  $update_query =  "UPDATE product SET  name='$update_name',
     category='$update_category',quantity_type='$update_quantity_type', quantity=$update_quantity,unit_price=$update_unit_price,
       product_img = '$update_image' WHERE product_id = $update_p_id";
     $stmnt = $db->connection->prepare($update_query);
     $stmnt->execute() or die("update query failed");
-    move_uploaded_file($update_image_tmp_name, $update_folder);
-    unlink('uploaded_img/' . $update_old_image);
+    move_uploaded_file($update_image_tmp_name, $update_image_folder);
+    unlink('../assets/uploaded_img/product/' . $update_old_image);
 
-
-
-    header('location:productHandler.php');
+    unset($_GET['update_id']);
 }
 
 if (isset($_POST['add_product'])) {
 
-    echo $product_info["name"] =  "'{$_POST['name']}'";
-    echo $product_info["description"] =  "'{$_POST['description']}'";
-    echo $product_info["category"] =  "'{$_POST['category']}'";
-    echo $product_info["unit_price"] = $_POST['unit_price'];
-    echo $product_info["product_img"] = "'{$_FILES['image']['name']}'";
-    echo $product_info["quantity"] =  $_POST['quantity'];
-    echo $product_info["quantity_type"] =  "'{$_POST['quantity_type']}'";
-    echo $product_info["farmer_id"] =  $_SESSION['user_id'];
+
+    // prints "The uploaded file exceeds the upload_max_filesize directive in php.ini"
+
+    $product_info["name"] =  "'{$_POST['name']}'";
+
+    $product_info["category"] =  "'{$_POST['category']}'";
+    $product_info["unit_price"] = $_POST['unit_price'];
+    $product_info["product_img"] = "'{$_FILES['image']['name']}'";
+    $product_info["quantity"] =  $_POST['quantity'];
+    $product_info["quantity_type"] =  "'{$_POST['quantity_type']}'";
+    $product_info["farmer_id"] =  $_SESSION['user_id'];
     $image_tmp_name = $_FILES['image']['tmp_name'];
-    $image_folder = '../assets/uploaded_img/' . $_FILES['image']['name'];
+    $image_folder = '../assets/uploaded_img/product/' . $_FILES['image']['name'];
 
 
-    print_r($product_info);
+
+
 
 
 

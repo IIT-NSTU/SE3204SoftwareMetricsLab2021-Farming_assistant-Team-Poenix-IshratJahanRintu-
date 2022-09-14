@@ -54,8 +54,8 @@ class category
         $stmnt = $this->db->connection->prepare($update_query);
         $stmnt->execute() or die("update query failed");
         move_uploaded_file($edit_info['update_image_tmp_name'], $edit_info['update_image_folder']);
-        unlink('../assets/uploaded_img/' . $edit_info['update_old_image']);
-        header("location:categoryHandler.php");
+        unlink('../assets/uploaded_img/category/' . $edit_info['update_old_image']);
+        unset($_GET['update_id']);
     }
 
     public function viewAllCategory()

@@ -63,7 +63,6 @@ class DeleteBlog implements ManageBlog
     public function manage()
     {
         if ($this->blog->deleteBlog($this->delete_info)) {
-            header("location:blogHandler.php");
         }
     }
 }
