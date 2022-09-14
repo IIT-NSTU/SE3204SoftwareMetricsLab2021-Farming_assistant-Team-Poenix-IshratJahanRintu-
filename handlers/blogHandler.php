@@ -42,7 +42,7 @@ if (isset($_POST['update_blog'])) {
     $blog_info['update_image'] = $_FILES['update_image']['name'];
     $blog_info['update_image_tmp_name'] = $_FILES['update_image']['tmp_name'];
     $update_image = $_FILES['update_image']['name'];
-    $blog_info['update_image_folder'] = '../assets/uploaded_img/' . $update_image;
+    $blog_info['update_image_folder'] = '../assets/uploaded_img/blog/' . $update_image;
     $blog_info['update_old_image'] = $_POST['update_old_image'];
 }
 
@@ -57,7 +57,7 @@ if (isset($_POST['add_blog'])) {
     echo $blog_info["author"] = $_SESSION['user_id'];
     $image_info['image_tmp_name'] = $_FILES['image']['tmp_name'];
     $image = $_FILES['image']['name'];
-    $image_info['image_folder'] = '../assets/uploaded_img/' . $image;
+    $image_info['image_folder'] = '../assets/uploaded_img/blog/' . $image;
 }
 
 if (isset($manager_type)) {

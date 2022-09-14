@@ -1,4 +1,26 @@
-<?php include 'basic_header.php' ?>
+<?php session_start();
+
+include_once 'handlers/converter.php';
+
+if (isset($_SESSION['user_type'])) {
+
+
+    if ($_SESSION['user_type'] == "farmer") {
+        include_once 'farmer_header.php';
+    }
+    if ($_SESSION['user_type'] == "admin") {
+        include_once 'admin_header.php';
+    }
+    if ($_SESSION['user_type'] == "customer") {
+        include_once 'customer_header.php';
+    }
+
+    if ($_SESSION['user_type'] == "agriculturist") {
+        include_once 'agri_header.php';
+    }
+} else {
+    include_once 'basic_header.php';
+} ?>
 <div class="login-container">
     <div class="wrapper">
         <div class="text-center mt-4 name heading">

@@ -180,14 +180,12 @@ $db = database::getInstance();
 
         ?>
         <div class="box">
-            <span class="price"><?php echo converter::en2bn($product['quantity'] * $product['unit_price']) ?> টাকা
-            </span>
-            <img src="assets/uploaded_img/<?php echo $product['product_img']; ?>"
+
+            <img src="assets/uploaded_img/product/<?php echo $product['product_img']; ?>"
                  alt="">
             <h3><?php echo $product['name']; ?></h3>
 
-            <p class="text-muted info"><span class="quantity"><?php echo $product['quantity']; ?></span><span
-                      class="quantity type"><?php echo $product['quantity_type']; ?></span></p>
+
 
             <a href="market.php"
                class="bttn">সকল পণ্য দেখুন</a>
@@ -225,7 +223,7 @@ $db = database::getInstance();
 
             <div class="swiper-slide slide">
                 <div class="image">
-                    <img src="assets/uploaded_img/<?php echo $b['blog_img']; ?>"
+                    <img src="assets/uploaded_img/blog/<?php echo $b['blog_img']; ?>"
                          alt="">
 
                 </div>

@@ -20,7 +20,7 @@ $db = EDatabase::getInstance();
 
         <div class="box">
             <div class="product-box-content">
-                <img src="../assets/uploaded_img/<?php echo $category['category_img']; ?>"
+                <img src="../assets/uploaded_img/category/<?php echo $category['category_img']; ?>"
                      alt="">
                 <div class="name"><?php echo $category['category_name']; ?>
                 </div>
@@ -111,7 +111,7 @@ if (isset($_GET['update_id'])) {
                class="box"
                required>
         <div id="btn-img-grp">
-            <img src="../assets/uploaded_img/<?php echo $category_update['category_img']; ?>"
+            <img src="../assets/uploaded_img/category/<?php echo $category_update['category_img']; ?>"
                  alt="">
             <div class="buttons-grp"> <input type="submit"
                        value="আপডেট করুন"

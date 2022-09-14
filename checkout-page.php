@@ -13,7 +13,7 @@ if (isset($_GET['product_id'])) {
         $product['farmer_id'] = $row['farmer_id'];
         echo $product["name"] = $row['name'];
         echo  $product["product_img"] = $row['product_img'];
-        $product["description"] = $row['description'];
+
         $product['unit_price'] = $row['unit_price'];
         $product['quantity'] = $row['quantity'];
         $sql = "SELECT name from user where user_id={$row['farmer_id']}";
@@ -47,10 +47,13 @@ if (isset($_GET['product_id'])) {
                     <span class="product-name"><?php echo $product['name']; ?></span>
 
 
-                    <p class="product-description"><?php echo $product['description']; ?></p>
+
                     <span class="seller-c">কৃষকঃ
 
                         <?php echo $product["seller"]; ?> </span>
+                    <span class="highest-quantity">পণ্যের সর্বোচ্চ পরিমাণঃ
+
+                        <?php echo $product["quantity"]; ?> </span>
 
                     <div class=quantity-div> <input type="number"
                                min="1"
@@ -60,10 +63,11 @@ if (isset($_GET['product_id'])) {
                                id="order-quantity"
                                onchange="calculatePrice(
                            )"
-                               required></div>
+                               required>
+                    </div>
                     <div class="btn-groups">
                         <span class="product-price"
-                              id="price"><?php echo $product['unit_price']; ?>টাকা</span>
+                              id="price"><?php echo $product['unit_price'] . " "; ?>টাকা</span>
 
                         <input type="hidden"
                                value="<?php echo $product['unit_price']; ?>"

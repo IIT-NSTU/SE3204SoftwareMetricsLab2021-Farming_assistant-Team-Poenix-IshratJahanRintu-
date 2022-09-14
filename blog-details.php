@@ -147,7 +147,7 @@ if (isset($_GET['update_id'])) {
                class="box"
                required>
         <div id="btn-img-grp">
-            <img src="../assets/uploaded_img/<?php echo $blog_update['blog_img']; ?>"
+            <img src="../assets/uploaded_img/blog/<?php echo $blog_update['blog_img']; ?>"
                  alt="">
             <div class="buttons-grp"> <input type="submit"
                        value="আপডেট করুন"
@@ -155,8 +155,9 @@ if (isset($_GET['update_id'])) {
                        class="bttn">
                 <input type="reset"
                        value="cancel"
-                       id="close-category"
-                       class="dlt-btn">
+                       id="close-blog"
+                       class="dlt-btn"
+                       onclick="hide()">
             </div>
         </div>
     </form>
@@ -170,7 +171,13 @@ if (isset($_GET['update_id'])) {
 
 </section>
 
+<script>
+function hide() {
+    console.log("hello");
+    document.querySelector(".edit-product-form").style.display = "none";
+    window.location.href = "blogHandler.php";
+}
+</script>
 
 
-
-<?php include 'handlers/footer.php' ?>
+<?php include 'footer.php' ?>

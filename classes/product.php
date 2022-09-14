@@ -26,15 +26,30 @@ class Product
     public function deleteProduct($where)
     {
 
-        $sql = "DELETE FROM $this->table WHERE product_id=$where";
-        $statement = $this->db->connection->prepare($sql);
-        $statement->execute();
-        if ($statement->execute()) {
+        $sql = "SELECT COUNT(*) FROM orders WHERE product_id=$where AND is_recieved='no'";
+        $res = $this->db->connection->query($sql);
+        $count = $res->fetchColumn();
+        if ($count > 0) {
+            echo "this product has order and you can not delete it ";
 
-            return true;
+            $sql1 = "update product set quantity=0 where product_id=$where";
+            $statement = $this->db->connection->prepare($sql1);
+            $statement->execute();
+            if ($statement->execute()) {
+                echo "instead product quantity is set to 0";
+                return true;
+            }
         } else {
+            $sql = "DELETE FROM $this->table WHERE product_id=$where";
+            $statement = $this->db->connection->prepare($sql);
+            $statement->execute();
+            if ($statement->execute()) {
 
-            return false;
+                return true;
+            } else {
+
+                return false;
+            }
         }
     }
     function viewAllproducts()

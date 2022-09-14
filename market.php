@@ -1,5 +1,27 @@
 <?php
-include 'admin_header.php';
+session_start();
+
+include_once 'handlers/converter.php';
+
+if (isset($_SESSION['user_type'])) {
+
+
+    if ($_SESSION['user_type'] == "farmer") {
+        include_once 'farmer_header.php';
+    }
+    if ($_SESSION['user_type'] == "admin") {
+        include_once 'admin_header.php';
+    }
+    if ($_SESSION['user_type'] == "customer") {
+        include_once 'customer_header.php';
+    }
+
+    if ($_SESSION['user_type'] == "agriculturist") {
+        include_once 'agri_header.php';
+    }
+} else {
+    include_once 'basic_header.php';
+}
 include_once 'Database.php';
 include_once 'handlers/converter.php';
 $db = database::getInstance();
@@ -144,23 +166,25 @@ $db = database::getInstance();
         if ($statement->rowCount()) {
             while ($product = $statement->fetch()) {
 
-
+                if ($product['quantity'] > 0) {
 
         ?>
         <div class="box">
             <span class="price"><?php echo converter::en2bn($product['quantity'] * $product['unit_price']) ?> টাকা
             </span>
-            <img src="assets/uploaded_img/<?php echo $product['product_img']; ?>"
+            <img src="assets/uploaded_img/product/<?php echo $product['product_img']; ?>"
                  alt="">
             <h3><?php echo $product['name']; ?></h3>
 
-            <p class="text-muted info"><span class="quantity"><?php echo $product['quantity']; ?></span><span
+            <p class="text-muted info"><span
+                      class="quantity"><?php echo converter::en2bn($product['quantity']); ?></span><span
                       class="quantity type"><?php echo $product['quantity_type']; ?></span></p>
 
             <a href="checkout-page.php?product_id=<?php echo $product['product_id'] ?>"
-               class="bttn">বিস্তারিত দেখুন</a>
+               class="bttn"> অর্ডার করুন</a>
         </div>
         <?php }
+            }
         } else {
 
             echo "<h1 class='empty-heading'>কোন পণ্য নেই </h1>";
