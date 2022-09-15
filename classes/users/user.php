@@ -23,9 +23,9 @@ class user
       echo  $_SESSION['user_id'] = $found_row[0]['user_id'];
       echo $_SESSION['user_type']
         = $found_row[0]['user_type'];
-      // header("location:../index.php");
+      header("location:http://localhost/Farming-assistant/index.php");
     } else {
-      header("location:../loginpage.php");
+      header("location:http://localhost/Farming-assistant/loginpage.php");
     }
   }
   public function deleteUser($where = null)
