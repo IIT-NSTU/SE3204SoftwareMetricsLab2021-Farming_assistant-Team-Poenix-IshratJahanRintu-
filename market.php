@@ -85,14 +85,22 @@ $db = database::getInstance();
     <h1 class="heading">ক্যাটাগরিসমূহ</h1>
     <!-- si -->
     <div class="box-container">
+
+
+        <?php
+        $sql = "SELECT * from product_category";
+        $statement = $db->connection->prepare($sql);
+        $statement->execute();
+        if ($statement->rowCount()) {
+            while ($category = $statement->fetch()) {
+        ?>
         <div class="box">
             <img class="image"
-                 src="assets/images/sp3.jpg"
+                 src="assets/uploaded_img/category/<?php echo $category["category_img"]; ?>"
                  alt="" />
             <div class="content">
-                <img src="images/s-1.png"
-                     alt="" />
-                <h3>চাল</h3>
+
+                <h3><?php echo $category["category_name"]; ?></h3>
                 <p>
 
                 </p>
@@ -100,49 +108,8 @@ $db = database::getInstance();
             </div>
         </div>
         <!-- single  -->
-        <div class="box">
-            <img class="image"
-                 src="assets/images/sp3.jpg"
-                 alt="" />
-            <div class="content">
-                <img src="images/s-2.png"
-                     alt="" />
-                <h3>ডাল</h3>
-                <p>
-
-                </p>
-            </div>
-        </div>
-
-        <!-- single  -->
-        <div class="box">
-            <img class="image"
-                 src="assets/images/sp3.jpg"
-                 alt="" />
-            <div class="content">
-                <img src="images/s-2.png"
-                     alt="" />
-                <h3>সবজি</h3>
-                <p>
-
-                </p>
-            </div>
-        </div>
-        <!-- single  -->
-        <div class="box">
-            <img class="image"
-                 src="assets/images/sp3.jpg"
-                 alt="" />
-            <div class="content">
-                <img src="images/s-2.png"
-                     alt="" />
-                <h3>শাক</h3>
-                <p>
-
-                </p>
-            </div>
-        </div>
-        <!-- single  -->
+        <?php }
+        } ?>
 
 
     </div>

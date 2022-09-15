@@ -60,6 +60,7 @@ section {
   text-transform: capitalize;
   padding-left: 1rem;
   border-left: 1rem solid #145e07;
+  align-self: self-start;
 }
 
 .bttn {
@@ -315,7 +316,7 @@ div#side-actions {
   font-weight: 600;
 }
 .about .roww .content #app-name:hover {
-  background-color: rgb(128, 214, 78);
+  /* background-color: rgb(128, 214, 78); */
   font-size: larger;
 }
 .about .roww .content h3 {
@@ -399,7 +400,6 @@ div#side-actions {
   grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
   gap: 1rem;
   align-items: flex-start;
-  height: 196px;
 }
 
 .speciality .box-container .box {
@@ -410,7 +410,11 @@ div#side-actions {
   border: 0.1rem solid rgba(0, 0, 0, 0.3);
   cursor: pointer;
   border-radius: 0.5rem;
+  /* margin: 10px 0px; */
   transition: 0.2s linear;
+  /* margin-bottom: 10px; */
+  /* width: 211px; */
+  height: 200px;
 }
 
 .speciality .box-container .box .image {
@@ -420,21 +424,22 @@ div#side-actions {
   position: absolute;
   top: -100%;
   left: 0;
+  transition: transform 1s, 0.5s ease-in-out;
+  /* margin-bottom: 10px; */
 }
 
 .speciality .box-container .box .content {
   text-align: center;
   background: #fff;
   padding: 2rem;
-}
-
-.speciality .box-container .box .content img {
-  margin: 1.5rem 0;
+  /* display: flex; */
 }
 
 .speciality .box-container .box .content h3 {
   font-size: 2.5rem;
   color: #333;
+  margin: 58px;
+  /* margin-bottom: 0px; */
 }
 
 .speciality .box-container .box .content p {
@@ -444,7 +449,7 @@ div#side-actions {
 }
 
 .speciality .box-container .box:hover .image {
-  top: 0;
+  top: 0px;
 }
 
 .speciality .box-container .box:hover .content {
@@ -470,10 +475,12 @@ div#side-actions {
   text-align: center;
   flex: 1 1 30rem;
   position: relative;
+  /* height: 408px; */
+  /* width: 293px; */
 }
 
 .popular .box-container .box img {
-  height: 23rem;
+  height: 24rem;
   object-fit: cover;
   width: 99%;
   border-radius: 0.5rem;
@@ -495,10 +502,13 @@ div#side-actions {
   font-size: 2rem;
   padding: 0.5rem 0.8rem;
   border-radius: 0.5rem;
+  transition: transform 0.2s, 0.5s ease-in-out;
   z-index: 2;
+  cursor: pointer;
 }
 .popular .box-container .box .price:hover {
   transform: scale(1.2) translateY(-11.5px);
+  background-color: green;
 }
 
 .popular .box-container .box h3 {
@@ -516,6 +526,7 @@ p.text-muted.info {
 }
 .blogs .slide {
   text-align: center;
+  /* height: 455px; */
 }
 .blogs .slide:hover .image img {
   transform: scale(1.1);
@@ -538,15 +549,22 @@ p.text-muted.info {
   padding-top: 5rem;
   background: var(--white);
   box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
+  height: 265px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .blogs .slide .content h3 {
   font-size: 2rem;
   color: var(--black);
   text-transform: capitalize;
+  flex: 2;
+  margin-top: 21px;
 }
 .blogs .slide .content p {
   padding: 1rem 0;
-  font-size: 1.4rem;
+  font-size: 1.75rem;
   color: var(--light-color);
   line-height: 2;
 }
@@ -732,7 +750,10 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  height: 261px;
 }
+
+.box {}
 
 .show-products .box-container .box img {
   height: 18rem;
@@ -832,31 +853,37 @@ h1.empty-heading {
 
 .blog-container .posts-container .post {
   width: 100%;
-  padding: 2rem;
+  padding: 3rem;
   background: #fff;
   border: var(--border);
   border-radius: 0.5rem;
   margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .blog-container .posts-container .post .image {
-  height: 47rem;
-  width: 100%;
+  height: 54rem;
+  width: 93%;
   border-radius: 0.5rem;
   object-fit: cover;
 }
 
 .blog-container .posts-container .post .title {
-  padding-top: 0.5rem;
-  font-size: 4rem;
+  padding-top: 1.5rem;
+  font-size: 3.5rem;
   color: var(--black);
+  margin-top: 46px;
 }
 
 .blog-container .posts-container .post .text {
   color: var(--light-color);
   font-size: 1.6rem;
   line-height: 1.7;
-  padding: 1rem 0;
+  padding: 2rem 0;
+  align-self: self-start;
 }
 
 /*blog ends*/
@@ -937,7 +964,7 @@ h1.empty-heading {
   margin: 0 auto;
   transition: transform 1s, filter 0.5s ease-in-out;
   transform-origin: center center;
-  filter: brightness(50%);
+  filter: brightness(75%);
 }
 .img-container:hover img {
   filter: brightness(100%);
@@ -987,6 +1014,7 @@ h1.empty-heading {
   margin-bottom: 0;
   display: flex;
   flex-direction: column;
+  width: 256px;
 }
 
 span.highest-quantity {

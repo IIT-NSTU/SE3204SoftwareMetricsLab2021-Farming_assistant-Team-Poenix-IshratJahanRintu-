@@ -1,4 +1,25 @@
-<?php include_once 'admin_header.php';
+<?php
+session_start();
+if (isset($_SESSION['user_type'])) {
+
+
+    if ($_SESSION['user_type'] == "farmer") {
+        include_once 'farmer_header.php';
+    }
+    if ($_SESSION['user_type'] == "admin") {
+        include_once 'admin_header.php';
+    }
+    if ($_SESSION['user_type'] == "customer") {
+        include_once 'customer_header.php';
+    }
+
+    if ($_SESSION['user_type'] == "agriculturist") {
+        include_once 'agri_header.php';
+    }
+} else {
+    include_once 'basic_header.php';
+}
+
 include_once 'Database.php';
 include_once 'handlers/converter.php';
 $db = database::getInstance();
@@ -13,7 +34,7 @@ if (isset($_GET['product_id'])) {
         $product['farmer_id'] = $row['farmer_id'];
         echo $product["name"] = $row['name'];
         echo  $product["product_img"] = $row['product_img'];
-
+        $product['quantity_type'] = $row['quantity_type'];
         $product['unit_price'] = $row['unit_price'];
         $product['quantity'] = $row['quantity'];
         $sql = "SELECT name from user where user_id={$row['farmer_id']}";
@@ -32,7 +53,7 @@ if (isset($_GET['product_id'])) {
         <div class="product-div">
             <div class="product-div-left">
                 <div class="img-container zoom-hover">
-                    <img src="assets/uploaded_img/<?php echo $product['product_img']; ?>"
+                    <img src="assets/uploaded_img/product/<?php echo $product['product_img']; ?>"
                          alt="কৃষিপণ্য">
                 </div>
 
@@ -53,7 +74,7 @@ if (isset($_GET['product_id'])) {
                         <?php echo $product["seller"]; ?> </span>
                     <span class="highest-quantity">পণ্যের সর্বোচ্চ পরিমাণঃ
 
-                        <?php echo $product["quantity"]; ?> </span>
+                        <?php echo $product["quantity"] . " " . $product['quantity_type']; ?> </span>
 
                     <div class=quantity-div> <input type="number"
                                min="1"
@@ -87,12 +108,28 @@ if (isset($_GET['product_id'])) {
                                placeholder="ট্রান্সেকশন আইডি লিখুন"
                                id="trans-id"
                                required> -->
+                        <?php
+                            if (isset($_SESSION['user_type'])) {
+
+
+                                if ($_SESSION['user_type'] == "customer") {
+                            ?>
+
+
                         <input type="submit"
                                class="bttn "
-                               value="পেমেন্ট করুন করুন"
+                               value="পেমেন্ট করুন"
                                name="order">
+                        <?php } else { ?>
+                        <a href="loginpage.php"
+                           class="bttn ">ক্রেতা হিসেবে লগইন করুন</a>
 
+                        <?php }
+                            } else { ?>
 
+                        <a href="loginpage.php"
+                           class="bttn ">ক্রেতা হিসেবে লগইন করুন</a>
+                        <?php } ?>
                 </form>
             </div>
         </div>
