@@ -88,4 +88,16 @@ class user
   {
     return (count($this->viewAllMembers()));
   }
+
+
+
+
+  public function editUser($edit_info = array())
+  {
+
+
+    echo  $update_query =  "UPDATE $this->table SET  name='{$edit_info["name"]}',phone_number='{$edit_info["phone_number"]}',address='{$edit_info["address"]}',password='{$edit_info["password"]}' WHERE user_id={$edit_info["user_id"]}";
+    $stmnt = $this->db->connection->prepare($update_query);
+    $stmnt->execute() or die("update query failed");
+  }
 }
