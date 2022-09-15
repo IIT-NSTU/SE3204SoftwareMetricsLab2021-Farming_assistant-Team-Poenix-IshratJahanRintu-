@@ -1,4 +1,21 @@
 <?php
+include_once 'handlers/DatabaseEdited.php';
+
+$db = EDatabase::getInstance();
+
+
+
+if (isset($_SESSION['user_id'])) {
+
+      $sql = "SELECT * from user where user_id={$_SESSION['user_id']}";
+      $stmnt = $db->connection->prepare($sql);
+      $stmnt->execute();
+
+      while ($row = $stmnt->fetch()) {
+            $user_info['name'] = $row['name'];
+            $user_info['phone_number'] = $row['phone_number'];
+      }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -90,9 +107,9 @@
             <div id="close-contact-info"
                  class="fas fa-times"></div>
             <div class="info">
-                <a href="#"><i class="fas fa-user"></i></a>
-                <h3>User name</h3>
-                <p>01756609963</p>
+                <a href="http://localhost/Farming-assistant/edit-profile-page.php"><i class="fas fa-user-edit"></i></a>
+                <h3><?php echo $user_info['name'] ?></h3>
+                <p><?php echo $user_info['phone_number'] ?></p>
             </div>
 
             <div id="side-actions">
