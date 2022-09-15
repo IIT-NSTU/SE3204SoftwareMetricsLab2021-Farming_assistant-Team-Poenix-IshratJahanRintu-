@@ -19,16 +19,23 @@
                 <th>অর্ডার</th>
                 <th>ক্রেতা</th>
                 <th>কৃষিপণ্য</th>
-
-                <th>কৃষক</th>
                 <th>তারিখ</th>
+                <?php if ($_SESSION['user_type'] == "admin") { ?>
+                <th>কৃষক</th>
+
 
                 <th>ট্রান্সেকশন আইডি</th>
+                <?php } ?>
+
+                <?php if ($_SESSION['user_type'] == "admin") { ?>
                 <th> পণ্য গ্রহণ </th>
-
+                <?php } else { ?>
+                <th> পণ্য প্রদান </th>
+                <?php } ?>
                 <th>পণ্য ডেলিভারি</th>
+                <?php if ($_SESSION['user_type'] == "admin") { ?>
                 <th>আপডেট </th>
-
+                <?php } ?>
             </tr>
             <?php
 
@@ -45,13 +52,16 @@
                     <div><?php echo $order['price']; ?><span>টাকা</span></div>
 
                 </td>
-
+                <td><?php echo $order['order_date']; ?></td>
+                <?php if ($_SESSION['user_type'] == "admin") { ?>
                 <td><?php echo $order['seller']; ?> <div><?php echo $order['farmer_no']; ?></div>
                     <div><?php echo $order['farmer_address']; ?></div>
                 </td>
-                <td><?php echo $order['order_date']; ?></td>
+
 
                 <td><?php echo $order['transaction_id']; ?></td>
+
+
                 <form action=""
                       method="post">
                     <input type="hidden"
@@ -104,7 +114,37 @@
                            class="dlt-btn"
                            style="margin: 0; padding: 11px; border-radius: 8px;">ডিলেট</a>
                     </td>
+
                 </form>
+                <?php }
+                            if ($_SESSION['user_type'] == "farmer") {
+                                if ($order['is_recieved'] == 'no') {
+                                ?>
+
+                <td>
+                    <div class="dlt-btn">করা হয়নি</div>
+                </td>
+                <?php } else { ?>
+
+                <td>
+                    <div class="bttn">করা হয়েছে</div>
+                </td>
+
+                <?php }
+                                if ($order['is_delivered'] == 'no') {  ?>
+
+                <td>
+                    <div class="dlt-btn">করা হয়নি</div>
+                </td>
+                <?php } else { ?>
+
+                <td>
+                    <div class="bttn">করা হয়েছে</div>
+                </td>
+
+                <?php  }
+                            } ?>
+
             </tr>
             <?php }
                 } else {
