@@ -66,16 +66,16 @@ class Blog
         $blog = array();
         $result = $this->db->fetch_all_data($this->table);
 
-        print_r($result);
+
         if (count($result)) {
             $blog_list = array();
             foreach ($result as $r) {
 
-                echo   $sql = "SELECT name from user where user_id={$r['author']}";
+                $sql = "SELECT name from user where user_id={$r['author']}";
                 $stmnt = $this->db->connection->prepare($sql);
                 $stmnt->execute();
                 while ($row = $stmnt->fetch()) {
-                    echo  $blog["author"] = $row['name'];
+                    $blog["author"] = $row['name'];
                 }
 
                 $blog['title'] = $r['title'];

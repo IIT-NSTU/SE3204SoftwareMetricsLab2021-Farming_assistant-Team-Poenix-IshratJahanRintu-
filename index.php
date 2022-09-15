@@ -233,7 +233,7 @@ $db = database::getInstance();
                         <?php echo $b["category"] ?>
                     </p>
                     <a href="single_blog.php?blog_id=<?php echo $b["blog_id"] ?>"
-                       class="bttn">read more</a>
+                       class="bttn">সম্পূর্ণ পড়ুন</a>
                 </div>
             </div>
             <?php }
