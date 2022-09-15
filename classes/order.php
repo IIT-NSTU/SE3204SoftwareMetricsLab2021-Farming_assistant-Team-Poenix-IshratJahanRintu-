@@ -74,6 +74,12 @@ class order
         if ($_SESSION['user_type'] == 'admin') {
             $result = $this->db->fetch_all_data($this->table);
         }
+        if ($_SESSION['user_type'] == 'customer') {
+            $customer_info["customer_id"] = $_SESSION['user_id'];
+            $result = $this->db->fetch_data_with_one_column_check($customer_info, $this->table, "customer_id");
+            print_r($result);
+        }
+
 
         if (count($result)) {
             foreach ($result as $r) {

@@ -17,19 +17,23 @@
                  order-table">
             <tr>
                 <th>অর্ডার</th>
+                <?php if ($_SESSION['user_type'] == "admin" or $_SESSION['user_type'] == "farmer") { ?>
                 <th>ক্রেতা</th>
+                <?php } ?>
                 <th>কৃষিপণ্য</th>
                 <th>তারিখ</th>
-                <?php if ($_SESSION['user_type'] == "admin") { ?>
+                <?php if ($_SESSION['user_type'] == "admin" or $_SESSION['user_type'] == "customer") { ?>
                 <th>কৃষক</th>
 
-
-                <th>ট্রান্সেকশন আইডি</th>
-                <?php } ?>
-
                 <?php if ($_SESSION['user_type'] == "admin") { ?>
+                <th>ট্রান্সেকশন আইডি</th>
+                <?php }
+                        }
+
+                        if ($_SESSION['user_type'] == "admin") { ?>
                 <th> পণ্য গ্রহণ </th>
-                <?php } else { ?>
+                <?php }
+                        if ($_SESSION['user_type'] == "farmer") { ?>
                 <th> পণ্য প্রদান </th>
                 <?php } ?>
                 <th>পণ্য ডেলিভারি</th>
@@ -43,9 +47,11 @@
                     ?>
             <tr>
                 <td><?php echo $order['order_id']; ?></td>
+                <?php if ($_SESSION['user_type'] == "admin" or $_SESSION['user_type'] == "farmer") { ?>
                 <td><?php echo $order['customer']; ?> <div><?php echo $order['customer_no']; ?></div>
                     <div><?php echo $order['customer_address']; ?></div>
                 </td>
+                <?php } ?>
                 <td>
                     <div><?php echo $order['product']; ?></div>
                     <div>(<?php echo $order['quantity']; ?>)</div>
@@ -53,12 +59,12 @@
 
                 </td>
                 <td><?php echo $order['order_date']; ?></td>
-                <?php if ($_SESSION['user_type'] == "admin") { ?>
+                <?php if ($_SESSION['user_type'] == "admin" or $_SESSION['user_type'] == "customer") { ?>
                 <td><?php echo $order['seller']; ?> <div><?php echo $order['farmer_no']; ?></div>
                     <div><?php echo $order['farmer_address']; ?></div>
                 </td>
 
-
+                <?php if ($_SESSION['user_type'] == "admin") { ?>
                 <td><?php echo $order['transaction_id']; ?></td>
 
 
@@ -68,11 +74,13 @@
                            name="order_id"
                            value="<?php echo $order['e_order_id']; ?>">
                     <td><select name="is_recieved"
-                                style="margin: 0; width:max-content;padding: 11px;
-    background-color: #093d09;
-    text-align: center; border-radius: 8px;box-shadow: inset 8px 8px 8px #198754, inset -8px -8px 8px black;"
+                                style="    margin: 0;
+    width: max-content;
+    padding: 11px;
+    
+    text-align: center;
+    border-radius: 8px;"
                                 name="is_recieved"
-                                id=""
                                 class="bttn">
                             <?php if ($order['is_recieved'] == 'no') { ?>
                             <option value="no"
@@ -86,9 +94,12 @@
                         </select></td>
 
                     <td><select name="is_delivered"
-                                style="margin: 0; width:max-content;padding: 11px;
-    background-color: #093d09;
-    text-align: center; border-radius: 8px;box-shadow: inset 8px 8px 8px #198754, inset -8px -8px 8px black;"
+                                style="    margin: 0;
+    width: max-content;
+    padding: 11px;
+    
+    text-align: center;
+    border-radius: 8px;"
                                 id=""
                                 class="bttn">
                             <?php if ($order['is_delivered'] == 'no') { ?>
@@ -117,6 +128,25 @@
 
                 </form>
                 <?php }
+                            }
+
+
+                            if ($_SESSION['user_type'] == "customer") {
+                                if ($order['is_delivered'] == 'no') {
+                                ?>
+
+                <td>
+                    <div class="dlt-btn">করা হয়নি</div>
+                </td>
+                <?php } else { ?>
+
+                <td>
+                    <div class="bttn">করা হয়েছে</div>
+                </td>
+
+                <?php }
+                            }
+
                             if ($_SESSION['user_type'] == "farmer") {
                                 if ($order['is_recieved'] == 'no') {
                                 ?>
