@@ -121,7 +121,9 @@ if (isset($_SESSION['user_id'])) {
                  style="height: 10%;">
 
 
-                <div class="action"><a href="#"> অর্ডারগুলো দেখুন</a></div>
+                <div class="action"><a href="http://localhost/Farming-assistant/handlers/orderHandler.php"> অর্ডারগুলো
+                        দেখুন</a>
+                </div>
 
 
             </div>
