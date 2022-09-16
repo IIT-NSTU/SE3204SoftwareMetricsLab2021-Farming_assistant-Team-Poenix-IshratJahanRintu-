@@ -20,9 +20,26 @@ if (isset($_SESSION['user_type'])) {
     }
 } else {
     include_once 'basic_header.php';
-} ?>
+}
+if (isset($_SESSION['message'])) {
+
+    echo '
+      <div class="message">
+         <span>' . $_SESSION['message'] . '</span>
+         <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+      </div>
+      ';
+    unset($_SESSION['message']);
+}
+
+
+?>
+
+
+
 <div class="login-container">
-    <div class="wrapper">
+    <div class="wrapper"
+         style="min-height: 400px;">
         <div class="text-center mt-4 name heading">
             লগইন করুন
         </div>
@@ -34,7 +51,9 @@ if (isset($_SESSION['user_type'])) {
             <div class="
               form-field
               d-flex
-              align-items-center">
+              align-items-center"
+                 style="height: 48px;
+    margin-bottom: 17px;">
                 <i class="bi bi-telephone-fill"></i>
                 <input type="number"
                        name="phone"
@@ -42,27 +61,15 @@ if (isset($_SESSION['user_type'])) {
                        placeholder="ফোন নাম্বার"
                        required>
             </div>
-            <div class="form-field d-flex align-items-center">
+            <div class="form-field d-flex align-items-center"
+                 style="height: 48px;
+    margin-bottom: 17px;">
                 <span class="fas fa-key"></span>
                 <input type="password"
                        name="login_password"
                        id="pwd"
                        placeholder="পাসওয়ার্ড"
                        required>
-            </div>
-
-            <div class=" d-flex align-items-center">
-
-                <div><select class="role"
-                            name="user_type"
-                            required>
-
-                        <option value="farmer">কৃষক</option>
-                        <option value="admin">এডমিন</option>
-                        <option value="agriculturist">কৃষিবিদ</option>
-                        <option value="customer">ক্রেতা</option>
-
-                    </select></div>
             </div>
 
             <input type="submit"
@@ -77,4 +84,6 @@ if (isset($_SESSION['user_type'])) {
     </div>
 </div>
 
-<?php include 'footer.php' ?>
+<?php
+
+include 'footer.php' ?>

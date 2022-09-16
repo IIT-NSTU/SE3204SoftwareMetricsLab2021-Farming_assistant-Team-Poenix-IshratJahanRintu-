@@ -30,7 +30,7 @@ if (isset($_POST['update'])) {
         $res = $db->connection->query($sql);
         $count = $res->fetchColumn();
         if ($count > 0) {
-            echo "same phone number";
+            $_SESSION['message'] = "প্রদত্ত নাম্বারে আগে থেকে একাউন্ট রয়েছে";
             header("location:../edit-profile-page.php");
         } else {
             $user->editUser($edit_info);
@@ -38,7 +38,7 @@ if (isset($_POST['update'])) {
             header("location:../index.php");
         }
     } else {
-        echo "password doesn't match";
+        $_SESSION['message'] = "ভুল পাসওয়ার্ড দিয়েছেন!";
         header("location:../edit-profile-page.php");
     }
 }

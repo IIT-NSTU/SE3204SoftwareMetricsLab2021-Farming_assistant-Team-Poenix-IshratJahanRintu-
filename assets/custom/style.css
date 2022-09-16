@@ -236,6 +236,43 @@ div#side-actions {
 .green-span {
   color: #225e27;
 }
+/*********navbar ends ************/
+
+/*********message starts ************/
+.message {
+  position: fixed;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #d6dbd8a8;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10000;
+  gap: 1.5rem;
+  top: 68px;
+  color: #0c7c0c;
+  transition: all 1s ease-in-out;
+  /* font-size: 16.5rem; */
+}
+
+.message span {
+  font-size: 2rem;
+  color: #0f5127;
+}
+
+.message i {
+  cursor: pointer;
+  color: var(--red);
+  font-size: 2.5rem;
+  transition: transform 0.2s, 0.5s ease-in-out;
+}
+
+.message i:hover {
+  transform: rotate(90deg);
+}
+
+/*********message ends ************/
 
 .home {
   padding: 0;
@@ -755,9 +792,6 @@ section {
   height: 371px;
 }
 
-.box {
-}
-
 .show-products .box-container .box img {
   height: 18rem;
   padding: 7px 0px;
@@ -890,39 +924,6 @@ h1.empty-heading {
 }
 
 /*blog ends*/
-
-.messages .box-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 35rem);
-  justify-content: center;
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  align-items: flex-start;
-}
-
-.messages .box-container .box {
-  background-color: var(--white);
-  padding: 2rem;
-  border: var(--border);
-  box-shadow: var(--box-shadow);
-  border-radius: 0.5rem;
-}
-
-.messages .box-container .box p {
-  padding-bottom: 1.5rem;
-  font-size: 2rem;
-  color: var(--light-color);
-  line-height: 1.5;
-}
-
-.messages .box-container .box p span {
-  color: var(--purple);
-}
-
-.messages .box-container .box .delete-btn {
-  margin-top: 0;
-}
 
 /* check-out page design starts*/
 .main-wrapper {

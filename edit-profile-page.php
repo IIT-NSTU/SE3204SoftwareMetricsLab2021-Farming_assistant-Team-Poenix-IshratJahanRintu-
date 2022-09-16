@@ -20,7 +20,19 @@ if (isset($_SESSION['user_type'])) {
     }
 } else {
     include_once 'basic_header.php';
-} ?>
+}
+if (isset($_SESSION['message'])) {
+
+    echo '
+      <div class="message">
+         <span>' . $_SESSION['message'] . '</span>
+         <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+      </div>
+      ';
+    unset($_SESSION['message']);
+}
+
+?>
 <div class="login-container">
     <div class="wrapper">
 
@@ -72,7 +84,7 @@ if (isset($_SESSION['user_type'])) {
                     <input type="password"
                            name="password"
                            id="pwd"
-                           placeholder="পাসওয়ার্ড"
+                           placeholder="নতুন পাসওয়ার্ড দিন"
                            required>
 
                 </div>

@@ -23,8 +23,10 @@ class user
       echo  $_SESSION['user_id'] = $found_row[0]['user_id'];
       echo $_SESSION['user_type']
         = $found_row[0]['user_type'];
+      $_SESSION['message'] = "লগইন সফল হয়েছে!";
       header("location:http://localhost/Farming-assistant/index.php");
     } else {
+      $_SESSION['message'] = "লগইন ব্যার্থ হয়েছে। সঠিক তথ্য দিয়ে পুনরায় চেষ্টা করুন";
       header("location:http://localhost/Farming-assistant/loginpage.php");
     }
   }
@@ -52,11 +54,13 @@ class user
   public function signup($signup_info)
   {
     if ($this->memberExist($signup_info['phone_number'])) {
-      echo "member already exists with this phone number";
+      $_SESSION['message'] = "একই নাম্বারে একাধিক একাউন্ট গ্রহণযোগ্য নয়!";
+
+      header("Location:../signup-page.php");
     } else {
       $this->db->insert($this->table, $signup_info);
-      header("Location:loginpage.php");
-      echo "user added to the system";
+      $_SESSION['message'] = "একাউন্ট তৈরি সফল হয়েছে। লগিন করুন!";
+      header("Location:../loginpage.php");
     }
   }
 
