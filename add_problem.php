@@ -1,12 +1,12 @@
 <?php
 
-require_once 'Database.php';
+require_once 'DatabaseEdited.php';
 session_start();
 //die(dirname(__FILE__));
 
 $file_name=$_FILES['img']['name'];
 
-move_uploaded_file($_FILES['img']['tmp_name'],$file_name);
+move_uploaded_file($_FILES['img']['tmp_name'],"assets/uploaded_img/".$file_name);
 
 
 
@@ -18,7 +18,7 @@ $data=[
 ];
 
 
-$db=Database::getInstance();
+$db=EDatabase::getInstance();
 
 $db->insert('problem',$data);
 

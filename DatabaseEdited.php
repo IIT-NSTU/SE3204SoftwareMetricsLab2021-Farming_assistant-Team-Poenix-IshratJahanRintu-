@@ -112,6 +112,7 @@ class EDatabase
             }
         } else {
             echo "table not found";
+            return false;
         }
     }
 
