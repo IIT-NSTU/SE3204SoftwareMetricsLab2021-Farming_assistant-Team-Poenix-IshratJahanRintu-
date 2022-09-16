@@ -18,7 +18,8 @@ $db = EDatabase::getInstance();
         ?>
 
 
-        <div class="box">
+        <div class="box"
+             style="height: 295px;">
             <div class="product-box-content">
 
                 <div class="name"><?php echo $blog['title']; ?>

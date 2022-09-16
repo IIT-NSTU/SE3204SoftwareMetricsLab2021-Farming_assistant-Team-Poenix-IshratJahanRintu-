@@ -30,7 +30,7 @@ class Product
         $res = $this->db->connection->query($sql);
         $count = $res->fetchColumn();
         if ($count > 0) {
-            echo "this product has order and you can not delete it ";
+            $_SESSION['message'] = "এই পণ্যের পেন্ডিং অর্ডার থাকার কারণে পণ্যটি রিমুভ করা সম্ভব নয়!";
 
             $sql1 = "update product set quantity=0 where product_id=$where";
             $statement = $this->db->connection->prepare($sql1);

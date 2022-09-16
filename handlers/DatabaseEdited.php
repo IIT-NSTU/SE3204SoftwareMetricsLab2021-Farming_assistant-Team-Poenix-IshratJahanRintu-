@@ -14,7 +14,6 @@ class EDatabase
         try {
             $this->connection = new PDO($dns, $user, $password);
             $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-            echo "connection successfull";
         } catch (PDOException $e) {
             echo "connection failed";
         }

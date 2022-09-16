@@ -13,6 +13,17 @@ if (isset($_SESSION['user_type'])) {
     }
 }
 
+if (isset($_SESSION['message'])) {
+
+    echo '
+      <div class="message">
+         <span>' . $_SESSION['message'] . '</span>
+         <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+      </div>
+      ';
+    unset($_SESSION['message']);
+}
+
 include 'Database.php';
 include 'converter.php';
 include '../classes/product.php';

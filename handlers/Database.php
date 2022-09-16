@@ -14,7 +14,6 @@ class database
         try {
             $this->connection = new PDO($dns, $user, $password);
             $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-            echo "connection successfull";
         } catch (PDOException $e) {
             echo "connection failed";
         }
@@ -61,8 +60,6 @@ class database
         if ($statement->rowCount()) {
             $row = $statement->fetchAll();
             print_r($row);
-        } else {
-            echo "no data found";
         }
         return $row;
     }
