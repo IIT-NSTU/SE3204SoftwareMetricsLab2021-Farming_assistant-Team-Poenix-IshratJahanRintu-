@@ -88,25 +88,28 @@ if (isset($_SESSION['user_type'])) {
 
 
         <?php
+
         $sql = "SELECT * from product_category";
         $statement = $db->connection->prepare($sql);
         $statement->execute();
         if ($statement->rowCount()) {
             while ($category = $statement->fetch()) {
         ?>
-        <div class="box">
-            <img class="image"
-                 src="assets/uploaded_img/category/<?php echo $category["category_img"]; ?>"
-                 alt="" />
-            <div class="content">
+        <a href="market.php?category=<?php echo  $category['category_name']; ?>">
+            <div class="box">
+                <img class="image"
+                     src="assets/uploaded_img/category/<?php echo $category["category_img"]; ?>"
+                     alt="" />
+                <div class="content">
 
-                <h3><?php echo $category["category_name"]; ?></h3>
-                <p>
+                    <h3><?php echo $category["category_name"]; ?></h3>
+                    <p>
 
-                </p>
+                    </p>
 
+                </div>
             </div>
-        </div>
+        </a>
         <!-- single  -->
         <?php }
         } ?>
@@ -127,7 +130,11 @@ if (isset($_SESSION['user_type'])) {
     <div class="box-container">
 
         <?php
-        $sql = "SELECT * from product ORDER BY product_id ";
+        if (isset($_GET['category'])) {
+            $sql = "SELECT * from product  where category='{$_GET['category']}' ";
+        } else {
+            $sql = "SELECT * from product ORDER BY product_id ";
+        }
         $statement = $db->connection->prepare($sql);
         $statement->execute();
         if ($statement->rowCount()) {

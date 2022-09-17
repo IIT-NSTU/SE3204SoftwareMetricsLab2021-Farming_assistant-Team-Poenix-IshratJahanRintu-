@@ -63,15 +63,18 @@
             <option value=""
                     selected>পণ্যের ধরণ নির্ধারণ করুন</option>
             <?php
-
-
+                            $sql = "SELECT * from product_category";
+                            $statement = $db->connection->prepare($sql);
+                            $statement->execute();
+                            if ($statement->rowCount()) {
+                                   while ($category = $statement->fetch()) {
                             ?>
 
-            <option value="চাল">চাল</option>
-            <option value="সবজি">সবজি</option>
-            <option value="মাছ">মাছ</option>
-            <option value="মশলা">মশলা</option>
-            <option value="ফল">ফল</option>
+
+
+            <option value="<?php echo $category['category_name'] ?>"><?php echo $category['category_name'] ?></option>
+            <?php }
+                            } ?>
         </select>
         <select name="quantity_type"
                 id=""
@@ -151,9 +154,19 @@
                 required>
             <option value=""
                     selected>পণ্যের ধরণ নির্ধারণ করুন</option>
-            <option value="সবজি">সবজি</option>
-            <option value="সবজি">সবজি</option>
-            <option value="সবজি">সবজি</option>
+            <?php
+                                          $sql = "SELECT * from product_category";
+                                          $statement = $db->connection->prepare($sql);
+                                          $statement->execute();
+                                          if ($statement->rowCount()) {
+                                                 while ($category = $statement->fetch()) {
+                                          ?>
+
+
+
+            <option value="<?php echo $category['category_name'] ?>"><?php echo $category['category_name'] ?></option>
+            <?php }
+                                          } ?>
         </select>
         <select name="update_quantity_type"
                 id=""

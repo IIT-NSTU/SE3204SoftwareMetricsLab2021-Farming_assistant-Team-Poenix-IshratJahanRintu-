@@ -902,6 +902,7 @@ h1.empty-heading {
 }
 
 .blog-container .posts-container .post .image {
+  padding: 13px;
   height: 54rem;
   width: 93%;
   border-radius: 0.5rem;
