@@ -71,7 +71,7 @@ class Blog
             $blog_list = array();
             foreach ($result as $r) {
 
-                $sql = "SELECT name from user where user_id={$r['author']}";
+               $sql = "SELECT name from user where user_id={$r['author']}";
                 $stmnt = $this->db->connection->prepare($sql);
                 $stmnt->execute();
                 while ($row = $stmnt->fetch()) {
