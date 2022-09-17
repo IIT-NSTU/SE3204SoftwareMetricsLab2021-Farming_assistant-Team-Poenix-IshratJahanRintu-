@@ -1,6 +1,3 @@
-<?php include_once 'farmer_header.php'; ?>
-
-
 <html lang="en">
 <head>
     <!-- Required meta tags -->
@@ -49,4 +46,3 @@
 </body>
 
 </html>
-<?php include_once 'footer.php' ?>
