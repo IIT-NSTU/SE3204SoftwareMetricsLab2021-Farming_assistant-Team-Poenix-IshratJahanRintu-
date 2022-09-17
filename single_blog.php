@@ -24,8 +24,8 @@ if (isset($_GET['blog_id'])) {
     while ($row = $stmnt->fetch()) {
 
 
-        echo $blog["title"] = $row['title'];
-        echo  $blog["blog_img"] = $row['blog_img'];
+        $blog["title"] = $row['title'];
+        $blog["blog_img"] = $row['blog_img'];
         $blog["description"] = $row['description'];
         $sql = "SELECT name from user where user_id={$row['author']}";
         $stmnt = $db->connection->prepare($sql);

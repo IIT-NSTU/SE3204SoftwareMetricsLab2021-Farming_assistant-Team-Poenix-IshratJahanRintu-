@@ -77,6 +77,7 @@ $db = EDatabase::getInstance();
             <option value="সেচ">সেচ</option>
             <option value="বীজ রোপণ">বীজ রোপণ</option>
             <option value="রোগবালাই">রোগবালাই</option>
+            <option value="যন্ত্রপাতি">যন্ত্রপাতি</option>
         </select>
 
 

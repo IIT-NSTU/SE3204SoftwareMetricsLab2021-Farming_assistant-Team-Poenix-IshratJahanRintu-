@@ -48,7 +48,7 @@ $db = EDatabase::getInstance();
                 <div class="content">
                     <h3>বাঁচাও কৃষক,বাঁচবে দেশ<br>
                         মুছবে দৈন্য,ঘুচবে ক্লেশ</h3>
-                    <!-- <p>দেশের অর্থনীতির সার্বিক উন্নতির জন্য ক</p> -->
+
                     <a href="#about"
                        class="bttn">শুরু করুন</a>
                 </div>
@@ -59,14 +59,14 @@ $db = EDatabase::getInstance();
                 <div class="content">
                     <h3>বাঁচাও কৃষক,বাঁচবে দেশ
                         মুছবে দৈন্য,ঘুচবে ক্লেশ</h3>
-                    <!-- <p>আমার মাথা,আমার টিমমেটদের মাথা ,আমার চৌদ্দ গুষ্টীর মাথা</p> -->
+
                     <a href="#about"
                        class="bttn">শুরু করুন</a>
                 </div>
             </section>
 
             <section class="swiper-slide slide"
-                     style="background: url(assets/images/farmer3.jpg) no-repeat">
+                     style="background: url(assets/images/farmerinsert.jpg) no-repeat">
                 <div class="content">
                     <h3>বাঁচাও কৃষক,বাঁচবে দেশ
                         মুছবে দৈন্য,ঘুচবে ক্লেশ</h3>

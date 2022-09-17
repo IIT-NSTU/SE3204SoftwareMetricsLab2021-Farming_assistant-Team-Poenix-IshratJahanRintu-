@@ -23,11 +23,10 @@ class category
 
     function addCategory($category_info)
     {
-        print_r($category_info);
+
 
         if ($this->db->insert($this->table, $category_info)) {
 
-            echo "category added to the system";
             return true;
         }
     }
@@ -50,7 +49,7 @@ class category
 
     public function editCategory($edit_info = array())
     {
-        echo  $update_query =  "UPDATE $this->table SET  category_name='{$edit_info["update_name"]}',category_img='{$edit_info["update_image"]}' WHERE category_id={$edit_info["update_id"]}";
+        $update_query =  "UPDATE $this->table SET  category_name='{$edit_info["update_name"]}',category_img='{$edit_info["update_image"]}' WHERE category_id={$edit_info["update_id"]}";
         $stmnt = $this->db->connection->prepare($update_query);
         $stmnt->execute() or die("update query failed");
         move_uploaded_file($edit_info['update_image_tmp_name'], $edit_info['update_image_folder']);
