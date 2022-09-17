@@ -87,7 +87,7 @@ if (isset($_SESSION['user_id'])) {
             <nav class="navbar">
                 <a href="http://localhost/Farming-assistant/index.php">হোম</a>
 
-                <a href="#projects">খবরাখবর</a>
+                <a href="http://localhost/Farming-assistant/noticeboard.php">খবরাখবর</a>
                 <a href="http://localhost/Farming-assistant/market.php">কৃষিপণ্য</a>
 
             </nav>
@@ -126,7 +126,7 @@ if (isset($_SESSION['user_id'])) {
                 <div class="action"><a href="http://localhost/Farming-assistant/handlers/blogHandler.php"> ব্লগগুলো
                         ম্যানেজ
                         করুন</a></div>
-                <div class="action"><a href="#"> কৃষকদের সমস্যার সমাধান দিন</a></div>
+                <div class="action"><a href="http://localhost/Farming-assistant/display_problem.php"> কৃষকদের সমস্যার সমাধান দিন</a></div>
 
 
 

@@ -63,7 +63,7 @@
             <nav class="navbar">
                 <a href="http://localhost/Farming-assistant/index.php">হোম</a>
 
-                <a href="#">খবরাখবর</a>
+                <a href="http://localhost/Farming-assistant/noticeboard.php">খবরাখবর</a>
                 <a href="http://localhost/Farming-assistant/market.php">কৃষিপণ্য</a>
 
             </nav>
