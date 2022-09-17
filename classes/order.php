@@ -22,7 +22,7 @@ class order
     // }
     function addOrder($order_info)
     {
-        print_r($order_info);
+
 
         if ($this->db->insert($this->table, $order_info)) {
             $sql = "update product set quantity=quantity-
@@ -30,7 +30,7 @@ class order
 
             $statement = $this->db->connection->prepare($sql);
             $statement->execute() or die("quantity decrease error");
-            echo "product added to the system";
+
             return true;
         }
     }
@@ -55,11 +55,9 @@ class order
 
     public function editOrder($edit_info = array())
     {
-        echo  $update_query =  "UPDATE $this->table SET  is_recieved='{$edit_info["is_recieved"]}',is_delivered='{$edit_info["is_delivered"]}' WHERE order_id={$edit_info["order_id"]}";
+        $update_query =  "UPDATE $this->table SET  is_recieved='{$edit_info["is_recieved"]}',is_delivered='{$edit_info["is_delivered"]}' WHERE order_id={$edit_info["order_id"]}";
         $stmnt = $this->db->connection->prepare($update_query);
         $stmnt->execute() or die("update query failed");
-
-        header("location:orderHandler.php");
     }
 
     public function viewOrder()
@@ -77,7 +75,6 @@ class order
         if ($_SESSION['user_type'] == 'customer') {
             $customer_info["customer_id"] = $_SESSION['user_id'];
             $result = $this->db->fetch_data_with_one_column_check($customer_info, $this->table, "customer_id");
-            print_r($result);
         }
 
 

@@ -87,19 +87,3 @@ document.getElementById("close-category").onclick = () => {
   document.querySelector(".edit-product-form").style.display = "none";
   window.location.href = "categoryHandler.php";
 };
-//update page////////
-document.querySelector("#close-update").onclick = () => {
-  document.querySelector(".edit-product-form").style.display = "none";
-  window.location.href = "productHandler.php";
-};
-
-document.getElementById("close-blog").onclick = () => {
-  console.log("hello");
-  document.querySelector(".edit-product-form").style.display = "none";
-  window.location.href = "blogHandler.php";
-};
-function hide() {
-  console.log("hello");
-  document.querySelector(".edit-product-form").style.display = "none";
-  window.location.href = "blogHandler.php";
-}

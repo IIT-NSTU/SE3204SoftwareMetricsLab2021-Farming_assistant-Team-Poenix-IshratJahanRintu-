@@ -32,7 +32,7 @@ if (isset($_GET['delete_id'])) {
 }
 
 if (isset($_POST['update_blog'])) {
-    print_r($_FILES);
+
     $manager_type = "update";
     $blog_info['update_id'] = $_POST['update_b_id'];
 
@@ -48,13 +48,13 @@ if (isset($_POST['update_blog'])) {
 
 if (isset($_POST['add_blog'])) {
     $manager_type = "add";
-    echo $blog_info["title"] = $_POST['name'];
-    echo $blog_info["description"] = $_POST['description'];
-    echo $blog_info["category"] = $_POST['category'];
+    $blog_info["title"] = $_POST['name'];
+    $blog_info["description"] = $_POST['description'];
+    $blog_info["category"] = $_POST['category'];
 
     $blog_info["blog_img"] = $_FILES['image']['name'];
 
-    echo $blog_info["author"] = $_SESSION['user_id'];
+    $blog_info["author"] = $_SESSION['user_id'];
     $image_info['image_tmp_name'] = $_FILES['image']['tmp_name'];
     $image = $_FILES['image']['name'];
     $image_info['image_folder'] = '../assets/uploaded_img/blog/' . $image;

@@ -7,17 +7,17 @@ class Product
     public $table = "product";
     function __construct()
     {
-        $this->db = database::getInstance();
+        $this->db = EDatabase::getInstance();
     }
 
 
     function addProduct($product_info)
     {
-        print_r($product_info);
+
 
         if ($this->db->insert($this->table, $product_info)) {
 
-            echo "product added to the system";
+
             return true;
         }
     }
@@ -36,7 +36,7 @@ class Product
             $statement = $this->db->connection->prepare($sql1);
             $statement->execute();
             if ($statement->execute()) {
-                echo "instead product quantity is set to 0";
+
                 return true;
             }
         } else {
@@ -58,8 +58,8 @@ class Product
         $product = array();
         $result = array();
         if ($_SESSION['user_type'] == 'farmer') {
-            print_r($farmer_info["farmer_id"] = $_SESSION['user_id']);
-            print_r($result = $this->db->fetch_data_with_one_column_check($farmer_info, $this->table, "farmer_id"));
+            $farmer_info["farmer_id"] = $_SESSION['user_id'];
+            $result = $this->db->fetch_data_with_one_column_check($farmer_info, $this->table, "farmer_id");
         }
         if ($_SESSION['user_type'] == 'admin') {
             $result = $this->db->fetch_all_data($this->table);

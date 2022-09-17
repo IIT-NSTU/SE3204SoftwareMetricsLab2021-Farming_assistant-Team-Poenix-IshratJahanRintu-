@@ -27,13 +27,14 @@ $db = EDatabase::getInstance();
                 <div class="price text-muted"><?php echo $blog['category']; ?></div>
 
                 <div class="price"><span class="text-muted"> by </span><?php echo $blog['author']; ?></div><?php ?>
-
+                <?php if ($_SESSION['user_type'] == 'agriculturist') { ?>
                 <a href="blogHandler.php?update_id=<?php echo $blog['blog_id']; ?>"
                    class="
-                   bttn">update</a>
+                   bttn">পরিবর্তন</a>
+                <?php }  ?>
                 <a href="blogHandler.php?delete_id=<?php echo $blog['blog_id']; ?>"
                    class="dlt-btn"
-                   onclick="return confirm('delete this product?');">delete</a>
+                   onclick="return confirm('delete this product?');">মুছুন</a>
             </div>
         </div>
 
@@ -71,10 +72,11 @@ $db = EDatabase::getInstance();
                 class="box"
                 required>
             <option value=""
-                    selected>পণ্যের ধরণ নির্ধারণ করুন</option>
+                    selected>ব্লগের ধরণ নির্ধারণ করুন</option>
             <option value="পোকামাকড়">পোকামাকড়</option>
             <option value="সেচ">সেচ</option>
             <option value="বীজ রোপণ">বীজ রোপণ</option>
+            <option value="রোগবালাই">রোগবালাই</option>
         </select>
 
 
@@ -137,10 +139,11 @@ if (isset($_GET['update_id'])) {
                 class="box"
                 required>
             <option value=""
-                    selected>পণ্যের ধরণ নির্ধারণ করুন</option>
-            <option value="সবজি">সবজি</option>
-            <option value="সবজি">সবজি</option>
-            <option value="সবজি">সবজি</option>
+                    selected>ব্লগের ধরণ নির্ধারণ করুন</option>
+            <option value="পোকামাকড়">পোকামাকড়</option>
+            <option value="সেচ">সেচ</option>
+            <option value="বীজ রোপণ">বীজ রোপণ</option>
+            <option value="রোগবালাই">রোগবালাই</option>
         </select>
         <input type="file"
                name="update_image"

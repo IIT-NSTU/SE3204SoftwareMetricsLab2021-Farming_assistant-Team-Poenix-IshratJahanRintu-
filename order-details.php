@@ -72,7 +72,10 @@
                     <input type="hidden"
                            name="order_id"
                            value="<?php echo $order['e_order_id']; ?>">
-                    <td><select name="is_recieved"
+
+                    <td>
+                        <?php if ($order['is_recieved'] == 'no') { ?>
+                        <select name="is_recieved"
                                 style="    margin: 0;
     width: max-content;
     padding: 11px;
@@ -80,38 +83,63 @@
     text-align: center;
     border-radius: 8px;"
                                 name="is_recieved"
-                                class="bttn">
-                            <?php if ($order['is_recieved'] == 'no') { ?>
+                                class="dlt-btn">
+
                             <option value="no"
                                     selected>করা হয়নি</option>
                             <option value="yes">করা হয়েছে</option>
-                            <?php } else { ?>
+                        </select>
+                        <?php } else {
+                                            ?>
+                        <select name="is_recieved"
+                                style="margin: 0;
+    width: max-content;
+    padding: 11px;
+    
+    text-align: center;
+    border-radius: 8px;"
+                                name="is_recieved"
+                                class="bttn">
                             <option value="no">করা হয়নি</option>
                             <option value="yes"
                                     selected>করা হয়েছে</option>
-                            <?php  } ?>
-                        </select></td>
 
-                    <td><select name="is_delivered"
+                        </select><?php  } ?>
+                    </td>
+                    <td>
+                        <?php if ($order['is_delivered'] == 'no') { ?>
+                        <select name="is_delivered"
                                 style="    margin: 0;
     width: max-content;
     padding: 11px;
     
     text-align: center;
     border-radius: 8px;"
-                                id=""
-                                class="bttn">
-                            <?php if ($order['is_delivered'] == 'no') { ?>
+                                name="is_delivered"
+                                class="dlt-btn">
+
                             <option value="no"
                                     selected>করা হয়নি</option>
                             <option value="yes">করা হয়েছে</option>
-                            <?php } else { ?>
+                        </select>
+                        <?php } else {
+                                            ?>
+                        <select name="is_delivered"
+                                style="margin: 0;
+    width: max-content;
+    padding: 11px;
+    
+    text-align: center;
+    border-radius: 8px;"
+                                name="is_delivered"
+                                class="bttn">
                             <option value="no">করা হয়নি</option>
                             <option value="yes"
                                     selected>করা হয়েছে</option>
-                            <?php  } ?>
 
-                        </select></td>
+                        </select><?php  } ?>
+                    </td>
+
                     <td style="display:flex ; flex-direction:column;"><input type="submit"
                                class="bttn"
                                style="margin: 5px 0px;

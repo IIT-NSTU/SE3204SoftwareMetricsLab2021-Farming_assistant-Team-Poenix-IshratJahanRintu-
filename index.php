@@ -2,7 +2,7 @@
 session_start();
 
 include_once 'handlers/converter.php';
-
+include_once 'handlers/DatabaseEdited.php';
 if (isset($_SESSION['user_type'])) {
 
 
@@ -33,8 +33,8 @@ if (isset($_SESSION['message'])) {
       ';
     unset($_SESSION['message']);
 }
-include_once 'Database.php';
-$db = database::getInstance();
+
+$db = EDatabase::getInstance();
 ?>
 
 <!-- home section starts  -->
@@ -59,7 +59,7 @@ $db = database::getInstance();
                 <div class="content">
                     <h3>বাঁচাও কৃষক,বাঁচবে দেশ
                         মুছবে দৈন্য,ঘুচবে ক্লেশ</h3>
-                
+                    <!-- <p>আমার মাথা,আমার টিমমেটদের মাথা ,আমার চৌদ্দ গুষ্টীর মাথা</p> -->
                     <a href="#about"
                        class="bttn">শুরু করুন</a>
                 </div>
@@ -70,7 +70,7 @@ $db = database::getInstance();
                 <div class="content">
                     <h3>বাঁচাও কৃষক,বাঁচবে দেশ
                         মুছবে দৈন্য,ঘুচবে ক্লেশ</h3>
-                
+                    <!-- <p>আমার মাথা,আমার টিমমেটদের মাথা ,আমার চৌদ্দ গুষ্টীর মাথা</p> -->
                     <a href="#about"
                        class="bttn">শুরু করুন</a>
                 </div>

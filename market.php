@@ -1,7 +1,9 @@
 <?php
 session_start();
 
+include_once 'handlers/DatabaseEdited.php';
 include_once 'handlers/converter.php';
+$db = EDatabase::getInstance();
 
 if (isset($_SESSION['user_type'])) {
 
@@ -22,9 +24,7 @@ if (isset($_SESSION['user_type'])) {
 } else {
     include_once 'basic_header.php';
 }
-include_once 'Database.php';
-include_once 'handlers/converter.php';
-$db = database::getInstance();
+
 ?>
 
 <!-- slider section start -->

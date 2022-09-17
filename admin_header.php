@@ -1,4 +1,5 @@
 <?php
+
 include_once 'handlers/DatabaseEdited.php';
 
 $db = EDatabase::getInstance();

@@ -1,5 +1,7 @@
 <?php
+session_start();
 include_once 'Database.php';
+include_once 'handlers/DatabaseEdited.php';
 include_once 'admin_header.php';
 include_once 'classes/users/user.php';
 include_once 'classes/users/farmer.php';

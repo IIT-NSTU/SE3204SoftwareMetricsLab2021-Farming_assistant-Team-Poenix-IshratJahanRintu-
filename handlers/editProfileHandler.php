@@ -1,8 +1,9 @@
 <?php
 session_start();
 include_once 'Database.php';
+include_once 'DatabaseEdited.php';
 include_once '../classes/users/user.php';
-$db = database::getInstance();
+$db = EDatabase::getInstance();
 $user = new user();
 if (isset($_POST['update'])) {
 

@@ -250,7 +250,7 @@ div#side-actions {
   justify-content: space-between;
   z-index: 10000;
   gap: 1.5rem;
-  top: 68px;
+  top: 79px;
   color: #0c7c0c;
   transition: all 1s ease-in-out;
   /* font-size: 16.5rem; */
