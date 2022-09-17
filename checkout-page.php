@@ -1,5 +1,8 @@
 <?php
 session_start();
+include_once 'handlers/DatabaseEdited.php';
+include_once 'handlers/converter.php';
+$db = EDatabase::getInstance();
 if (isset($_SESSION['user_type'])) {
 
 
@@ -20,9 +23,7 @@ if (isset($_SESSION['user_type'])) {
     include_once 'basic_header.php';
 }
 
-include_once 'Database.php';
-include_once 'handlers/converter.php';
-$db = database::getInstance();
+
 
 if (isset($_GET['product_id'])) {
     $product['product_id'] = $_GET['product_id'];
@@ -32,8 +33,8 @@ if (isset($_GET['product_id'])) {
     while ($row = $stmnt->fetch()) {
 
         $product['farmer_id'] = $row['farmer_id'];
-        echo $product["name"] = $row['name'];
-        echo  $product["product_img"] = $row['product_img'];
+        $product["name"] = $row['name'];
+        $product["product_img"] = $row['product_img'];
         $product['quantity_type'] = $row['quantity_type'];
         $product['unit_price'] = $row['unit_price'];
         $product['quantity'] = $row['quantity'];

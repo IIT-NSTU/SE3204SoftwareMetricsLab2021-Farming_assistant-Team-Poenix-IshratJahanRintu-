@@ -6,17 +6,17 @@ include_once 'handlers/DatabaseEdited.php';
 $db = EDatabase::getInstance();
 
 
+
 if (isset($_SESSION['user_id'])) {
 
       $sql = "SELECT * from user where user_id={$_SESSION['user_id']}";
       $stmnt = $db->connection->prepare($sql);
       $stmnt->execute();
 
-      $row = $stmnt->fetch();
-      
-      $user_info['name'] = $row['name'];
-      $user_info['phone_number'] = $row['phone_number'];
-      
+      while ($row = $stmnt->fetch()) {
+            $user_info['name'] = $row['name'];
+            $user_info['phone_number'] = $row['phone_number'];
+      }
 }
 ?>
 <!DOCTYPE html>
@@ -82,7 +82,7 @@ if (isset($_SESSION['user_id'])) {
             <nav class="navbar">
                 <a href="http://localhost/Farming-assistant/index.php">হোম</a>
 
-                <a href="http://localhost/Farming-assistant/noticeboard.php">খবরাখবর</a>
+                <a href="#">খবরাখবর</a>
                 <a href="http://localhost/Farming-assistant/market.php">কৃষিপণ্য</a>
 
             </nav>
@@ -110,8 +110,8 @@ if (isset($_SESSION['user_id'])) {
                  class="fas fa-times"></div>
             <div class="info">
                 <a href="http://localhost/Farming-assistant/edit-profile-page.php"><i class="fas fa-user-edit"></i></a>
-                <h3><?php echo $user_info['name']; ?></h3>
-                <p><?php echo $user_info['phone_number']; ?></p>
+                <h3><?php echo $user_info['name'] ?></h3>
+                <p><?php echo $user_info['phone_number'] ?></p>
             </div>
 
             <div id="side-actions">
@@ -122,9 +122,9 @@ if (isset($_SESSION['user_id'])) {
                         ম্যানেজ
                         করুন</a>
                 </div>
-                <div class="action"><a href="http://localhost/Farming-assistant/problem_add_page.php"> সমস্যা বলুন</a>
+                <div class="action"><a href="#"> সমস্যা বলুন</a>
                 </div>
-                <div class="action"><a href="http://localhost/Farming-assistant/display_problem.php"> সমাধান দেখুন</a>
+                <div class="action"><a href="#"> সমাধান দেখুন</a>
                 </div>
 
             </div>

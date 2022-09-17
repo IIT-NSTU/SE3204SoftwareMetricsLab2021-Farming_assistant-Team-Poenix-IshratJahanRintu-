@@ -50,19 +50,15 @@ class EDatabase
     //pass an associative array 
     function fetch_data_with_two_column_check($data_array, $table, $col1, $col2)
     {
-        echo "$data_array[$col1]";
-        echo "$data_array[$col2]";
+
         $row = array();
-        echo $sql = "select * from ${table} Where ${col1}=? and ${col2}=?";
+        $sql = "select * from ${table} Where ${col1}=? and ${col2}=?";
 
         $statement = $this->connection->prepare($sql);
         $statement->execute([$data_array[$col1], $data_array[$col2]]);
-        echo "two column check function is called ";
+
         if ($statement->rowCount()) {
             $row = $statement->fetchAll();
-            print_r($row);
-        } else {
-            echo "no data found";
         }
         return $row;
     }
@@ -79,8 +75,6 @@ class EDatabase
         if ($statement->rowCount()) {
             $row = $statement->fetchAll();
             // print_r($row);
-        } else {
-            echo "no data found";
         }
         return $row;
     }
@@ -100,14 +94,14 @@ class EDatabase
             $table_columns = implode(', ', array_keys($params));
             $table_values = implode(", ", array_keys($cols));
 
-            echo    $sql = "INSERT INTO $table ($table_columns) VALUES($table_values)";
+            $sql = "INSERT INTO $table ($table_columns) VALUES($table_values)";
             $statement = $this->connection->prepare($sql);
 
             if ($statement->execute($cols)) {
-                echo "new data inserted";
+
                 return true;
             } else {
-                echo "no data inserted";
+
                 return false;
             }
         } else {

@@ -1,3 +1,14 @@
+<?php if (isset($_SESSION['message'])) {
+
+       echo '
+<div class="message">
+       <span>' . $_SESSION['message'] . '</span>
+       <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+</div>
+';
+       unset($_SESSION['message']);
+} ?>
+
 <section class="show-products">
     <h1 class="heading text-center">কৃষিবিদগণ</h1>
     <div class="box-container">
@@ -18,12 +29,9 @@
                 <div class="price text-muted"><?php echo $agri['phone_number']; ?></div>
                 <div class="price text-muted"><?php echo $agri['address']; ?></div>
 
-                <a href="admin_products.php"
-                   class="
-                   bttn">update</a>
                 <a href="agriHandler.php?delete_id=<?php echo $agri['user_id']; ?>"
                    class=" dlt-btn"
-                   onclick="return confirm('কৃষিবিদ রিমুভ করতে চান?');">delete</a>
+                   onclick="return confirm('কৃষিবিদ রিমুভ করতে চান?');">মুছুন</a>
             </div>
         </div>
 
@@ -81,7 +89,7 @@
 
 
         <input type="submit"
-               value="add_agri"
+               value="যোগ করুন"
                name="add_agri"
                class="bttn">
     </form>

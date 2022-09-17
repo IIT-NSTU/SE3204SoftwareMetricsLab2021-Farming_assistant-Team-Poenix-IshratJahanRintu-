@@ -9,7 +9,7 @@ class user
   {
 
 
-    $this->db = database::getInstance();
+    $this->db = EDatabase::getInstance();
   }
 
 
@@ -42,7 +42,7 @@ class user
       $product_delete = $this->db->connection->prepare($sql);
       $product_delete->execute();
       if ($product_delete->execute()) {
-        echo "farm product also deleted";
+
         return true;
       }
     } else {
@@ -67,16 +67,16 @@ class user
   public function memberExist($phone_number)
   {
     $row = array();
-    echo $sql = "select * from $this->table Where phone_number=$phone_number";
+    $sql = "select * from $this->table Where phone_number=$phone_number";
 
     $statement = $this->db->connection->prepare($sql);
     $statement->execute();
     if ($statement->rowCount()) {
       $row = $statement->fetchAll();
-      print_r($row);
+
       return true;
     } else {
-      echo "no data found";
+
       return false;
     }
   }

@@ -88,3 +88,6 @@ $order_info['transaction_id'] = $tran_id;
 $order_info['is_delivered'] = "no";
 $order_info['order_date'] = $tran_date;
 $order->addOrder($order_info);
+$_SESSION['user_id'] = $customer_id;
+$_SESSION['user_type'] = "customer";
+header("location:orderHandler.php");

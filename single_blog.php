@@ -53,18 +53,10 @@ if (isset($_GET['blog_id'])) {
             <div class="links">
 
                 <i class="far fa-user"></i>
-                <span style=" font-size: 10px; ">পোস্টদাতা <?php echo $blog["author"] ?></span>
+                <span style=" font-size: 13px;font-weight=600;">পোস্টদাতা <?php echo " " . $blog["author"] ?></span>
 
-                <a href=" #"
-                   class="icon">
-                    <i class="far fa-comment"></i>
-                    <span>(45)</span>
-                </a>
-                <a href="#"
-                   class="icon">
-                    <i class="far fa-share-square"></i>
-                    <span>(29)</span>
-                </a>
+
+
             </div>
         </div>
 

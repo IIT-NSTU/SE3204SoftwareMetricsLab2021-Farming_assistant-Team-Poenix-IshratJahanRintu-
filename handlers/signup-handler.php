@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once 'Database.php';
+include_once 'DatabaseEdited.php';
 include_once '../classes/users/user.php';
 include_once '../classes/users/farmer.php';
 include_once '../classes/users/admin.php';
@@ -10,11 +11,11 @@ include_once 'UserFactory.php';
 
 if (isset($_POST['phone'])) {
 
-    echo $signup_info['phone_number'] = "'{$_POST['phone']}'";
-    echo $signup_info['password'] = "'{$_POST['password']}'";
-    echo $signup_info['name'] = "'{$_POST['name']}'";
-    echo $signup_info['address'] = "'{$_POST['address']}'";
-    $signup_info['user_type'] = "'{$_POST['user_type']}'";
+    echo $signup_info['phone_number'] = $_POST['phone'];
+    echo $signup_info['password'] = $_POST['password'];
+    echo $signup_info['name'] = $_POST['name'];
+    echo $signup_info['address'] = $_POST['address'];
+    $signup_info['user_type'] = $_POST['user_type'];
 
 
 

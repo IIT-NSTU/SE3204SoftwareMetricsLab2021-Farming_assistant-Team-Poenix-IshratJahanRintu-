@@ -50,7 +50,7 @@ class Blog
 
     public function editBlog($edit_info = array())
     {
-        echo  $update_query =  "UPDATE $this->table SET  title='{$edit_info["update_name"]}',description='{$edit_info["update_description"]}',category='{$edit_info["update_category"]}',blog_img='{$edit_info["update_image"]}' WHERE blog_id={$edit_info["update_id"]}";
+        $update_query =  "UPDATE $this->table SET  title='{$edit_info["update_name"]}',description='{$edit_info["update_description"]}',category='{$edit_info["update_category"]}',blog_img='{$edit_info["update_image"]}' WHERE blog_id={$edit_info["update_id"]}";
         $stmnt = $this->db->connection->prepare($update_query);
         $stmnt->execute() or die("update query failed");
         move_uploaded_file($edit_info['update_image_tmp_name'], $edit_info['update_image_folder']);

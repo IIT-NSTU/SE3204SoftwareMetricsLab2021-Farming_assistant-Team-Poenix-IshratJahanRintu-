@@ -1,8 +1,7 @@
 <?php
 session_start();
 
-include_once 'DatabaseEdited.php';
-$db = EDatabase::getInstance();
+
 if (isset($_SESSION['user_type'])) {
     if ($_SESSION['user_type'] == "farmer") {
         include_once '../farmer_header.php';
@@ -12,6 +11,14 @@ if (isset($_SESSION['user_type'])) {
         header("location:../index.php");
     }
 }
+
+
+
+include 'Database.php';
+include_once 'DatabaseEdited.php';
+include 'converter.php';
+include '../classes/product.php';
+
 
 if (isset($_SESSION['message'])) {
 
@@ -24,11 +31,7 @@ if (isset($_SESSION['message'])) {
     unset($_SESSION['message']);
 }
 
-include 'Database.php';
-include 'converter.php';
-include '../classes/product.php';
-
-$db = database::getInstance();
+$db = EDatabase::getInstance();
 
 $p = new Product();
 
@@ -68,7 +71,7 @@ if (isset($_POST['update_product'])) {
     // );
     // echo $error_messages[$_FILES['update_image']["error"]];
 
-    echo  $update_query =  "UPDATE product SET  name='$update_name',
+    $update_query =  "UPDATE product SET  name='$update_name',
     category='$update_category',quantity_type='$update_quantity_type', quantity=$update_quantity,unit_price=$update_unit_price,
       product_img = '$update_image' WHERE product_id = $update_p_id";
     $stmnt = $db->connection->prepare($update_query);
@@ -82,15 +85,15 @@ if (isset($_POST['update_product'])) {
 if (isset($_POST['add_product'])) {
 
 
-    // prints "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 
-    $product_info["name"] =  "'{$_POST['name']}'";
 
-    $product_info["category"] =  "'{$_POST['category']}'";
+    $product_info["name"] = $_POST['name'];
+
+    $product_info["category"] =  $_POST['category'];
     $product_info["unit_price"] = $_POST['unit_price'];
-    $product_info["product_img"] = "'{$_FILES['image']['name']}'";
+    $product_info["product_img"] = $_FILES['image']['name'];
     $product_info["quantity"] =  $_POST['quantity'];
-    $product_info["quantity_type"] =  "'{$_POST['quantity_type']}'";
+    $product_info["quantity_type"] =  $_POST['quantity_type'];
     $product_info["farmer_id"] =  $_SESSION['user_id'];
     $image_tmp_name = $_FILES['image']['tmp_name'];
     $image_folder = '../assets/uploaded_img/product/' . $_FILES['image']['name'];
