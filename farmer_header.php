@@ -72,6 +72,34 @@ if (isset($_SESSION['user_id'])) {
         <link rel="stylesheet"
               href="assets/custom/loginpage.css" />
 
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+              rel="stylesheet"
+              integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+              crossorigin="anonymous">
+        <style>
+        a {
+            text-decoration: none;
+            text-decoration-color: none;
+        }
+
+        .container {
+            margin-top: 3%;
+        }
+
+        .inner {
+            overflow: hidden;
+        }
+
+        .inner img {
+            transition: all 1.5s ease;
+        }
+
+        .inner:hover img {
+            transform: scale(1.5);
+        }
+        </style>
+
     </head>
 
     <body>

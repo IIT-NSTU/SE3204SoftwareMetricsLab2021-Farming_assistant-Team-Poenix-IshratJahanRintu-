@@ -1,80 +1,125 @@
 <!-- Footer -->
-<footer class="page-footer font-small blue pt-4">
+<footer class="site-footer">
 
-    <!-- Footer Links -->
-    <div class="container-fluid text-center text-md-left">
-
-        <!-- Grid row -->
+    <div class="container">
         <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <div class="footer-widget">
+                    <h3 class="footer-widget__title">আমাদের সেবাসমূহ</h3>
+                    <p>There are many variations of passages of lorem ipsum available, but the majority suffered.
+                    </p>
 
-            <!-- Grid column -->
-            <div class="col-md-6 mt-md-0 mt-3">
 
-                <!-- Content -->
-                <h5 class="text-uppercase">Footer Content</h5>
-                <p>Here you can use rows and columns to organize your footer content.</p>
+                </div><!-- /.footer-widget -->
+            </div><!-- /.col-sm-12 col-md-6 col-lg-4 -->
+            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <div class="footer-widget footer-widget__links-widget">
+                    <h3 class="footer-widget__title">লিংকসমূহ</h3><!-- /.footer-widget__title -->
+                    <ul class="list-unstyled footer-widget__links">
+                        <li><a href="http://localhost/Farming-assistant/index.php">হোম পেজ</a></li>
+                        <li><a href="http://localhost/Farming-assistant/market.php">কৃষিপণ্য</a></li>
+                        <li><a href="http://localhost/Farming-assistant/noticeboard.php">খবরাখবর</a></li>
 
-            </div>
-            <!-- Grid column -->
+                    </ul><!-- /.list-unstyled -->
+                </div><!-- /.footer-widget -->
+            </div><!-- /.col-sm-12 col-md-6 col-lg-2 -->
 
-            <hr class="clearfix w-100 d-md-none pb-3">
-
-            <!-- Grid column -->
-            <div class="col-md-3 mb-md-0 mb-3">
-
-                <!-- Links -->
-                <h5 class="text-uppercase">Links</h5>
-
-                <ul class="list-unstyled">
+            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <h3 class="footer-widget__title">যোগাযোগ</h3><!-- /.footer-widget__title -->
+                <ul class="list-unstyled footer-widget__contact">
                     <li>
-                        <a href="#!">Link 1</a>
+                        <i class="bi bi-telephone-forward-fill"></i>
+                        <a href="tel:666-888-0000">০১৪০৫২০১৭৭১</a>
                     </li>
                     <li>
-                        <a href="#!">Link 2</a>
+                        <i class="bi bi-envelope-fill"></i>
+                        <a href="mailto:farmingassistant@gmail.com">farmingassistant@gmail.com</a>
                     </li>
                     <li>
-                        <a href="#!">Link 3</a>
+                        <i class="bi bi-facebook"></i>
+                        <a href="#">facebook.com/farming-assistant</a>
                     </li>
-                    <li>
-                        <a href="#!">Link 4</a>
-                    </li>
-                </ul>
 
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-3 mb-md-0 mb-3">
-
-                <!-- Links -->
-                <h5 class="text-uppercase">Links</h5>
-
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="#!">Link 1</a>
-                    </li>
-                    <li>
-                        <a href="#!">Link 2</a>
-                    </li>
-                    <li>
-                        <a href="#!">Link 3</a>
-                    </li>
-                    <li>
-                        <a href="#!">Link 4</a>
-                    </li>
-                </ul>
-
-            </div>
-            <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
+                </ul><!-- /.list-unstyled -->
+            </div><!-- /.col-sm-12 col-md-6 col-lg-3 -->
+        </div><!-- /.row -->
     </div>
+    <!-- Grid row -->
+    <!-- <div class="row"> -->
+
+    <!-- Grid column -->
+    <!-- <div class="col-md-6 mt-md-0 mt-3"> -->
+
+    <!-- Content -->
+    <!-- <h5 class="text-uppercase">Footer Content</h5>
+                <p>Here you can use rows and columns to organize your footer content.</p> -->
+
+    <!-- </div> -->
+    <!-- Grid column -->
+
+    <!-- <hr class="clearfix w-100 d-md-none pb-3"> -->
+
+    <!-- Grid column -->
+    <!-- <div class="col-md-3 mb-md-0 mb-3"> -->
+
+    <!-- Links -->
+    <!-- <h5 class="text-uppercase">Links</h5> -->
+
+    <!-- <ul class="list-unstyled"> -->
+    <!-- <li>
+                        <a href="#!">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 2</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 3</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 4</a>
+                    </li>
+                </ul>
+
+            </div> -->
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <!-- <div class="col-md-3 mb-md-0 mb-3"> -->
+
+    <!-- Links -->
+    <!-- <h5 class="text-uppercase">Links</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a style="color:black;"
+                           href="#!">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 2</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 3</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 4</a>
+                    </li>
+                </ul>
+
+            </div> -->
+    <!-- Grid column -->
+    <!-- 
+        </div> -->
+    <!-- Grid row -->
+    <!-- 
+    </div> -->
     <!-- Footer Links -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2022 Copyright:
+    <div class="footer-copyright text-center py-3"
+         style="background-color: #0e580e;
+    padding: 23px;
+    color: white;
+    font-size: 14px;">© 2022 Copyright:
         <span>IIT,NSTU</span>
     </div>
     <!-- Copyright -->
@@ -90,7 +135,17 @@
 <script src="assets/js/phone.js"></script>
 <script src="assets/custom/script.js"></script>
 <script src="../assets/custom/script.js"></script>
-
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 <script>
 lightGallery(document.querySelector(".projects .box-container"));
 </script>
