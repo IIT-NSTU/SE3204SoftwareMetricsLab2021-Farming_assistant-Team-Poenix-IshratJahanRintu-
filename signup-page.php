@@ -110,7 +110,8 @@ if (isset($_SESSION['message'])) {
     </div>
     <div class="signup-footer fs-6">
 
-        <p class="already">আগে থেকেই একাউন্ট আছে?<a href="loginpage.php">লগইন করুন </a></p>
+        <p class="already">আগে থেকেই একাউন্ট আছে?<a style="text-decoration: none;color:green;"
+               href=" loginpage.php">লগইন করুন </a></p>
     </div>
 </div>
 </div>

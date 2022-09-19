@@ -5,8 +5,10 @@
         <div class="row">
             <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
                 <div class="footer-widget">
-                    <h3 class="footer-widget__title">আমাদের সেবাসমূহ</h3>
-                    <p>There are many variations of passages of lorem ipsum available, but the majority suffered.
+                    <h3 class="footer-widget__title">আমাদের অভিলক্ষ্য</h3>
+                    <p>
+                        কৃষিপণ্যের উৎপাদনশীলতা বৃদ্ধি , বিপণন ব্যাবস্থা আধুনিকায়ন,কৃষি সম্পর্কিত টিপস এবং তথ্যসেবা
+                        নিশ্চিতকরণ।
                     </p>
 
 
@@ -146,6 +148,35 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="assets/js/jquery-3.5.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.validate.min.js"></script>
+<script src="assets/js/bootstrap-select.min.js"></script>
+<script src="assets/js/wow.js"></script>
+<script src="assets/js/odometer.min.js"></script>
+<script src="assets/js/jquery.appear.min.js"></script>
+<script src="assets/js/jarallax.min.js"></script>
+<script src="assets/js/circle-progress.min.js"></script>
+<script src="assets/js/wNumb.min.js"></script>
+<script src="assets/js/nouislider.min.js"></script>
+
+<!-- template js -->
+<script src="assets/js/theme.js"></script>
+
 <script>
 lightGallery(document.querySelector(".projects .box-container"));
 </script>

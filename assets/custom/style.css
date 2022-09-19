@@ -1179,10 +1179,11 @@ span.highest-quantity {
 }
 .footer-widget p {
   font-size: 14px;
-  color: #198754;
+  color: #0f5132;
   max-width: 271px;
   margin: 0;
   margin-top: 25px;
+  /* text-align: center; */
 }
 
 .footer-widget__title {

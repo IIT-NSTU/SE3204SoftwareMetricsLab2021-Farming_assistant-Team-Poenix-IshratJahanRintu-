@@ -14,10 +14,10 @@ $admin = new admin();
 $customer = new customer();
 $agri = new agriculturist();
 
-echo $total_farmers = $farmer->countMembers();
-echo $total_customers = $customer->countMembers();
-echo $total_admin = $admin->countMembers();
-echo $total_agri = $agri->countMembers();
+$total_farmers = $farmer->countMembers();
+$total_customers = $customer->countMembers();
+$total_admin = $admin->countMembers();
+$total_agri = $agri->countMembers();
 
 
 

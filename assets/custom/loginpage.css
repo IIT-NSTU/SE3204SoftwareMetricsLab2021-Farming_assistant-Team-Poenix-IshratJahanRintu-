@@ -111,8 +111,9 @@ select:focus {
 .create {
   text-align: center;
   text-decoration: none;
-  color: #297b1b;
+  color: #103e09;
   font-size: 18px;
+  text-decoration-color: none;
 }
 p.already {
   font-size: 14px;
@@ -127,6 +128,7 @@ p.already {
 }
 .login-footer {
   margin-bottom: -18px;
+  color: black;
 }
 
 @media (max-width: 380px) {

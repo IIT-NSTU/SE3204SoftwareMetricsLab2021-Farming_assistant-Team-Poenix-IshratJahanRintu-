@@ -30,9 +30,6 @@ class EDatabase
         }
     }
 
-    function count_row($table)
-    {
-    }
 
     function fetch_all_data($table)
     {

@@ -78,8 +78,9 @@ if (isset($_SESSION['message'])) {
                    id="login_submit">
         </form>
         <div class="login-footer fs-6">
-            <p id="forget"> <a href="#">পাসওয়ার্ড ভুলে গিয়েছেন?</a></p>
-            <p class="create"><a href="signup-page.php">নতুন একাউন্ট তৈরি করুন </a></p>
+
+            <p class="create"><a style="text-decoration: none;color:green;padding-top:2rem;"
+                   href="signup-page.php">নতুন একাউন্ট তৈরি করুন </a></p>
         </div>
     </div>
 </div>
