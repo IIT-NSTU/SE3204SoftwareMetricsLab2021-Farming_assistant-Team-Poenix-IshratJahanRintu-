@@ -714,20 +714,21 @@ section {
 
 .dashboard .box-container .box h3 {
   font-size: 5rem;
-  color: var(--black);
+  color: black;
 }
 
-.dashboard .box-container .box p {
-  color: white;
+.box-container .box p {
   margin-top: 1.5rem;
   padding: 1.5rem;
   background-color: rgb(206, 235, 206);
-  color: var(--purple);
+  color: black;
   font-size: 3rem;
   border-radius: 0.5rem;
+  height: 106px;
 }
 .dashboard .box-container .box p:hover {
-  background-color: yellowgreen;
+  background-color: rgb(4, 80, 15);
+  color: white;
   border: none;
 }
 
@@ -919,11 +920,15 @@ h1.empty-heading {
 }
 
 .blog-container .posts-container .post .text {
-  color: var(--light-color);
+  color: #666;
   font-size: 1.6rem;
   line-height: 1.7;
-  padding: 2rem 0;
+  /* padding: 2rem 0; */
   align-self: self-start;
+  background-color: #f6f5f2;
+  border-radius: 5px;
+  padding: 30px;
+  text-align: center;
 }
 
 /*blog ends*/

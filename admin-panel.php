@@ -8,16 +8,17 @@ include_once 'classes/users/farmer.php';
 include_once 'classes/users/customer.php';
 include_once 'classes/users/agriculturist.php';
 include_once 'classes/users/admin.php';
+include_once 'handlers/converter.php';
 
 $farmer = new farmer();
 $admin = new admin();
 $customer = new customer();
 $agri = new agriculturist();
 
-$total_farmers = $farmer->countMembers();
-$total_customers = $customer->countMembers();
-$total_admin = $admin->countMembers();
-$total_agri = $agri->countMembers();
+$total_farmers = converter::en2bn($farmer->countMembers());
+$total_customers = converter::en2bn($customer->countMembers());
+$total_admin = converter::en2bn($admin->countMembers());
+$total_agri = converter::en2bn($agri->countMembers());
 
 
 
