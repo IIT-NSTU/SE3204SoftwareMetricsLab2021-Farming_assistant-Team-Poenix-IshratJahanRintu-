@@ -8,11 +8,11 @@ $user = new user();
 if (isset($_POST['update'])) {
 
     echo $edit_info['phone_number'] = $_POST['phone'];
-    echo $edit_info['password'] = $_POST['password'];
+    echo $edit_info['password'] = md5($_POST['password']);
     echo $edit_info['name'] = $_POST['name'];
     echo $edit_info['address'] = $_POST['address'];
     echo $edit_info['user_id'] = $_SESSION['user_id'];
-    echo $old_password = $_POST['old-password'];
+    echo $old_password = md5($_POST['old-password']);
 
     $password_match = false;
     echo $sql1 = "SELECT password from user where user_id={$edit_info['user_id']}";

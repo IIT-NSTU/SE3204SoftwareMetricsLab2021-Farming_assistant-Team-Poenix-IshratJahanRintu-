@@ -23,7 +23,7 @@ class AddBlog implements ManageBlog
     {
 
         if ($this->blog->addBlog($this->blog_info)) {
-            echo "blog data inserted";
+
 
             move_uploaded_file($this->image_info['image_tmp_name'], $this->image_info['image_folder']);
         }

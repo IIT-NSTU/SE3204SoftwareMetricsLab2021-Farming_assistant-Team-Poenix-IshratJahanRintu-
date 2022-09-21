@@ -28,9 +28,10 @@ if (isset($_SESSION['user_type'])) {
     <div class="row justify-content-center">
         <div class="col-md-4">
             <div class="card shadow"
-                 style="width: 20rem;">
+                 style="width: 27rem;">
                 <div class="inner">
-                    <img class="card-img-top"
+                    <img style="height: 192px;"
+                         class="card-img-top"
                          src="assets/images/dam.jpg"
                          alt="Card image cap">
                 </div>
@@ -46,9 +47,10 @@ if (isset($_SESSION['user_type'])) {
 
         <div class="col-md-4">
             <div class="card shadow"
-                 style="width: 20rem;">
-                <div class="inner">
-                    <img class="card-img-top"
+                 style="width: 27rem;">
+                <div class=" inner">
+                    <img style="height: 192px;"
+                         class="card-img-top"
                          src="assets/images/weather3.png"
                          alt="Card image cap">
                 </div>
@@ -64,9 +66,10 @@ if (isset($_SESSION['user_type'])) {
         </div>
         <div class="col-md-4">
             <div class="card shadow"
-                 style="width: 20rem;">
+                 style="width: 27rem;">
                 <div class="inner">
-                    <img class="card-img-top"
+                    <img style="height: 192px;"
+                         class="card-img-top"
                          src="assets/images/Krishe.jpg"
                          alt="Card image cap">
                 </div>

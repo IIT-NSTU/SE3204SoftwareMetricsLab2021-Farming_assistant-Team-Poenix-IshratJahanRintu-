@@ -44,7 +44,8 @@ if (isset($_SESSION['user_type'])) {
                      style="background: url(assets/images/sp1.jpg) no-repeat">
                 <div class="content">
                     <h3>কৃষিপণ্য কিনুন ঘরে বসেই</h3>
-                    <a href="#"
+                    <a style="text-decoration-line:none;"
+                       href="#products"
                        class="bttn">শুরু করুন</a>
                 </div>
             </section>
@@ -52,7 +53,8 @@ if (isset($_SESSION['user_type'])) {
                      style="background: url(assets/images/sp2.jpg) no-repeat">
                 <div class="content">
                     <h3>কৃষিপণ্য কিনুন ঘরে বসেই</h3>
-                    <a href="#"
+                    <a style="text-decoration-line:none;"
+                       href="#products"
                        class="bttn">শুরু করুন</a>
                 </div>
             </section>
@@ -60,7 +62,8 @@ if (isset($_SESSION['user_type'])) {
                      style="background: url(assets/images/tomato.jpg) no-repeat">
                 <div class="content">
                     <h3>কৃষিপণ্য কিনুন ঘরে বসেই</h3>
-                    <a href="#"
+                    <a style="text-decoration-line:none;"
+                       href="#products"
                        class="bttn">শুরু করুন</a>
                 </div>
             </section>
@@ -80,7 +83,8 @@ if (isset($_SESSION['user_type'])) {
 
 
 
-<section class="speciality"
+<section id="products"
+         class="speciality"
          id="speciality">
     <h1 class="heading">ক্যাটাগরিসমূহ</h1>
     <!-- si -->
@@ -95,7 +99,8 @@ if (isset($_SESSION['user_type'])) {
         if ($statement->rowCount()) {
             while ($category = $statement->fetch()) {
         ?>
-        <a href="market.php?category=<?php echo  $category['category_name']; ?>">
+        <a style="text-decoration-line:none;"
+           href="market.php?category=<?php echo  $category['category_name']; ?>">
             <div class="box">
                 <img class="image"
                      src="assets/uploaded_img/category/<?php echo $category["category_img"]; ?>"
@@ -171,7 +176,8 @@ if (isset($_SESSION['user_type'])) {
                       class="quantity"><?php echo converter::en2bn($product['quantity']); ?></span><span
                       class="quantity type"><?php echo $product['quantity_type']; ?></span></p>
 
-            <a href="checkout-page.php?product_id=<?php echo $product['product_id'] ?>"
+            <a style="text-decoration-line:none;"
+               href="checkout-page.php?product_id=<?php echo $product['product_id'] ?>"
                class="bttn"> অর্ডার করুন</a>
         </div>
         <?php }

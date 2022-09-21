@@ -12,7 +12,7 @@ include_once 'UserFactory.php';
 if (isset($_POST['phone'])) {
 
     echo $signup_info['phone_number'] = $_POST['phone'];
-    echo $signup_info['password'] = $_POST['password'];
+    echo $signup_info['password'] = md5($_POST['password']);
     echo $signup_info['name'] = $_POST['name'];
     echo $signup_info['address'] = $_POST['address'];
     $signup_info['user_type'] = $_POST['user_type'];

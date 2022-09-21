@@ -1,5 +1,6 @@
 <?php
-include_once 'converter.php';
+// 
+
 //implements ExistingCheckable
 class order
 {
@@ -20,6 +21,23 @@ class order
     //         echo "no existing found";
     //     }
     // }
+
+    function countOrders()
+    {
+        return (count($this->db->fetch_all_data($this->table)));
+    }
+
+    function countPendingOrders()
+    {
+        $sql = "select * from $this->table where is_delivered='no'";
+
+
+
+        $statement = $this->db->connection->prepare($sql);
+        $statement->execute();
+        $row = $statement->fetchAll();
+        return count($row);
+    }
     function addOrder($order_info)
     {
 

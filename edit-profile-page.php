@@ -1,7 +1,7 @@
 <?php session_start();
-
+include_once 'handlers/DatabaseEdited.php';
 include_once 'handlers/converter.php';
-
+$db = EDatabase::getInstance();
 if (isset($_SESSION['user_type'])) {
 
 
@@ -32,6 +32,16 @@ if (isset($_SESSION['message'])) {
     unset($_SESSION['message']);
 }
 
+$sql = "SELECT  * from user where user_id={$_SESSION['user_id']}";
+$stmnt = $db->connection->prepare($sql);
+$stmnt->execute() or die("query failed");
+
+while ($row = $stmnt->fetch()) {
+    $user['name'] = $row['name'];
+    $user['phone_number'] = $row['phone_number'];
+    $user['address'] = $row['address'];
+}
+
 ?>
 <div class="login-container">
     <div class="wrapper">
@@ -50,12 +60,14 @@ if (isset($_SESSION['message'])) {
                     <input type="text"
                            name="name"
                            placeholder="নাম লিখুন"
+                           value="<?php echo $user['name']; ?>"
                            required>
                 </div>
                 <div class="form-field d-flex align-items-center">
                     <input type="text"
                            name="address"
                            placeholder="ঠিকানা লিখুন"
+                           value="<?php echo $user['address']; ?>"
                            required>
                 </div>
 
@@ -68,6 +80,7 @@ if (isset($_SESSION['message'])) {
                            name="phone"
                            id="phone"
                            placeholder="ফোন নাম্বার"
+                           value="<?php echo $user['phone_number']; ?>"
                            required>
                 </div>
 

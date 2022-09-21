@@ -36,18 +36,23 @@ $posts = $db->fetch_all_data('problem');
             <div class="card mb-5 shadow-sm ">
 
                 <?php if ($post['img'] != "") : ?>
-                <img src="assets/uploaded_img/<?php echo $post['img']; ?>"
+                <img style="object-fit: cover;"
+                     src="assets/uploaded_img/<?php echo $post['img']; ?>"
                      class="img-fluid">
                 <?php endif; ?>
 
-                <div class="card-body">
+                <div style="height: 120px;"
+                     class="card-body">
                     <div class="card-title">
                         <h2><?php echo $post['title']; ?></h2>
                     </div>
-                    <div class="card-text">
-                        <p><?php echo $post['problem_des']; ?></p>
-                    </div>
-                    <a href="http://localhost/Farming-assistant/solution.php?problem_id=<?php echo $post['problem_id'] ?>"
+
+                    <a style="    width: 87px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;"
+                       href="http://localhost/Farming-assistant/solution.php?problem_id=<?php echo $post['problem_id'] ?>"
                        class="btn btn-outline-primary rounded-0 float-end">বিস্তারিত</a>
                 </div>
 

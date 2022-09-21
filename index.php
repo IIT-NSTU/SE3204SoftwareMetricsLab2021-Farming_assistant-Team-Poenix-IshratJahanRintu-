@@ -45,40 +45,33 @@ $db = EDatabase::getInstance();
 
 <!-- home section starts  -->
 
-<section class="home"
-         id="home">
+<section class="home" id="home">
     <div class="swiper home-slider">
         <div class="swiper-wrapper">
-            <section class="swiper-slide slide"
-                     style="background: url(assets/images/farmer2.jpg) no-repeat">
+            <section class="swiper-slide slide" style="background: url(assets/images/farmer2.jpg) no-repeat">
                 <div class="content">
                     <h3>বাঁচাও কৃষক,বাঁচবে দেশ<br>
                         মুছবে দৈন্য,ঘুচবে ক্লেশ</h3>
 
-                    <a href="#about"
-                       class="bttn">শুরু করুন</a>
+                    <a style="margin-top: 86px;text-decoration-line:none;" href="#about" class="bttn">শুরু করুন</a>
                 </div>
             </section>
 
-            <section class="swiper-slide slide"
-                     style="background: url(assets/images/slider1.jpg) no-repeat">
+            <section class="swiper-slide slide" style="background: url(assets/images/slider1.jpg) no-repeat">
                 <div class="content">
                     <h3>বাঁচাও কৃষক,বাঁচবে দেশ
                         মুছবে দৈন্য,ঘুচবে ক্লেশ</h3>
 
-                    <a href="#about"
-                       class="bttn">শুরু করুন</a>
+                    <a style="margin-top: 86px;text-decoration-line:none;" href="#about" class="bttn">শুরু করুন</a>
                 </div>
             </section>
 
-            <section class="swiper-slide slide"
-                     style="background: url(assets/images/farmerinsert.jpg) no-repeat">
+            <section class="swiper-slide slide" style="background: url(assets/images/farmerinsert.jpg) no-repeat">
                 <div class="content">
                     <h3>বাঁচাও কৃষক,বাঁচবে দেশ
                         মুছবে দৈন্য,ঘুচবে ক্লেশ</h3>
 
-                    <a href="#about"
-                       class="bttn">শুরু করুন</a>
+                    <a style="margin-top: 86px;text-decoration-line:none;" href="#about" class="bttn">শুরু করুন</a>
                 </div>
             </section>
         </div>
@@ -95,8 +88,7 @@ $db = EDatabase::getInstance();
 
 <!-- about section starts  -->
 
-<section class="about"
-         id="about">
+<section class="about" id="about">
     <h1 class="heading">আমাদের লক্ষ্য</h1>
 
     <div class="roww">
@@ -114,8 +106,7 @@ $db = EDatabase::getInstance();
                 বাজারজাতকরণের জন্য একটি অনলাইন প্লাটফর্ম এবং কৃষি সম্পর্কিত বিভিন্ন সমস্যাবলির
                 সমাধান দিয়ে সহায়তা দিয়ে থাকে।
             </p>
-            <a href="#services"
-               class="bttn">আরও দেখুন</a>
+            <a href="#services" style="text-decoration-line:none;" class="bttn">আরও দেখুন</a>
         </div>
     </div>
     <?php
@@ -156,31 +147,26 @@ $db = EDatabase::getInstance();
 
 <!-- services section starts  -->
 
-<section class="services"
-         id="services">
+<section class="services" id="services">
     <h1 class="heading">আমাদের সেবাসমূহ</h1>
     <div class="box-container">
         <div class="box">
-            <img src="assets/images/internet.gif"
-                 alt="" />
+            <img src="assets/images/internet.gif" alt="" />
             <h3>কৃষিবিষয়ক খবরাখবর</h3>
         </div>
 
         <div class="box">
-            <img src="assets/images/document.gif"
-                 alt="" />
+            <img src="assets/images/document.gif" alt="" />
             <h3>ব্লগ</h3>
         </div>
 
         <div class="box">
-            <img src="assets/images/shopping-cart.gif"
-                 alt="" />
+            <img src="assets/images/shopping-cart.gif" alt="" />
             <h3>কৃষিপণ্য বাজারজাতকরণ</h3>
         </div>
 
         <div class="box">
-            <img src="assets/images/tech-support.gif"
-                 alt="" />
+            <img src="assets/images/tech-support.gif" alt="" />
             <h3>কৃষিবিষয়ক সমস্যাবলির সমাধান</h3>
         </div>
     </div>
@@ -192,8 +178,7 @@ $db = EDatabase::getInstance();
 
 <!-- popular section starts  -->
 
-<section class="popular"
-         id="popular">
+<section class="popular" id="popular">
     <h1 class="heading "> <span class="green-span">সাম্প্রতিক</span> পণ্যসমূহ</h1>
 
     <div class="box-container">
@@ -207,17 +192,15 @@ $db = EDatabase::getInstance();
 
 
         ?>
-        <div class="box">
+                <div class="box">
 
-            <img src="assets/uploaded_img/product/<?php echo $product['product_img']; ?>"
-                 alt="">
-            <h3><?php echo $product['name']; ?></h3>
-
+                    <img src="assets/uploaded_img/product/<?php echo $product['product_img']; ?>" alt="">
+                    <h3><?php echo $product['name']; ?></h3>
 
 
-            <a href="market.php"
-               class="bttn">সকল পণ্য দেখুন</a>
-        </div>
+
+                    <a style="text-decoration-line:none;" href="market.php" class="bttn">সকল পণ্য দেখুন</a>
+                </div>
 
 
 
@@ -232,8 +215,7 @@ $db = EDatabase::getInstance();
 <!-- popular section ends -->
 <!-- blogs section starts  -->
 
-<section class="blogs"
-         id="blogs">
+<section class="blogs" id="blogs">
     <h1 class="heading">ব্লগসমূহ</h1>
 
     <div class="swiper blogs-slider">
@@ -249,21 +231,19 @@ $db = EDatabase::getInstance();
 
 
 
-            <div class="swiper-slide slide">
-                <div class="image">
-                    <img src="assets/uploaded_img/blog/<?php echo $b['blog_img']; ?>"
-                         alt="">
+                    <div class="swiper-slide slide">
+                        <div class="image">
+                            <img src="assets/uploaded_img/blog/<?php echo $b['blog_img']; ?>" alt="">
 
-                </div>
-                <div class="content">
-                    <h3><?php echo $b["title"] ?></h3>
-                    <p>
-                        <?php echo $b["category"] ?>
-                    </p>
-                    <a href="single_blog.php?blog_id=<?php echo $b["blog_id"] ?>"
-                       class="bttn">সম্পূর্ণ পড়ুন</a>
-                </div>
-            </div>
+                        </div>
+                        <div class="content">
+                            <h3><?php echo $b["title"] ?></h3>
+                            <p>
+                                <?php echo $b["category"] ?>
+                            </p>
+                            <a href="single_blog.php?blog_id=<?php echo $b["blog_id"] ?>" class="bttn">সম্পূর্ণ পড়ুন</a>
+                        </div>
+                    </div>
             <?php }
             } ?>
 

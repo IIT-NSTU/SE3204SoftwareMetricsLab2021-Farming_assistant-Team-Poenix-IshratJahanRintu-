@@ -26,7 +26,7 @@
                    class="bttn">পরিবর্তন</a>
                 <a href="productHandler.php?delete_id=<?php echo $product['product_id']; ?>"
                    class="dlt-btn"
-                   onclick="return confirm('delete this product?');">মুছুন</a>
+                   onclick="return confirm('পণ্যটি মুছে ফেলতে চান?');">মুছুন</a>
             </div>
         </div>
 

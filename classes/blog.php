@@ -23,11 +23,11 @@ class Blog
 
     function addBlog($blog_info)
     {
-        print_r($blog_info);
+
 
         if ($this->db->insert($this->table, $blog_info)) {
 
-            echo "blog added to the system";
+
             return true;
         }
     }

@@ -47,6 +47,18 @@ if (isset($_SESSION['message'])) {
                   action="handlers/signup-handler.php"
                   method="post"
                   onsubmit="return validate_mbl_pass()">
+                <div class="form-field d-flex align-items-center">
+                    <input type="text"
+                           name="name"
+                           placeholder="নাম লিখুন"
+                           required>
+                </div>
+                <div class="form-field d-flex align-items-center">
+                    <input type="text"
+                           name="address"
+                           placeholder="ঠিকানা লিখুন"
+                           required>
+                </div>
                 <div class="
               form-field
               d-flex
@@ -76,18 +88,7 @@ if (isset($_SESSION['message'])) {
                            required>
 
                 </div>
-                <div class="form-field d-flex align-items-center">
-                    <input type="text"
-                           name="name"
-                           placeholder="নাম লিখুন"
-                           required>
-                </div>
-                <div class="form-field d-flex align-items-center">
-                    <input type="text"
-                           name="address"
-                           placeholder="ঠিকানা লিখুন"
-                           required>
-                </div>
+
                 <div class=" d-flex align-items-center">
 
                     <div><select class="role"

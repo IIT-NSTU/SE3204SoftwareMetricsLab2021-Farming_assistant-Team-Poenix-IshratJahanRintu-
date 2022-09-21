@@ -20,7 +20,7 @@ if (isset($_POST['add_agri'])) {
     $agri_info["phone_number"] =  $_POST['phone'];
     $agri_info["address"] =  $_POST['address'];
     $agri_info["user_type"] = 'agriculturist';
-    $agri_info['password'] = $_POST['password'];
+    $agri_info['password'] = md5($_POST['password']);
 
 
 

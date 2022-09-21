@@ -97,7 +97,10 @@ $sol = $db->fetch_data_with_one_column_check($_GET, 'solution', 'problem_id');
                         <div class="col-lg-8">
                             <div class="blog-details__image">
                                 <?php if ($data[0]['img'] != "") : ?>
-                                <img src="assets/uploaded_img/<?php echo $data[0]['img']; ?>"
+                                <img style="width: 99%;
+    height: 400px;
+    object-fit: cover;"
+                                     src="assets/uploaded_img/<?php echo $data[0]['img']; ?>"
                                      class="img-fluid"
                                      alt="">
                                 <?php endif; ?>

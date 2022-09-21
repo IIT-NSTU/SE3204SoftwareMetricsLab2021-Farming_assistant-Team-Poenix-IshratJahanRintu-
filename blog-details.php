@@ -26,7 +26,8 @@ $db = EDatabase::getInstance();
                 </div>
                 <div class="price text-muted"><?php echo $blog['category']; ?></div>
 
-                <div class="price"><span class="text-muted"> by </span><?php echo $blog['author']; ?></div><?php ?>
+                <div class="price"><span class="text-muted">পোস্টদাতাঃ</span><?php echo $blog['author']; ?></div>
+                <?php ?>
                 <?php if ($_SESSION['user_type'] == 'agriculturist') { ?>
                 <a href="blogHandler.php?update_id=<?php echo $blog['blog_id']; ?>"
                    class="
@@ -34,7 +35,7 @@ $db = EDatabase::getInstance();
                 <?php }  ?>
                 <a href="blogHandler.php?delete_id=<?php echo $blog['blog_id']; ?>"
                    class="dlt-btn"
-                   onclick="return confirm('delete this product?');">মুছুন</a>
+                   onclick="return confirm('ব্লগটি মুছে ফেলতে চান?');">মুছুন</a>
             </div>
         </div>
 
@@ -78,6 +79,9 @@ $db = EDatabase::getInstance();
             <option value="বীজ রোপণ">বীজ রোপণ</option>
             <option value="রোগবালাই">রোগবালাই</option>
             <option value="যন্ত্রপাতি">যন্ত্রপাতি</option>
+            <option value="সার ও কীটনাশক">সার ও কীটনাশক</option>
+            <option value="চাষ পদ্ধতি">চাষ পদ্ধতি</option>
+
         </select>
 
 
@@ -145,6 +149,10 @@ if (isset($_GET['update_id'])) {
             <option value="সেচ">সেচ</option>
             <option value="বীজ রোপণ">বীজ রোপণ</option>
             <option value="রোগবালাই">রোগবালাই</option>
+            <option value="যন্ত্রপাতি">যন্ত্রপাতি</option>
+            <option value="সার ও কীটনাশক">সার ও কীটনাশক</option>
+            <option value="চাষ পদ্ধতি">চাষ পদ্ধতি</option>
+
         </select>
         <input type="file"
                name="update_image"
