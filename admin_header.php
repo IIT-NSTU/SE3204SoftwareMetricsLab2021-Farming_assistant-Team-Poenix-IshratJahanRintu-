@@ -28,7 +28,7 @@ if (isset($_SESSION['user_id'])) {
               content="IE=edge" />
         <meta name="viewport"
               content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Farming-Assistant</title>
         <!-- Font awesome cdn link -->
 
         <link rel="stylesheet"
@@ -41,12 +41,25 @@ if (isset($_SESSION['user_id'])) {
 
         <link rel="stylesheet"
               href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+              rel="stylesheet"
+              integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+              crossorigin="anonymous">
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
 
         <!-- bootstrap paths -->
 
         <link rel="stylesheet"
               href="assets/css/bootstrap.min.css" />
 
+        <link rel="stylesheet"
+              href="../assets/css/bootstrap.min.css" />
+
+        <link rel="stylesheet"
+              href="../assets/icon/bootstrap-icons.css" />
         <link rel="stylesheet"
               href="assets/icon/bootstrap-icons.css" />
         <link rel="stylesheet"
@@ -58,11 +71,6 @@ if (isset($_SESSION['user_id'])) {
 
         <!-- bootstrap paths -->
 
-        <link rel="stylesheet"
-              href="../assets/css/bootstrap.min.css" />
-
-        <link rel="stylesheet"
-              href="../assets/icon/bootstrap-icons.css" />
 
         <!-- Custom css files -->
 
@@ -72,14 +80,7 @@ if (isset($_SESSION['user_id'])) {
         <link rel="stylesheet"
               href="../assets/custom/loginpage.css" />
         <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-              rel="stylesheet"
-              integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-              crossorigin="anonymous">
-        <link rel="stylesheet"
-              href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-              crossorigin="anonymous">
+
         <style>
         a {
             text-decoration: none;
@@ -146,31 +147,40 @@ if (isset($_SESSION['user_id'])) {
             </div>
 
             <div id="side-actions">
-                <div class="action"><a href="http://localhost/Farming-assistant/admin-panel.php"> এডমিন প্যানেল</a>
+                <div class="action"><a style="text-decoration:none;"
+                       href="http://localhost/Farming-assistant/admin-panel.php"> এডমিন প্যানেল</a>
                 </div>
-                <div class="action"><a href="http://localhost/Farming-assistant/handlers/adminHandler.php">এডমিনদের
+                <div class="action"><a style="text-decoration:none;"
+                       href="http://localhost/Farming-assistant/handlers/adminHandler.php">এডমিনদের
                         বিবরণ </a>
                 </div>
-                <div class="action"><a href="http://localhost/Farming-assistant/handlers/farmerHandler.php"> কৃষকদের
+                <div class="action"><a style="text-decoration:none;"
+                       href="http://localhost/Farming-assistant/handlers/farmerHandler.php"> কৃষকদের
                         বিবরণ</a>
                 </div>
-                <div class="action"><a href="http://localhost/Farming-assistant/handlers/agriHandler.php"> কৃষিবিদদের
+                <div class="action"><a style="text-decoration:none;"
+                       href="http://localhost/Farming-assistant/handlers/agriHandler.php"> কৃষিবিদদের
                         বিবরণ</a>
                 </div>
-                <div class="action"><a href="http://localhost/Farming-assistant/handlers/customerHandler.php"> ক্রেতাদের
+                <div class="action"><a style="text-decoration:none;"
+                       href="http://localhost/Farming-assistant/handlers/customerHandler.php"> ক্রেতাদের
                         বিবরণ</a>
                 </div>
-                <div class="action"><a href="http://localhost/Farming-assistant/handlers/productHandler.php"> কৃষিপণ্য
+                <div class="action"><a style="text-decoration:none;"
+                       href="http://localhost/Farming-assistant/handlers/productHandler.php"> কৃষিপণ্য
                         ম্যানেজ
                         করুন</a></div>
-                <div class="action"><a href="http://localhost/Farming-assistant/handlers/orderHandler.php"> অর্ডার
+                <div class="action"><a style="text-decoration:none;"
+                       href="http://localhost/Farming-assistant/handlers/orderHandler.php"> অর্ডার
                         ম্যানেজ
                         করুন</a>
                 </div>
-                <div class="action"><a href="http://localhost/Farming-assistant/handlers/blogHandler.php"> ব্লগ ম্যানেজ
+                <div class="action"><a style="text-decoration:none;"
+                       href="http://localhost/Farming-assistant/handlers/blogHandler.php"> ব্লগ ম্যানেজ
                         করুন</a>
                 </div>
-                <div class="action"><a href="http://localhost/Farming-assistant/handlers/categoryHandler.php">
+                <div class="action"><a style="text-decoration:none;"
+                       href="http://localhost/Farming-assistant/handlers/categoryHandler.php">
                         কৃষিপণ্যের
                         ক্যাটাগরি ম্যানেজ করুন</a>
                 </div>

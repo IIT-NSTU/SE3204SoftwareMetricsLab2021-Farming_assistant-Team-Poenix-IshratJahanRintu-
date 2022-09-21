@@ -48,6 +48,12 @@ class Blog
         }
     }
 
+
+    public function countBlogs()
+    {
+        return (count($this->db->fetch_all_data($this->table)));
+    }
+
     public function editBlog($edit_info = array())
     {
         $update_query =  "UPDATE $this->table SET  title='{$edit_info["update_name"]}',description='{$edit_info["update_description"]}',category='{$edit_info["update_category"]}',blog_img='{$edit_info["update_image"]}' WHERE blog_id={$edit_info["update_id"]}";
@@ -71,7 +77,7 @@ class Blog
             $blog_list = array();
             foreach ($result as $r) {
 
-               $sql = "SELECT name from user where user_id={$r['author']}";
+                $sql = "SELECT name from user where user_id={$r['author']}";
                 $stmnt = $this->db->connection->prepare($sql);
                 $stmnt->execute();
                 while ($row = $stmnt->fetch()) {

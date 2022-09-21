@@ -942,20 +942,20 @@
 }
 
 .blog-card__date {
-  width: 74px;
-  height: 74px;
-  background-color: var(--thm-base);
+  width: 136px;
+  height: 98px;
+  background-color: #6ab17b;
   border: 6px solid #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   text-align: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-radius: 50%;
   font-size: 14px;
   font-weight: 600;

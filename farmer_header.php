@@ -28,7 +28,7 @@ if (isset($_SESSION['user_id'])) {
               content="IE=edge" />
         <meta name="viewport"
               content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Farming-Assistant</title>
         <!-- Font awesome cdn link -->
 
         <link rel="stylesheet"
@@ -43,36 +43,16 @@ if (isset($_SESSION['user_id'])) {
               href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
         <!-- bootstrap paths -->
-
-        <link rel="stylesheet"
-              href="assets/css/bootstrap.min.css" />
-
-        <link rel="stylesheet"
-              href="assets/icon/bootstrap-icons.css" />
-
-        <!-- Custom css files -->
-
-        <link rel="stylesheet"
-              href="assets/custom/style.css" />
-        <!-- bootstrap paths -->
-
         <link rel="stylesheet"
               href="../assets/css/bootstrap.min.css" />
 
         <link rel="stylesheet"
               href="../assets/icon/bootstrap-icons.css" />
-
-        <!-- Custom css files -->
+        <link rel="stylesheet"
+              href="assets/css/bootstrap.min.css" />
 
         <link rel="stylesheet"
-              href="../assets/custom/style.css" />
-
-        <link rel="stylesheet"
-              href="../assets/custom/loginpage.css" />
-        <link rel="stylesheet"
-              href="assets/custom/loginpage.css" />
-
-        <!-- Bootstrap CSS -->
+              href="assets/icon/bootstrap-icons.css" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
               rel="stylesheet"
               integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
@@ -85,6 +65,25 @@ if (isset($_SESSION['user_id'])) {
               href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
               integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
               crossorigin="anonymous">
+
+        <!-- Custom css files -->
+
+        <link rel="stylesheet"
+              href="assets/custom/style.css" />
+        <!-- bootstrap paths -->
+
+        <!-- Custom css files -->
+
+        <link rel="stylesheet"
+              href="../assets/custom/style.css" />
+
+        <link rel="stylesheet"
+              href="../assets/custom/loginpage.css" />
+        <link rel="stylesheet"
+              href="assets/custom/loginpage.css" />
+
+        <!-- Bootstrap CSS -->
+
 
 
         <style>
@@ -157,16 +156,20 @@ if (isset($_SESSION['user_id'])) {
             </div>
 
             <div id="side-actions">
-                <div class="action"><a href="http://localhost/Farming-assistant/handlers/productHandler.php"> কৃষিপণ্য
+                <div class="action"><a style="text-decoration:none;"
+                       href="http://localhost/Farming-assistant/handlers/productHandler.php"> কৃষিপণ্য
                         ম্যানেজ
                         করুন</a></div>
-                <div class="action"><a href="http://localhost/Farming-assistant/handlers/orderHandler.php"> অর্ডার
+                <div class="action"><a style="text-decoration:none;"
+                       href="http://localhost/Farming-assistant/handlers/orderHandler.php"> অর্ডার
                         ম্যানেজ
                         করুন</a>
                 </div>
-                <div class="action"><a href="http://localhost/Farming-assistant/problem_add_page.php"> সমস্যা বলুন</a>
+                <div class="action"><a style="text-decoration:none;"
+                       href="http://localhost/Farming-assistant/problem_add_page.php"> সমস্যা বলুন</a>
                 </div>
-                <div class="action"><a href="http://localhost/Farming-assistant/display_problem.php"> সমাধান দেখুন</a>
+                <div class="action"><a style="text-decoration:none;"
+                       href="http://localhost/Farming-assistant/display_problem.php"> সমাধান দেখুন</a>
                 </div>
 
             </div>

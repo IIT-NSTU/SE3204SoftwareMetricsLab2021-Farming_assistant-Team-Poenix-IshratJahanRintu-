@@ -103,7 +103,10 @@ $sol = $db->fetch_data_with_one_column_check($_GET, 'solution', 'problem_id');
                                 <?php endif; ?>
                             </div><!-- /.blog-details__image -->
                             <div class="blog-card__content">
-                                <div class="blog-card__date"><?php echo $data[0]['date']; ?></div>
+                                <div class="blog-card__date"
+                                     style="width: 136px;
+    height: 98px;
+    background-color: #6ab17b;"><?php echo $data[0]['date']; ?></div>
                                 <!-- /.blog-card__date -->
                                 <div class="blog-card__meta">
                                 </div><!-- /.blog-card__meta -->

@@ -87,4 +87,8 @@ class Product
 
         return $product_list;
     }
+    public function countProducts()
+    {
+        return (count($this->db->fetch_all_data($this->table)));
+    }
 }

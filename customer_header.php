@@ -43,12 +43,20 @@ if (isset($_SESSION['user_id'])) {
               href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
         <!-- bootstrap paths -->
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+              rel="stylesheet"
+              integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+              crossorigin="anonymous">
         <link rel="stylesheet"
               href="assets/css/bootstrap.min.css" />
 
         <link rel="stylesheet"
               href="assets/icon/bootstrap-icons.css" />
+        <link rel="stylesheet"
+              href="../assets/css/bootstrap.min.css" />
+
+        <link rel="stylesheet"
+              href="../assets/icon/bootstrap-icons.css" />
 
         <!-- Custom css files -->
 
@@ -60,11 +68,7 @@ if (isset($_SESSION['user_id'])) {
 
         <!-- bootstrap paths -->
 
-        <link rel="stylesheet"
-              href="../assets/css/bootstrap.min.css" />
 
-        <link rel="stylesheet"
-              href="../assets/icon/bootstrap-icons.css" />
 
         <!-- Custom css files -->
 
@@ -75,10 +79,7 @@ if (isset($_SESSION['user_id'])) {
               href="../assets/custom/loginpage.css" />
 
         <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-              rel="stylesheet"
-              integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-              crossorigin="anonymous">
+
         <style>
         a {
             text-decoration: none;
@@ -139,7 +140,8 @@ if (isset($_SESSION['user_id'])) {
             <div id="close-contact-info"
                  class="fas fa-times"></div>
             <div class="info">
-                <a href="http://localhost/Farming-assistant/edit-profile-page.php"><i class="fas fa-user-edit"></i></a>
+                <a style="text-decoration:none;"
+                   href="http://localhost/Farming-assistant/edit-profile-page.php"><i class="fas fa-user-edit"></i></a>
                 <h3><?php echo $user_info['name'] ?></h3>
                 <p><?php echo $user_info['phone_number'] ?></p>
             </div>
@@ -148,7 +150,8 @@ if (isset($_SESSION['user_id'])) {
                  style="height: 10%;">
 
 
-                <div class="action"><a href="http://localhost/Farming-assistant/handlers/orderHandler.php"> অর্ডারগুলো
+                <div class="action"><a style="text-decoration:none;"
+                       href="http://localhost/Farming-assistant/handlers/orderHandler.php"> অর্ডারগুলো
                         দেখুন</a>
                 </div>
 

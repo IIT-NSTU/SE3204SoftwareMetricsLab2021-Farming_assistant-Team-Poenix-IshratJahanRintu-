@@ -9,8 +9,12 @@
               content="IE=edge" />
         <meta name="viewport"
               content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Farming-Assistant</title>
         <!-- Font awesome cdn link -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+              rel="stylesheet"
+              integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+              crossorigin="anonymous">
 
         <link rel="stylesheet"
               href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
@@ -33,8 +37,6 @@
 
         <!-- Custom css files -->
 
-        <link rel="stylesheet"
-              href="assets/custom/style.css" />
         <!-- bootstrap paths -->
 
         <link rel="stylesheet"
@@ -45,19 +47,17 @@
 
         <!-- Custom css files -->
 
-        <link rel="stylesheet"
-              href="../assets/custom/style.css" />
+
 
         <link rel="stylesheet"
               href="../assets/custom/loginpage.css" />
         <link rel="stylesheet"
               href="assets/custom/loginpage.css">
+        <link rel="stylesheet"
+              href="../assets/custom/style.css" />
 
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-              rel="stylesheet"
-              integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-              crossorigin="anonymous">
+        <link rel="stylesheet"
+              href="assets/custom/style.css" />
 
         <style>
         a {
@@ -100,10 +100,7 @@
             <div class="icons">
                 <div id="menu-btn"
                      class="fas fa-bars"></div>
-                <a href="loginpage.php">
-                    <div id="login-btn"
-                         class="fas fa-user"></div>
-                </a>
+
 
                 <!-- <a href="http://localhost/Farming-assistant/logoutpage.php">
                     <div title="লগআউট করুন"
@@ -114,6 +111,10 @@
 
                 <div id="info-btn"
                      style="display: none;"></div>
+                <a href="loginpage.php">
+                    <div id="login-btn"
+                         class="fas fa-user"></div>
+                </a>
             </div>
 
 

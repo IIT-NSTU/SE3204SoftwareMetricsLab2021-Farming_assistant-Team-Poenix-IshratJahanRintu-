@@ -29,9 +29,16 @@ if (isset($_SESSION['user_id'])) {
               content="IE=edge" />
         <meta name="viewport"
               content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Farming-Assistant</title>
         <!-- Font awesome cdn link -->
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+              rel="stylesheet"
+              integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+              crossorigin="anonymous">
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
         <link rel="stylesheet"
               href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
         <link rel="stylesheet"
@@ -76,14 +83,7 @@ if (isset($_SESSION['user_id'])) {
               href="../assets/custom/loginpage.css" />
 
         <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-              rel="stylesheet"
-              integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-              crossorigin="anonymous">
-        <link rel="stylesheet"
-              href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-              crossorigin="anonymous">
+
 
         <style>
         a {
@@ -158,10 +158,12 @@ if (isset($_SESSION['user_id'])) {
                  style="height: 30%;">
 
 
-                <div class="action"><a href="http://localhost/Farming-assistant/handlers/blogHandler.php"> ব্লগগুলো
+                <div class="action"><a style="text-decoration:none;"
+                       href="http://localhost/Farming-assistant/handlers/blogHandler.php"> ব্লগগুলো
                         ম্যানেজ
                         করুন</a></div>
-                <div class="action"><a href="http://localhost/Farming-assistant/display_problem.php"> কৃষকদের সমস্যার
+                <div class="action"><a style="text-decoration:none;"
+                       href="http://localhost/Farming-assistant/display_problem.php"> কৃষকদের সমস্যার
                         সমাধান দিন</a></div>
 
 

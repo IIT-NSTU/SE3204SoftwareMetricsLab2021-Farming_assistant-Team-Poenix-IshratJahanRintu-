@@ -57,7 +57,7 @@ if (isset($_SESSION['user_type'])) {
                 </div>
             </section>
             <section class="swiper-slide slide"
-                     style="background: url(assets/images/sp3.jpg) no-repeat">
+                     style="background: url(assets/images/tomato.jpg) no-repeat">
                 <div class="content">
                     <h3>কৃষিপণ্য কিনুন ঘরে বসেই</h3>
                     <a href="#"
@@ -103,9 +103,7 @@ if (isset($_SESSION['user_type'])) {
                 <div class="content">
 
                     <h3><?php echo $category["category_name"]; ?></h3>
-                    <p>
 
-                    </p>
 
                 </div>
             </div>
@@ -126,11 +124,29 @@ if (isset($_SESSION['user_type'])) {
 <section class="popular"
          id="popular">
     <h1 class="heading"> <span>পন্য</span> সমূহ</h1>
+    <div class="search__container">
+        <p class="search__title">
+            কৃষিপণ্য অনুসন্ধান করুন
+        </p>
+        <form action=""
+              method="post">
+            <input class="search__input"
+                   type="text"
+                   name="search_product"
+                   placeholder="অনুসন্ধান করুন">
+            <input type="submit"
+                   hidden
+                   name="search" />
+        </form>
+    </div>
 
     <div class="box-container">
 
         <?php
-        if (isset($_GET['category'])) {
+        if (isset($_POST['search_product'])) {
+            $name = $_POST['search_product'];
+            $sql = "SELECT * from product  where name like '%$name%' or category like '%$name%' ";
+        } else  if (isset($_GET['category'])) {
             $sql = "SELECT * from product  where category='{$_GET['category']}' ";
         } else {
             $sql = "SELECT * from product ORDER BY product_id ";
@@ -150,7 +166,8 @@ if (isset($_SESSION['user_type'])) {
                  alt="">
             <h3><?php echo $product['name']; ?></h3>
 
-            <p class="text-muted info"><span
+            <p style="background-color: transparent; font-size: 20px; margin: auto; padding: auto; padding: 10px; height: 50px;"
+               class="text-muted info"><span
                       class="quantity"><?php echo converter::en2bn($product['quantity']); ?></span><span
                       class="quantity type"><?php echo $product['quantity_type']; ?></span></p>
 

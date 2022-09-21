@@ -3,6 +3,12 @@ session_start();
 
 include_once 'handlers/converter.php';
 include_once 'handlers/DatabaseEdited.php';
+include_once 'classes/users/user.php';
+include_once 'classes/users/farmer.php';
+include_once 'classes/users/customer.php';
+include_once 'classes/product.php';
+include_once 'classes/blog.php';
+
 if (isset($_SESSION['user_type'])) {
 
 
@@ -59,7 +65,7 @@ $db = EDatabase::getInstance();
                 <div class="content">
                     <h3>বাঁচাও কৃষক,বাঁচবে দেশ
                         মুছবে দৈন্য,ঘুচবে ক্লেশ</h3>
-                   
+
                     <a href="#about"
                        class="bttn">শুরু করুন</a>
                 </div>
@@ -70,7 +76,7 @@ $db = EDatabase::getInstance();
                 <div class="content">
                     <h3>বাঁচাও কৃষক,বাঁচবে দেশ
                         মুছবে দৈন্য,ঘুচবে ক্লেশ</h3>
-                    
+
                     <a href="#about"
                        class="bttn">শুরু করুন</a>
                 </div>
@@ -112,24 +118,35 @@ $db = EDatabase::getInstance();
                class="bttn">আরও দেখুন</a>
         </div>
     </div>
+    <?php
+    $farmer = new farmer();
 
+    $customer = new customer();
+    $product = new Product();
+    $blog = new Blog();
+
+    $total_farmers = converter::en2bn($farmer->countMembers());
+    $total_customers = converter::en2bn($customer->countMembers());
+    $total_products = converter::en2bn($product->countProducts());
+    $total_blogs = converter::en2bn($blog->countBlogs());
+    ?>
     <div class="box-container">
         <div class="box">
-            <h3>৫০+</h3>
+            <h3><?php echo $total_farmers . " "; ?>+</h3>
             <p>কৃষক</p>
         </div>
         <div class="box">
-            <h3>৪৫+</h3>
+            <h3><?php echo $total_customers . " "; ?>+</h3>
             <p>ক্রেতা</p>
         </div>
 
         <div class="box">
-            <h3>১০০+</h3>
+            <h3><?php echo $total_products . " "; ?>+</h3>
             <p>কৃষিপণ্য</p>
         </div>
 
         <div class="box">
-            <h3>১০+</h3>
+            <h3><?php echo $total_blogs . " "; ?>+</h3>
             <p>ব্লগ</p>
         </div>
     </div>
