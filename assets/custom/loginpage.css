@@ -15,7 +15,7 @@
   padding: 40px 30px 83px 30px;
   background-color: #ecf0f3;
   border-radius: 15px;
-  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+  box-shadow: 13px 13px 20px #8a8b8b, -13px -13px 20px #fff;
 }
 
 .wrapper .name {
@@ -42,7 +42,7 @@
   padding-left: 10px;
   margin-bottom: 8px;
   border-radius: 20px;
-  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+  box-shadow: inset 8px 8px 8px #acadae, inset -8px -8px 8px #fff;
 }
 
 .wrapper .form-field .fas {

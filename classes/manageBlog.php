@@ -62,8 +62,7 @@ class DeleteBlog implements ManageBlog
     }
     public function manage()
     {
-        if ($this->blog->deleteBlog($this->delete_info)) {
-        }
+        $this->blog->deleteBlog($this->delete_info);
     }
 }
 

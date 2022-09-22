@@ -29,11 +29,11 @@ if ($code == 200 && !(curl_errno($handle))) {
     $result = json_decode($result);
 
     # TRANSACTION INFO
-    echo   $status = $result->status;
-    echo   $tran_date = $result->tran_date;
-    echo  $tran_id = $result->tran_id;
+    $status = $result->status;
+    $tran_date = $result->tran_date;
+    $tran_id = $result->tran_id;
     $val_id = $result->val_id;
-    echo  $amount = $result->amount;
+    $amount = $result->amount;
     $store_amount = $result->store_amount;
     $bank_tran_id = $result->bank_tran_id;
     $card_type = $result->card_type;
@@ -56,14 +56,14 @@ if ($code == 200 && !(curl_errno($handle))) {
     $validated_on = $result->validated_on;
     $gw_version = $result->gw_version;
 
-    echo  $quantity = $result->value_a;
-    echo "product id";
+    $quantity = $result->value_a;
 
 
-    echo  $product_id = $result->value_b;
-    echo "farmer id";
-    echo  $farmer_id = $result->value_c;
-    echo  $customer_id = $result->value_d;
+
+    $product_id = $result->value_b;
+
+    $farmer_id = $result->value_c;
+    $customer_id = $result->value_d;
 } else {
 
     echo "Failed to connect with SSLCOMMERZ";
