@@ -841,6 +841,7 @@ h1.empty-heading {
 .dlt-btn:hover {
   background-color: red;
   color: black;
+  text-decoration-line: none;
 }
 /* admin farmer product details */
 .product-box-content {
