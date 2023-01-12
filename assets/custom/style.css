@@ -815,6 +815,10 @@ section {
   object-fit: cover;
   width: 238px;
 }
+.show-products .box-container .box img:hover {
+  box-shadow: 0px 10px 18px lightgrey;
+  height: 18.8rem;
+}
 h1.empty-heading {
   text-align: center;
   border: 2px solid #0e610e;

@@ -30,9 +30,7 @@ class database
         }
     }
 
-    function count_row($table)
-    {
-    }
+
     function fetch_all_data($table)
     {
 
@@ -45,6 +43,8 @@ class database
         $row = $statement->fetchAll();
         return $row;
     }
+
+
 
     //pass an associative array 
     function fetch_data_with_two_column_check($data_array, $table, $col1, $col2)

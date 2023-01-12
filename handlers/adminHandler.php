@@ -14,12 +14,12 @@ include_once '../classes/users/admin.php';
 if (isset($_POST['add_admin'])) {
     echo "post ";
 
-    echo $admin_info["name"] =  $_POST['name'];
-    echo $admin_info["phone_number"] =  $_POST['phone'];
-    echo $admin_info["address"] =  $_POST['address'];
-    echo $admin_info["user_type"] = 'admin';
-    echo $admin_info['password'] = $_POST['password'];
-    print_r($admin_info);
+    $admin_info["name"] =  $_POST['name'];
+    $admin_info["phone_number"] =  $_POST['phone'];
+    $admin_info["address"] =  $_POST['address'];
+    $admin_info["user_type"] = 'admin';
+    $admin_info['password'] = $_POST['password'];
+
 
 
 

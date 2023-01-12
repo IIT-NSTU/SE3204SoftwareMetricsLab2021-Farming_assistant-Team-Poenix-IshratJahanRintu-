@@ -44,36 +44,7 @@
               href="https://www.bamis.gov.bd/assets/css/bamis.css?v=v2.022051" /> <!-- scripts -->
 
 
-        <!-- <style>
-        #loadingDiv {
-            width: 100px;
-            height: 5px;
-            background-color: green;
-            animation-name: LoadingDiv;
-            animation-duration: 15s;
-            animation-iteration-count: infinite;
-        }
-        #loadingWrap{
-            display:block;
-            height:5px;
-            background-color: yellow;
-        }
-        @keyframes LoadingDiv {
-            from {width: 1px;}
-            to {width: 100%;}
-        }
-        @-webkit-keyframes LoadingDiv {
-            from {width: 1px;}
-            to {width: 100%;}
-        }
-        @-moz-keyframes LoadingDiv {
-            from {width: 1px;}
-            to {width: 100%;}loadPageUrl
-        }
-        @-ms-keyframes LoadingDiv {
-            from {width: 1px;}
-            to {width: 100%;}
-        } -->
+
         <style>
         .single_big_btn_menu {
             display: none;
